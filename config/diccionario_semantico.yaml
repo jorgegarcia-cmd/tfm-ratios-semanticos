@@ -1,0 +1,218 @@
+# Diccionario semántico v0 — TFM "Contextualización semántica de ratios financieros"
+# Catálogo de 12 ratios para banca y seguros + conceptos canónicos que intervienen.
+#
+# Convenciones:
+#   - fuente: esef (calculable desde estados XBRL) | publicado (Pilar 3, SFCR, APM del informe de gestión)
+#   - xbrl_candidatos: etiquetas de la taxonomía NIIF (ifrs-full) que PROBABLEMENTE recogen el concepto.
+#     PENDIENTE DE VERIFICAR contra los ficheros ESEF reales: las entidades usan extensiones propias.
+#   - variantes: diferencias de definición conocidas entre entidades (núcleo del problema semántico).
+
+version: 0.1
+fecha: 2026-11-01
+
+entidades:
+  banca: [santander, bbva, caixabank, sabadell, bankinter, unicaja]
+  seguros: [mapfre, linea_directa]
+ejercicios: [2024, 2025]
+
+# ---------------------------------------------------------------------------
+# CONCEPTOS CANÓNICOS
+# ---------------------------------------------------------------------------
+conceptos:
+  resultado_atribuido:
+    nombre: Resultado atribuido a la entidad dominante
+    tipo: flujo          # flujo = cifra del periodo; stock = saldo a fecha
+    xbrl_candidatos: [ifrs-full:ProfitLossAttributableToOwnersOfParent]
+  resultado_ejercicio:
+    nombre: Resultado consolidado del ejercicio (incluye minoritarios)
+    tipo: flujo
+    xbrl_candidatos: [ifrs-full:ProfitLoss]
+  patrimonio_atribuido:
+    nombre: Patrimonio neto atribuido a la dominante
+    tipo: stock
+    xbrl_candidatos: [ifrs-full:EquityAttributableToOwnersOfParent]
+  activos_intangibles:
+    nombre: Activos intangibles (incluido fondo de comercio)
+    tipo: stock
+    xbrl_candidatos: [ifrs-full:IntangibleAssetsAndGoodwill, ifrs-full:Goodwill, ifrs-full:IntangibleAssetsOtherThanGoodwill]
+  activo_total:
+    nombre: Total activo
+    tipo: stock
+    xbrl_candidatos: [ifrs-full:Assets]
+  ingresos_intereses:
+    nombre: Ingresos por intereses
+    tipo: flujo
+    xbrl_candidatos: [ifrs-full:RevenueFromInterest, ifrs-full:InterestRevenueCalculatedUsingEffectiveInterestMethod]
+  gastos_intereses:
+    nombre: Gastos por intereses
+    tipo: flujo
+    xbrl_candidatos: [ifrs-full:InterestExpense]
+  margen_intereses:
+    nombre: Margen de intereses
+    tipo: flujo
+    derivado: ingresos_intereses - gastos_intereses
+    xbrl_candidatos: [ifrs-full:InterestIncomeExpenseNet]
+  margen_bruto:
+    nombre: Margen bruto
+    tipo: flujo
+    xbrl_candidatos: []   # normalmente extensión propia de cada banco
+  gastos_explotacion_banca:
+    nombre: Gastos de administración + amortización
+    tipo: flujo
+    xbrl_candidatos: [ifrs-full:AdministrativeExpense, ifrs-full:DepreciationAndAmortisationExpense]
+  prestamos_clientela:
+    nombre: Préstamos y anticipos a la clientela (netos)
+    tipo: stock
+    xbrl_candidatos: []   # suele ser extensión; verificar
+  depositos_clientela:
+    nombre: Depósitos de la clientela
+    tipo: stock
+    xbrl_candidatos: []   # suele ser extensión; verificar
+  ingresos_seguros:
+    nombre: Ingresos por contratos de seguro (NIIF 17) / primas imputadas
+    tipo: flujo
+    xbrl_candidatos: [ifrs-full:InsuranceRevenue]
+  gastos_servicio_seguro:
+    nombre: Gastos del servicio de seguro (NIIF 17)
+    tipo: flujo
+    xbrl_candidatos: [ifrs-full:InsuranceServiceExpensesFromInsuranceContractsIssued]
+
+# ---------------------------------------------------------------------------
+# RATIOS
+# ---------------------------------------------------------------------------
+ratios:
+
+  # --- Comunes -------------------------------------------------------------
+  roe:
+    nombre: Rentabilidad sobre recursos propios (ROE)
+    familia: rentabilidad
+    aplica_a: [banca, seguros]
+    formula: resultado_atribuido / media(patrimonio_atribuido)
+    fuente: esef
+    variantes:
+      - patrimonio de cierre en lugar de media
+      - media de 2 puntos (inicio y fin) frente a media trimestral o mensual
+      - excluye cupones de AT1 del numerador e instrumentos AT1 del denominador (banca)
+      - excluye ajustes por valoración (OCI) del denominador
+      - resultado ajustado por partidas no recurrentes
+    interpretacion: Mayor es mejor; comparar con el coste de capital (~10–12 % en banca europea, a contrastar).
+
+  roa:
+    nombre: Rentabilidad sobre activos (ROA)
+    familia: rentabilidad
+    aplica_a: [banca, seguros]
+    formula: resultado_ejercicio / media(activo_total)
+    fuente: esef
+    variantes:
+      - resultado atribuido en lugar de consolidado
+      - activo de cierre en lugar de medio
+    interpretacion: En banca, valores típicos por debajo del 1 %; muy sensible al apalancamiento.
+
+  # --- Banca ---------------------------------------------------------------
+  eficiencia:
+    nombre: Ratio de eficiencia (cost-to-income)
+    familia: eficiencia
+    aplica_a: [banca]
+    formula: gastos_explotacion_banca / margen_bruto
+    fuente: esef
+    variantes:
+      - incluye o excluye amortizaciones
+      - excluye gastos extraordinarios (reestructuraciones)
+      - margen bruto con o sin contribuciones al FUR/FGD (impuesto a la banca)
+    interpretacion: Menor es mejor; por debajo del 40–50 % se considera eficiente.
+
+  nim:
+    nombre: Margen de intereses sobre activos medios (NIM)
+    familia: rentabilidad
+    aplica_a: [banca]
+    formula: margen_intereses / media(activo_total)
+    fuente: esef
+    variantes:
+      - denominador en activos rentables medios en lugar de activo total
+      - diferencial de clientes (rendimiento de la cartera menos coste de los depósitos)
+    interpretacion: Muy sensible al ciclo de tipos de interés.
+
+  ltd:
+    nombre: Préstamos sobre depósitos (loan-to-deposit)
+    familia: liquidez
+    aplica_a: [banca]
+    formula: prestamos_clientela / depositos_clientela
+    fuente: esef
+    variantes:
+      - excluye adquisiciones temporales de activos (repos)
+      - incluye en el denominador fondos de mediación o emisiones minoristas
+    interpretacion: Por debajo del 100 % indica financiación estable con depósitos.
+
+  morosidad:
+    nombre: Tasa de morosidad (NPL ratio)
+    familia: calidad_activo
+    aplica_a: [banca]
+    formula: riesgos_dudosos / riesgo_crediticio_total
+    fuente: publicado        # Pilar 3 / APM del informe de gestión
+    variantes:
+      - incluye o excluye riesgos contingentes (avales)
+      - perímetro (grupo frente a negocio en España)
+    interpretacion: Menor es mejor; contextualizar por mix de cartera y geografía.
+
+  cobertura:
+    nombre: Tasa de cobertura de dudosos
+    familia: calidad_activo
+    aplica_a: [banca]
+    formula: provisiones_insolvencias / riesgos_dudosos
+    fuente: publicado
+    variantes:
+      - provisiones totales frente a solo las de stage 3
+    interpretacion: Mayor es más prudente; depende de las garantías de la cartera.
+
+  cet1:
+    nombre: Ratio de capital CET1
+    familia: solvencia
+    aplica_a: [banca]
+    formula: capital_cet1 / activos_ponderados_por_riesgo
+    fuente: publicado        # Pilar 3
+    variantes:
+      - phased-in frente a fully loaded
+    interpretacion: Comparar con el requerimiento SREP de cada entidad, no con un umbral único.
+
+  # --- Seguros -------------------------------------------------------------
+  siniestralidad:
+    nombre: Ratio de siniestralidad (no vida)
+    familia: tecnica_aseguradora
+    aplica_a: [seguros]
+    formula: siniestralidad_neta / primas_imputadas_netas
+    fuente: esef             # aproximación desde estados y notas
+    variantes:
+      - bruto frente a neto de reaseguro
+      - terminología NIIF 17 frente a la anterior (primas imputadas)
+      - perímetro (no vida total frente a ramos concretos)
+    interpretacion: Menor es mejor; muy dependiente del ramo (autos, hogar, salud).
+
+  ratio_gastos:
+    nombre: Ratio de gastos
+    familia: eficiencia
+    aplica_a: [seguros]
+    formula: gastos_explotacion_netos / primas_imputadas_netas
+    fuente: esef
+    variantes:
+      - incluye o excluye gastos de adquisición
+    interpretacion: Equivalente asegurador del ratio de eficiencia bancario.
+
+  ratio_combinado:
+    nombre: Ratio combinado (no vida)
+    familia: tecnica_aseguradora
+    aplica_a: [seguros]
+    formula: siniestralidad + ratio_gastos
+    fuente: esef
+    variantes:
+      - la entidad lo publica como APM con su propia definición (validar contra ella)
+    interpretacion: Por debajo del 100 % hay beneficio técnico antes de ingresos financieros.
+
+  solvencia_ii:
+    nombre: Ratio de solvencia (Solvencia II)
+    familia: solvencia
+    aplica_a: [seguros]
+    formula: fondos_propios_admisibles / scr
+    fuente: publicado        # Informe SFCR
+    variantes:
+      - con o sin medidas transitorias
+    interpretacion: Por encima del 100 % cumple; las aseguradoras suelen fijar objetivos internos del 150–200 %.

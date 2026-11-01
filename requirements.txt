@@ -1,0 +1,4 @@
+arelle-release
+pandas
+pyyaml
+streamlit
