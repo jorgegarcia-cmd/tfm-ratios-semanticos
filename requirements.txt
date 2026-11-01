@@ -1,4 +1,4 @@
-arelle-release
+lxml
 pandas
 pyyaml
 streamlit

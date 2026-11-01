@@ -216,3 +216,60 @@ ratios:
     variantes:
       - con o sin medidas transitorias
     interpretacion: Por encima del 100 % cumple; las aseguradoras suelen fijar objetivos internos del 150–200 %.
+
+# ---------------------------------------------------------------------------
+# MAPEO VERIFICADO CONTRA DATOS REALES (ESEF ejercicio 2025, incluye comparativo 2024)
+# Verificado: 2026-11-01 · 6 entidades (faltan Bankinter y Unicaja)
+# Formato: concepto -> entidad -> etiqueta(s) XBRL (se suman si hay varias)
+# ---------------------------------------------------------------------------
+lei:
+  santander: 5493006QMFDDMYWIAM13
+  bbva: K8MS7FD7N5Z2WQ51AZ71
+  caixabank: 7CUNS533WID6K7DGFI87
+  sabadell: SI5RG2M0WQQLZCXKRM20
+  mapfre: 95980020140005693107
+  linea_directa: 95980079E2NBJT967T79
+
+mapeo:
+  resultado_atribuido:
+    _todas: [ifrs-full:ProfitLossAttributableToOwnersOfParent]
+  resultado_ejercicio:
+    _todas: [ifrs-full:ProfitLoss]
+  activo_total:
+    _todas: [ifrs-full:Assets]
+  activos_intangibles:
+    _todas: [ifrs-full:IntangibleAssetsAndGoodwill]
+    linea_directa: [ifrs-full:IntangibleAssetsOtherThanGoodwill]   # no tiene fondo de comercio
+  patrimonio_atribuido:
+    caixabank: [ifrs-full:EquityAttributableToOwnersOfParent]
+    mapfre: [ifrs-full:EquityAttributableToOwnersOfParent]
+    # HALLAZGO: el resto no etiqueta el patrimonio atribuido con el elemento NIIF estándar.
+    bbva: [bbva:FondosPropios]              # fondos propios: excluye OCI acumulado -> NO equivale
+    sabadell: [sab:FondosPropios]           # idem
+    linea_directa: [lda:FondosPropios]      # idem
+    santander: PENDIENTE                    # candidato san:PatrimonioNetoAtribuible...Excluido (141.144 M€), revisar
+  margen_intereses:
+    # HALLAZGO: ningún banco usa InterestIncomeExpenseNet; todos usan InterestRevenueExpense
+    _banca: [ifrs-full:InterestRevenueExpense]
+  margen_bruto:
+    # HALLAZGO: los bancos etiquetan su "margen bruto" con ifrs-full:GrossProfit,
+    # elemento pensado para "ventas - coste de ventas" en empresas industriales
+    _banca: [ifrs-full:GrossProfit]
+  gastos_explotacion_banca:
+    _banca: [ifrs-full:AdministrativeExpense, ifrs-full:DepreciationAndAmortisationExpense]
+  prestamos_clientela:
+    caixabank: [ifrs-full:LoansAndAdvancesToCustomers]
+    sabadell: [ifrs-full:LoansAndAdvancesToCustomers]
+    bbva: [ifrs-full:LoansAndAdvancesToCustomersAtAmortisedCost, ifrs-full:LoansAndAdvancesToCustomersAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading]
+    santander: PENDIENTE
+  depositos_clientela:
+    caixabank: [ifrs-full:DepositsFromCustomers]
+    sabadell: [ifrs-full:DepositsFromCustomers]
+    bbva: [ifrs-full:DepositsFromCustomersAtAmortisedCost]   # + variantes a valor razonable, revisar
+    santander: PENDIENTE
+  ingresos_seguros:
+    linea_directa: [ifrs-full:InsuranceRevenue]
+    caixabank: [ifrs-full:InsuranceRevenue]   # negocio asegurador de CaixaBank (VidaCaixa)
+    mapfre: PENDIENTE                         # no usa InsuranceRevenue sin dimensiones; revisar extensiones
+  gastos_servicio_seguro:
+    _seguros: [ifrs-full:InsuranceServiceExpensesFromInsuranceContractsIssued]

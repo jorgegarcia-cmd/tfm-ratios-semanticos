@@ -2,4 +2,6 @@
 __pycache__/
 *.pyc
 data/raw/esef/*.zip
+data/raw/esef/*.xbri
+data/processed/*.csv
 .env

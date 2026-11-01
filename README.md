@@ -30,7 +30,7 @@ docs/              notas de diseño
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-PYTHONPATH=src python -m tfm_ratios.esef_loader data/raw/esef/bankinter_2024.zip
+PYTHONPATH=src python -m tfm_ratios.ixbrl_parser data/raw/esef/*.xbri
 ```
 
 ## Muestra
