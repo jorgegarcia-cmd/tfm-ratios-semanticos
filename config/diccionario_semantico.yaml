@@ -95,7 +95,7 @@ ratios:
       - excluye cupones de AT1 del numerador e instrumentos AT1 del denominador (banca)
       - excluye ajustes por valoración (OCI) del denominador
       - resultado ajustado por partidas no recurrentes
-    interpretacion: Mayor es mejor; comparar con el coste de capital (~10–12 % en banca europea, a contrastar).
+    interpretacion: Mayor es mejor; debe compararse con el coste de capital de la entidad.
 
   roa:
     nombre: Rentabilidad sobre activos (ROA)
