@@ -229,6 +229,22 @@ class Escritor:
                     tcpr = celda._tc.get_or_add_tcPr(); sh = OxmlElement("w:shd")
                     sh.set(qn("w:val"), "clear"); sh.set(qn("w:color"), "auto"); sh.set(qn("w:fill"), "D9E2F3")
                     tcpr.append(sh)
+        # anchos proporcionales al texto más largo de cada columna (mín. 8 %, total 16 cm)
+        largo = [max(len(re.sub(r"[*`]", "", (f[j] if j < len(f) else ""))) for f in filas) for j in range(len(cab))]
+        palabra = [max((len(w_) for f in filas for w_ in re.sub(r"[*`]", "", (f[j] if j < len(f) else "")).split()), default=4)
+                   for j in range(len(cab))]
+        peso = [max(min(max(l, 6), 60), palabra[j] * 1.25) for j, l in enumerate(largo)]
+        tot = sum(peso)
+        anchos = [max(Cm(16) * w_ / tot, Cm(16) * 0.08) for w_ in peso]
+        esc = Cm(16) / sum(anchos)
+        anchos = [int(a * esc) for a in anchos]
+        t.autofit = False
+        grid = t._tbl.tblGrid
+        for j, gc in enumerate(grid.findall(qn("w:gridCol"))):
+            gc.set(qn("w:w"), str(int(anchos[j] / 635)))
+        for fila in t.rows:
+            for j, celda in enumerate(fila.cells):
+                celda.width = anchos[j]
         self.ancla._p.addprevious(t._tbl)
 
     def markdown(self, md: str):

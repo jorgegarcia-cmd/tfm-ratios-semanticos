@@ -7,7 +7,7 @@ Prototipo del Trabajo Fin de Máster *"Contextualización semántica de estados 
 
 ## Qué hace
 
-Calcula 12 ratios de banca y seguros a partir de los informes ESEF (XBRL) de 8 entidades cotizadas españolas. Lo hace en cuatro pasos:
+Calcula 12 ratios de banca y seguros a partir de los informes ESEF (XBRL) de 6 entidades cotizadas españolas. Lo hace en cuatro pasos:
 
 1. **Extracción:** lee los hechos XBRL del paquete ESEF.
 2. **Diccionario semántico:** relaciona cada partida con un concepto financiero canónico (`config/diccionario_semantico.yaml`).
@@ -35,6 +35,15 @@ PYTHONPATH=src python -m tfm_ratios.ixbrl_parser data/raw/esef/*.xbri
 
 ## Muestra
 
-- **Banca:** Santander, BBVA, CaixaBank, Sabadell, Bankinter, Unicaja.
+- **Banca:** Santander, BBVA, CaixaBank, Sabadell (Bankinter y Unicaja, trabajo futuro).
 - **Seguros:** Mapfre, Línea Directa.
-- **Ejercicios:** 2024 y 2025.
+- **Ejercicios:** 2024 y 2025 (informe 2025 con comparativo).
+
+## Probar la demo
+
+```bash
+PYTHONPATH=src python -m tfm_ratios.consulta "¿Cuál fue el ROE de Santander y de BBVA en 2025?"
+streamlit run app.py
+```
+
+Para recalcular desde los ficheros oficiales: copiar los `.xbri` a `data/raw/esef/` y ejecutar `ixbrl_parser`, `motor` y `comparacion` (ver arriba).
