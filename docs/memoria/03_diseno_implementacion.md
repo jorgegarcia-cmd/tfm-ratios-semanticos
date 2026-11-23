@@ -149,7 +149,25 @@ Esta función se ofrece a un modelo de lenguaje como herramienta, con un esquema
 
 Para que la herramienta pueda demostrarse y evaluarse sin depender de un proveedor comercial, el módulo incluye un intérprete por reglas, que identifica entidades, ratio y ejercicio mediante patrones, y una redacción por plantilla. Ante la pregunta «¿Cuál fue el ROE de Santander y de BBVA en 2025?», el prototipo responde con el valor calculado de cada entidad, su fórmula y cifras de origen, los comparables homogéneos y el aviso de que el ROE depende de la base de patrimonio elegida. Ante una pregunta sobre la ratio préstamos/depósitos de Santander, responde que no es calculable desde ESEF y explica el motivo, en lugar de ofrecer una cifra.
 
-## 3.8. Limitaciones del diseño
+## 3.8. Pruebas
+
+El prototipo se ha verificado con un plan de pruebas en once niveles, automatizado con `pytest` y Playwright. Su objetivo es demostrar que cada cifra es correcta, trazable y estable, y que la herramienta no inventa datos cuando no los tiene. La Tabla 6 resume los resultados.
+
+**Tabla 6. Resultados del plan de pruebas**
+
+| Nivel | Pruebas | Qué se comprueba |
+|---|---|---|
+| Unitarias (lector, motor, consulta, validación) | 34 | Formatos numéricos, escala y signo; reglas de mapeo; que la consulta devuelva exactamente la cifra del motor y ninguna cuando el dato no existe |
+| Integración | 9 | Los seis informes reales (6.835 hechos), el cálculo completo y las identidades contables (activo igual a pasivo más patrimonio) |
+| Regresión | 30 | Que las cifras citadas en esta memoria siguen saliendo del prototipo |
+| Calidad de datos | 3 | Que los 203 hechos de las trazas y las 104 citas de ratios publicados existen literalmente en los informes |
+| Versión web | 33 | API ante entradas anómalas, latencia y recorrido completo en navegador en escritorio y móvil |
+
+Fuente: Elaboración propia.
+
+Todas las pruebas se superan. La versión web se ha comprobado además en producción (Anexo C).
+
+## 3.9. Limitaciones del diseño
 
 - **Muestra:** el diccionario se ha verificado con seis entidades. Su extensión a otras exige revisar sus etiquetas de extensión, aunque las reglas por defecto cubren la mayoría de conceptos.
 - **Hechos con dimensiones:** no se usan, lo que impide, por ejemplo, separar el negocio de vida y no vida de Mapfre.
