@@ -52,7 +52,7 @@ Fuente: Elaboración propia a partir del motor de ratios y de los informes de la
 
 # Anexo C. Repositorio y estructura del código
 
-El código, los datos derivados y esta memoria están en el repositorio privado https://github.com/jorgegarcia-cmd/tfm-ratios-semanticos, al que el autor dará acceso al tutor y al tribunal.
+El código, los datos derivados y esta memoria están en el repositorio privado https://github.com/jorgegarcia-cmd/tfm-ratios-semanticos, al que el autor dará acceso al tutor y al tribunal. La demostración del prototipo está publicada en https://tfm-ratios-semanticos.vercel.app.
 
 - `src/tfm_ratios/ixbrl_parser.py`: lector de Inline XBRL sin taxonomías externas.
 - `config/diccionario_semantico.yaml`: diccionario semántico (conceptos, ratios y reglas de mapeo).
@@ -60,6 +60,7 @@ El código, los datos derivados y esta memoria están en el repositorio privado 
 - `src/tfm_ratios/comparacion.py`: validación frente a los ratios publicados.
 - `src/tfm_ratios/consulta.py`: capa de consulta y esquema de la herramienta para un modelo de lenguaje.
 - `app.py`: interfaz de demostración en Streamlit.
+- `deploy/`: versión web (API FastAPI y página) desplegada en Vercel.
 - `data/published/`: ratios publicados por las entidades, con su definición y una cita verificable.
 - `data/results/`: ratios calculados, trazas y comparación.
 - `docs/evaluacion/`: preguntas, respuestas y rúbrica de la evaluación.

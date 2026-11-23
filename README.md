@@ -39,7 +39,11 @@ PYTHONPATH=src python -m tfm_ratios.ixbrl_parser data/raw/esef/*.xbri
 - **Seguros:** Mapfre, Línea Directa.
 - **Ejercicios:** 2024 y 2025 (informe 2025 con comparativo).
 
-## Probar la demo
+## Demo en línea
+
+https://tfm-ratios-semanticos.vercel.app (desplegada en Vercel desde `deploy/`; se actualiza con cada push a `main`).
+
+## Probar la demo en local
 
 ```bash
 PYTHONPATH=src python -m tfm_ratios.consulta "¿Cuál fue el ROE de Santander y de BBVA en 2025?"
