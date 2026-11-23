@@ -87,7 +87,8 @@ class Entidad:
             if a is None:
                 return Valor(concepto, None, "resta", motivo=f"falta {regla['resta'][0]} en {ejercicio}")
             hechos = [a] + ([b] if b else [])
-            return Valor(concepto, a["valor"] - (b["valor"] if b else 0.0), "resta", hechos)
+            regla_txt = "resta" if b else f"resta (sin {regla['resta'][1]} etiquetado: se toma {regla['resta'][0]})"
+            return Valor(concepto, a["valor"] - (b["valor"] if b else 0.0), regla_txt, hechos)
         hechos = [self._hecho(e, ejercicio, tipo) for e in regla]
         encontrados = [h for h in hechos if h]
         if not encontrados:
@@ -150,7 +151,15 @@ def calcular() -> tuple[pd.DataFrame, list[dict]]:
                 if num.ok and den.ok and den.valor:
                     valor = round(100 * num.valor / den.valor, 2)
                 motivo = None if valor is not None else (num.motivo or den.motivo or "denominador nulo")
-                nota = "; ".join(n for n in (nota_n, nota_d) if n)
+                avisos_regla = [v.regla for v in (num, den) if "sin " in (v.regla or "") and not v.regla.startswith("media(")]
+                if bd == "media":  # revisar también el saldo inicial
+                    ini = ent.valor(cd, ej - 1, "instante")
+                    if ini.ok and "sin " in ini.regla:
+                        avisos_regla.append(f"saldo inicial: {ini.regla}")
+                    fin = ent.valor(cd, ej, "instante")
+                    if fin.ok and "sin " in fin.regla:
+                        avisos_regla.append(f"saldo final: {fin.regla}")
+                nota = "; ".join(dict.fromkeys(n for n in (nota_n, nota_d, *avisos_regla) if n))
                 filas.append({
                     "entidad": nombre, "grupo": ent.grupo, "ejercicio": ej, "ratio": rid,
                     "valor_pct": valor, "numerador_meur": _m(num), "denominador_meur": _m(den),

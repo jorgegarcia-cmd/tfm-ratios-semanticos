@@ -1,6 +1,6 @@
 # Anexo A. Diccionario semántico
 
-El diccionario completo está en `config/diccionario_semantico.yaml` del repositorio. Este anexo resume el catálogo de ratios y las reglas de mapeo.
+El diccionario completo está en `config/diccionario_semantico.yaml` del repositorio. Este anexo resume el catálogo de ratios; las reglas de mapeo por entidad se resumen en el apartado 3.4.2 y se recogen completas, con el motivo de cada excepción, en la sección `mapeo` del fichero.
 
 **Tabla 1. Catálogo de ratios del diccionario semántico**
 
@@ -14,18 +14,16 @@ El diccionario completo está en `config/diccionario_semantico.yaml` del reposit
 | Tasa de morosidad (NPL ratio) | banca | `riesgos_dudosos / riesgo_crediticio_total` | Publicado por la entidad |
 | Tasa de cobertura de dudosos | banca | `provisiones_insolvencias / riesgos_dudosos` | Publicado por la entidad |
 | Ratio de capital CET1 | banca | `capital_cet1 / activos_ponderados_por_riesgo` | Publicado por la entidad |
-| Ratio de siniestralidad (no vida) | seguros | `siniestralidad_neta / primas_imputadas_netas` | Calculado (ESEF) |
-| Ratio de gastos | seguros | `gastos_explotacion_netos / primas_imputadas_netas` | Calculado (ESEF) |
-| Ratio combinado (no vida) | seguros | `siniestralidad + ratio_gastos` | Calculado (ESEF) |
+| Ratio de siniestralidad (no vida) | seguros | `siniestralidad_neta / ingresos_seguros` | Calculado (ESEF) |
+| Ratio de gastos | seguros | `(gastos_servicio_seguro - siniestralidad_neta) / ingresos_seguros` | Calculado (ESEF) |
+| Ratio combinado (no vida) | seguros | `gastos_servicio_seguro / ingresos_seguros` | Calculado (ESEF) |
 | Ratio de solvencia (Solvencia II) | seguros | `fondos_propios_admisibles / scr` | Publicado por la entidad |
 
 Fuente: Elaboración propia.
 
-Las reglas de mapeo por entidad se resumen en el apartado 3.4.2 y se recogen completas, con el motivo de cada excepción, en la sección `mapeo` del fichero.
-
 # Anexo B. Preguntas de evaluación
 
-**Tabla 3. Preguntas de evaluación y respuestas de referencia**
+**Tabla 2. Preguntas de evaluación y respuestas de referencia**
 
 | Id | Tipo | Pregunta | Respuesta de referencia |
 |---|---|---|---|
@@ -33,7 +31,7 @@ Las reglas de mapeo por entidad se resumen en el apartado 3.4.2 y se recogen com
 | P02 | cifra | ¿Cuál fue el ratio de eficiencia de CaixaBank en 2025? | 39,4 % publicado; 39,43 % calculado |
 | P03 | cifra | ¿Cuál fue el ROA de Santander en 2025? | 0,84 % publicado y calculado |
 | P04 | cifra | ¿Cuál fue el ratio combinado de Línea Directa en 2025? | 92,6 % publicado (no vida, neto de reaseguro); 91,49 % calculado bruto de reaseguro desde ESEF |
-| P05 | cifra | ¿Cuál fue el margen de intereses sobre activos medios (NIM) de Sabadell en 2025? | 1,97 % publicado (margen de intereses / ATM, con TSB); 1,46 % calculado sobre activo total medio de actividades continuadas |
+| P05 | cifra | ¿Cuál fue el margen de intereses sobre activos medios (NIM) de Sabadell en 2025? | 1,97 % publicado (margen de intereses / ATM, con TSB); 1,46 % calculado: margen sin TSB sobre activo total medio (incluye TSB como mantenido para la venta) |
 | P06 | cifra | ¿Cuál fue el ROE de Mapfre en 2025? | 12,4 % publicado; 12,38 % calculado |
 | P07 | regulatorio | ¿Cuál fue el ratio CET1 de Santander a cierre de 2025? | 13,5 % phased-in (13,46 % en la memoria); Santander no publica fully loaded para 2025 |
 | P08 | regulatorio | ¿Cuál fue la tasa de morosidad de CaixaBank en 2025? | 2,1 % |
@@ -54,13 +52,13 @@ Fuente: Elaboración propia a partir del motor de ratios y de los informes de la
 
 # Anexo C. Repositorio y estructura del código
 
-El código, los datos derivados y esta memoria están en el repositorio https://github.com/jorgegarcia-cmd/tfm-ratios-semanticos (acceso bajo solicitud al autor).
+El código, los datos derivados y esta memoria están en el repositorio privado https://github.com/jorgegarcia-cmd/tfm-ratios-semanticos, al que el autor dará acceso al tutor y al tribunal.
 
 - `src/tfm_ratios/ixbrl_parser.py`: lector de Inline XBRL sin taxonomías externas.
 - `config/diccionario_semantico.yaml`: diccionario semántico (conceptos, ratios y reglas de mapeo).
 - `src/tfm_ratios/motor.py`: motor de ratios con trazabilidad.
 - `src/tfm_ratios/comparacion.py`: validación frente a los ratios publicados.
-- `src/tfm_ratios/consulta.py`: capa de consulta y esquema de la herramienta para el modelo de lenguaje.
+- `src/tfm_ratios/consulta.py`: capa de consulta y esquema de la herramienta para un modelo de lenguaje.
 - `app.py`: interfaz de demostración en Streamlit.
 - `data/published/`: ratios publicados por las entidades, con su definición y una cita verificable.
 - `data/results/`: ratios calculados, trazas y comparación.

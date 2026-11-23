@@ -3,8 +3,7 @@
 #
 # Convenciones:
 #   - fuente: esef (calculable desde estados XBRL) | publicado (Pilar 3, SFCR, APM del informe de gestión)
-#   - xbrl_candidatos: etiquetas de la taxonomía NIIF (ifrs-full) que PROBABLEMENTE recogen el concepto.
-#     PENDIENTE DE VERIFICAR contra los ficheros ESEF reales: las entidades usan extensiones propias.
+#   - xbrl_candidatos: etiquetas NIIF (ifrs-full) de partida; las reglas verificadas están en `mapeo`.
 #   - variantes: diferencias de definición conocidas entre entidades (núcleo del problema semántico).
 
 version: 0.2
@@ -119,7 +118,7 @@ ratios:
     variantes:
       - resultado atribuido en lugar de consolidado
       - activo de cierre en lugar de medio
-    interpretacion: En banca, valores típicos por debajo del 1 %; muy sensible al apalancamiento.
+    interpretacion: Muy sensible al apalancamiento; compárese solo entre entidades del mismo tipo.
 
   # --- Banca ---------------------------------------------------------------
   eficiencia:
@@ -132,7 +131,7 @@ ratios:
       - incluye o excluye amortizaciones
       - excluye gastos extraordinarios (reestructuraciones)
       - margen bruto con o sin contribuciones al FUR/FGD (impuesto a la banca)
-    interpretacion: Menor es mejor; por debajo del 40–50 % se considera eficiente.
+    interpretacion: Menor es mejor; compárese con entidades de modelo de negocio similar.
 
   nim:
     nombre: Margen de intereses sobre activos medios (NIM)
@@ -192,7 +191,7 @@ ratios:
     nombre: Ratio de siniestralidad (no vida)
     familia: tecnica_aseguradora
     aplica_a: [seguros]
-    formula: siniestralidad_neta / primas_imputadas_netas
+    formula: siniestralidad_neta / ingresos_seguros
     fuente: esef             # aproximación desde estados y notas
     variantes:
       - bruto frente a neto de reaseguro
@@ -204,7 +203,7 @@ ratios:
     nombre: Ratio de gastos
     familia: eficiencia
     aplica_a: [seguros]
-    formula: gastos_explotacion_netos / primas_imputadas_netas
+    formula: (gastos_servicio_seguro - siniestralidad_neta) / ingresos_seguros
     fuente: esef
     variantes:
       - incluye o excluye gastos de adquisición
@@ -214,7 +213,7 @@ ratios:
     nombre: Ratio combinado (no vida)
     familia: tecnica_aseguradora
     aplica_a: [seguros]
-    formula: siniestralidad + ratio_gastos
+    formula: gastos_servicio_seguro / ingresos_seguros
     fuente: esef
     variantes:
       - la entidad lo publica como APM con su propia definición (validar contra ella)
@@ -228,7 +227,7 @@ ratios:
     fuente: publicado        # Informe SFCR
     variantes:
       - con o sin medidas transitorias
-    interpretacion: Por encima del 100 % cumple; las aseguradoras suelen fijar objetivos internos del 150–200 %.
+    interpretacion: Por encima del 100 % cumple el requerimiento de capital de solvencia; compárese con el objetivo interno que publique la entidad.
 
 # ---------------------------------------------------------------------------
 # MAPEO VERIFICADO CONTRA DATOS REALES (ESEF ejercicio 2025, incluye comparativo 2024)

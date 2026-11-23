@@ -35,7 +35,7 @@ caixabank,banca,2025,roa,0.91,5901.0,647521.5,resultado_ejercicio / media(activo
 caixabank,banca,2025,eficiencia,39.43,6415.0,16270.0,gastos_explotacion_banca / margen_bruto,,
 caixabank,banca,2025,nim,1.65,10671.0,647521.5,margen_intereses / media(activo_total),media de saldos inicial y final,
 caixabank,banca,2025,ltd,83.81,375328.0,447812.0,prestamos_clientela / depositos_clientela,,
-sabadell,banca,2024,roe,12.65,1826.8,14438.7,resultado_atribuido / media(patrimonio_atribuido),media de saldos inicial y final,
+sabadell,banca,2024,roe,12.65,1826.8,14438.7,resultado_atribuido / media(patrimonio_atribuido),media de saldos inicial y final; saldo inicial: resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity),
 sabadell,banca,2024,roe_fondos_propios,11.87,1826.8,15389.2,resultado_atribuido / media(fondos_propios),saldo de cierre (saldo inicial no etiquetado),
 sabadell,banca,2024,roa,0.76,1828.6,239597.9,resultado_ejercicio / media(activo_total),saldo de cierre (saldo inicial no etiquetado),
 sabadell,banca,2024,eficiencia,45.62,2261.8,4958.1,gastos_explotacion_banca / margen_bruto,,
@@ -59,13 +59,13 @@ mapfre,seguros,2025,roa,3.12,1797.3,57609.8,resultado_ejercicio / media(activo_t
 mapfre,seguros,2025,siniestralidad,59.62,15710.3,26352.4,siniestralidad_neta / ingresos_seguros,,
 mapfre,seguros,2025,ratio_gastos,24.8,6535.9,26352.4,gastos_no_siniestros / ingresos_seguros,,
 mapfre,seguros,2025,ratio_combinado,84.42,22246.2,26352.4,gastos_servicio_seguro / ingresos_seguros,,
-linea_directa,seguros,2024,roe,19.13,64.2,335.7,resultado_atribuido / media(patrimonio_atribuido),media de saldos inicial y final,
+linea_directa,seguros,2024,roe,19.13,64.2,335.7,resultado_atribuido / media(patrimonio_atribuido),media de saldos inicial y final; saldo inicial: resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity); saldo final: resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity),
 linea_directa,seguros,2024,roe_fondos_propios,17.51,64.2,366.8,resultado_atribuido / media(fondos_propios),saldo de cierre (saldo inicial no etiquetado),
 linea_directa,seguros,2024,roa,5.19,64.2,1236.1,resultado_ejercicio / media(activo_total),saldo de cierre (saldo inicial no etiquetado),
 linea_directa,seguros,2024,siniestralidad,,,991.3,siniestralidad_neta / ingresos_seguros,,solo etiqueta el total de gastos del servicio de seguro
 linea_directa,seguros,2024,ratio_gastos,,,991.3,gastos_no_siniestros / ingresos_seguros,,solo etiqueta el total de gastos del servicio de seguro
 linea_directa,seguros,2024,ratio_combinado,94.29,934.7,991.3,gastos_servicio_seguro / ingresos_seguros,,
-linea_directa,seguros,2025,roe,22.47,85.7,381.4,resultado_atribuido / media(patrimonio_atribuido),media de saldos inicial y final,
+linea_directa,seguros,2025,roe,22.47,85.7,381.4,resultado_atribuido / media(patrimonio_atribuido),media de saldos inicial y final; saldo inicial: resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity); saldo final: resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity),
 linea_directa,seguros,2025,roe_fondos_propios,22.12,85.7,387.6,resultado_atribuido / media(fondos_propios),media de saldos inicial y final,
 linea_directa,seguros,2025,roa,6.57,85.7,1305.4,resultado_ejercicio / media(activo_total),media de saldos inicial y final,
 linea_directa,seguros,2025,siniestralidad,,,1076.7,siniestralidad_neta / ingresos_seguros,,solo etiqueta el total de gastos del servicio de seguro

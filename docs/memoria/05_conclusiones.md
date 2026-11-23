@@ -10,11 +10,11 @@ El objetivo general de este trabajo era diseñar y validar una herramienta de co
 - **Definiciones divergentes:** las medidas alternativas de rendimiento se definen de forma distinta pese a llevar el mismo nombre; el ROE de los seis informes usa al menos cuatro bases de patrimonio diferentes.
 - **Perímetro y normativa:** los cambios de perímetro y las distintas variantes regulatorias (CET1 *phased-in*, *fully loaded* o de gestión; Solvencia II individual o de grupo) impiden comparar cifras que en apariencia son homogéneas.
 
-**Objetivo 2. Diseñar un diccionario semántico.** Se ha construido un diccionario declarativo con diecisiete conceptos canónicos y doce ratios. Sus reglas de mapeo (suma, diferencia, excepción por entidad y no disponibilidad motivada) bastan para resolver todos los casos encontrados en las seis entidades. La regla del patrimonio atribuido como diferencia entre patrimonio total e intereses minoritarios es un buen ejemplo: sustituye a un elemento NIIF que las entidades usan de forma inconsistente por una definición homogénea basada en dos elementos que todas etiquetan.
+**Objetivo 2. Diseñar un diccionario semántico.** Se ha construido un diccionario declarativo con diecisiete conceptos canónicos y doce ratios. Sus reglas de mapeo (suma, diferencia, excepción por entidad y no disponibilidad motivada) bastan para resolver todos los casos encontrados en las seis entidades. La regla del patrimonio atribuido como diferencia entre patrimonio total e intereses minoritarios es un buen ejemplo: sustituye a un elemento NIIF que las entidades usan de forma inconsistente por una definición homogénea basada en dos elementos estándar, con un tratamiento explícito y trazado de los casos en que falta uno de ellos.
 
-**Objetivo 3. Desarrollar un prototipo trazable.** El prototipo calcula 64 de los 72 ratios que le corresponden a partir de los informes oficiales. Cada cifra conserva su traza hasta el hecho XBRL de origen y, cuando un dato no está etiquetado, el sistema lo declara con su motivo. El lector propio de Inline XBRL procesa los seis informes en unos nueve segundos y sin conexión a internet.
+**Objetivo 3. Desarrollar un prototipo trazable.** El prototipo calcula 64 de los 72 valores que le corresponden (los ocho ratios derivables de ESEF y la variante del ROE sobre fondos propios) a partir de los informes oficiales, e integra los cuatro ratios regulatorios publicados. Cada cifra conserva su traza hasta el hecho XBRL de origen y, cuando un dato no está etiquetado, el sistema lo declara con su motivo. El lector propio de Inline XBRL procesa los seis informes en pocos segundos y sin conexión a internet.
 
-**Objetivo 4. Validar frente a las cifras publicadas.** En 26 de 39 comparaciones el ratio calculado coincide con el publicado con una diferencia inferior a 0,5 puntos; la diferencia mediana es de 0,22 puntos. Las 13 diferencias restantes se explican por diferencias de definición o de perímetro documentadas por las propias entidades. Esto valida el motor y, a la vez, confirma la utilidad de mostrar ambas cifras con sus definiciones.
+**Objetivo 4. Validar frente a las cifras publicadas.** En 23 de 37 comparaciones el ratio calculado coincide con el publicado con una diferencia absoluta inferior a 0,5 puntos; la diferencia absoluta mediana es de 0,22 puntos. Las 14 diferencias restantes se explican principalmente por diferencias de definición o de perímetro, en su mayoría documentadas por las propias entidades. Esto valida el motor y, a la vez, confirma la utilidad de mostrar ambas cifras con sus definiciones.
 
 **Objetivo 5. Evaluar la capa de consulta con un modelo de lenguaje.** [PENDIENTE: completar con los resultados de la sección 4.4.2.]
 
@@ -22,7 +22,7 @@ El objetivo general de este trabajo era diseñar y validar una herramienta de co
 
 Desde el punto de vista financiero, el trabajo documenta con datos reales que comparar ratios publicados por distintas entidades puede llevar a conclusiones erróneas sin un análisis previo de sus definiciones. El caso del ROE de BBVA es ilustrativo: con la base de patrimonio que usa la entidad lidera la muestra, y con la base de fondos propios queda por detrás de CaixaBank.
 
-Desde el punto de vista tecnológico, el trabajo propone una arquitectura en la que el modelo de lenguaje no genera cifras. Sus funciones se limitan a interpretar la pregunta y redactar la respuesta, mientras que un motor determinista y trazable, gobernado por un diccionario semántico explícito, produce los datos. Este diseño hace que la respuesta sea verificable por un analista, requisito imprescindible para su uso en un entorno financiero.
+Desde el punto de vista tecnológico, el trabajo propone una arquitectura en la que el modelo de lenguaje no genera cifras, y la demuestra con un intérprete por reglas. Sus funciones se limitan a interpretar la pregunta y redactar la respuesta, mientras que un motor determinista y trazable, gobernado por un diccionario semántico explícito, produce los datos. Este diseño hace que la respuesta sea verificable por un analista, requisito imprescindible para su uso en un entorno financiero.
 
 ## 5.3. Limitaciones
 
@@ -30,7 +30,8 @@ Desde el punto de vista tecnológico, el trabajo propone una arquitectura en la 
 - **Solo hechos sin dimensiones:** no se aprovechan los desgloses dimensionales, lo que impide, por ejemplo, separar los negocios de vida y no vida.
 - **Mapeo manual asistido:** las reglas se han definido a partir de la exploración de los datos, no de forma automática.
 - **Ratios regulatorios no calculables:** la morosidad, la cobertura, el CET1 y la Solvencia II dependen de la información publicada, porque no están en los estados estructurados.
-- **Evaluación limitada:** se ha usado un número reducido de preguntas y un único modelo generalista, sin integración por API.
+- **Evaluación limitada:** se ha usado un número reducido de preguntas y un único modelo generalista, y la capa de consulta se ha probado con un intérprete por reglas, sin integrar un modelo de lenguaje por API.
+- **Tolerancia de validación:** el umbral absoluto de 0,5 puntos es holgado para ratios de nivel bajo; una tolerancia relativa o específica por ratio daría una validación más exigente.
 
 ## 5.4. Trabajo futuro
 

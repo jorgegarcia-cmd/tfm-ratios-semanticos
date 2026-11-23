@@ -233,7 +233,7 @@ class Escritor:
         largo = [max(len(re.sub(r"[*`]", "", (f[j] if j < len(f) else ""))) for f in filas) for j in range(len(cab))]
         palabra = [max((len(w_) for f in filas for w_ in re.sub(r"[*`]", "", (f[j] if j < len(f) else "")).split()), default=4)
                    for j in range(len(cab))]
-        peso = [max(min(max(l, 6), 60), palabra[j] * 1.25) for j, l in enumerate(largo)]
+        peso = [max(min(max(l, 6), 60), palabra[j] * 1.6) for j, l in enumerate(largo)]
         tot = sum(peso)
         anchos = [max(Cm(16) * w_ / tot, Cm(16) * 0.08) for w_ in peso]
         esc = Cm(16) / sum(anchos)

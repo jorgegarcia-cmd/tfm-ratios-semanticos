@@ -12,7 +12,7 @@ A esta dificultad se suma la aparición de los grandes modelos de lenguaje (LLM)
 
 El problema que motiva este Trabajo Fin de Máster se sitúa en la intersección de estas tres circunstancias: la heterogeneidad de las definiciones de los ratios, la calidad desigual del etiquetado XBRL y la falta de fiabilidad numérica de los modelos de lenguaje. La hipótesis de trabajo es que una capa de contextualización semántica, que haga explícito qué significa cada partida y cada ratio, permite calcular ratios trazables y comparables y, al mismo tiempo, ofrecer a un modelo de lenguaje una base factual sobre la que responder sin inventar cifras.
 
-El trabajo se centra en el sector financiero español porque sus entidades cotizadas publican, junto al informe ESEF, información regulatoria específica (Pilar 3 en banca, informe sobre la situación financiera y de solvencia en seguros) que permite contrastar ambas fuentes, y porque la entrada en vigor de la NIIF 17 en 2023 ha alterado la base de los ratios técnicos de las aseguradoras (International Accounting Standards Board [IASB], 2017b).
+El trabajo se centra en el sector financiero español porque sus entidades cotizadas publican, junto al informe ESEF, información regulatoria específica (Pilar 3 en banca, informe sobre la situación financiera y de solvencia en seguros) cuyas cifras principales se resumen en el propio informe de gestión, y porque la entrada en vigor de la NIIF 17 en 2023 ha alterado la base de los ratios técnicos de las aseguradoras (International Accounting Standards Board [IASB], 2017b).
 
 ## 1.2. Objetivos
 
@@ -22,11 +22,11 @@ Este objetivo se descompone en cinco **objetivos específicos**:
 
 1. **OE1.** Analizar los problemas de comparabilidad que afectan a los ratios del sector financiero: definiciones heterogéneas de las APM, efectos de la normativa contable y prudencial, y calidad del etiquetado ESEF/XBRL.
 2. **OE2.** Diseñar un diccionario semántico que relacione las partidas ESEF/XBRL y los datos publicados por las entidades con un conjunto de conceptos financieros canónicos.
-3. **OE3.** Construir un prototipo que calcule doce ratios (ROE, ROA, eficiencia, margen de intereses sobre activos medios, préstamos sobre depósitos, morosidad, cobertura, CET1, siniestralidad, ratio de gastos, ratio combinado y ratio de Solvencia II) con trazabilidad completa hasta el dato de origen.
+3. **OE3.** Construir un prototipo que calcule los ocho ratios derivables de los estados ESEF (ROE, ROA, eficiencia, margen de intereses sobre activos medios, préstamos sobre depósitos, siniestralidad, ratio de gastos y ratio combinado) e integre los cuatro ratios regulatorios que publican las entidades (morosidad, cobertura, CET1 y Solvencia II), con trazabilidad hasta el dato de origen.
 4. **OE4.** Validar los ratios calculados frente a las APM publicadas por las entidades y explicar las diferencias encontradas.
-5. **OE5.** Evaluar si un modelo de lenguaje apoyado en la capa semántica responde preguntas sobre ratios con mayor fiabilidad que un modelo de lenguaje consultado directamente.
+5. **OE5.** Evaluar si una capa de consulta que obtiene las cifras del motor determinista responde preguntas sobre ratios con mayor fiabilidad que un modelo de lenguaje generalista consultado directamente.
 
-El **alcance** se ha delimitado a seis entidades cotizadas españolas: cuatro bancos (Banco Santander, BBVA, CaixaBank y Banco Sabadell) y dos aseguradoras (Mapfre y Línea Directa Aseguradora). Se analiza el ejercicio 2025 con el comparativo de 2024 que incluye el propio informe. Bankinter y Unicaja, inicialmente consideradas, quedan como trabajo futuro, y Grupo Catalana Occidente se excluye por haber dejado de cotizar el 5 de enero de 2026.
+El **alcance** se ha delimitado a seis entidades cotizadas españolas: cuatro bancos (Banco Santander, BBVA, CaixaBank y Banco Sabadell) y dos aseguradoras (Mapfre y Línea Directa Aseguradora). Se analiza el ejercicio 2025 con el comparativo de 2024 que incluye el propio informe. Bankinter y Unicaja, inicialmente consideradas, quedan como trabajo futuro, y Grupo Catalana Occidente se excluye por haber sido excluido de negociación a comienzos de 2026 tras una OPA de exclusión (Forbes España, 2026).
 
 ## 1.3. Metodología
 
@@ -44,7 +44,7 @@ Para estructurar el proceso se adopta la metodología de Peffers et al. (2007), 
 | Definición de los objetivos de la solución | Requisitos de fuente oficial, cálculo determinista, trazabilidad, explicitud semántica y transparencia ante la falta de datos | 2 y 3 |
 | Diseño y desarrollo | Lector de Inline XBRL, diccionario semántico en YAML, motor de ratios y capa de consulta en lenguaje natural | 3 |
 | Demostración | Cálculo de los doce ratios para seis entidades y dos ejercicios | 4 |
-| Evaluación | (a) Ratios calculados frente a publicados; (b) veinte preguntas a un LLM solo frente a un LLM con capa semántica | 4 |
+| Evaluación | (a) Ratios calculados frente a publicados; (b) veinte preguntas a un asistente de IA generalista frente al prototipo con capa semántica | 4 |
 | Comunicación | Esta memoria y el repositorio del prototipo | 5 y anexos |
 
 Fuente: Elaboración propia a partir de Peffers et al. (2007).
@@ -55,12 +55,12 @@ La primera fase caracteriza los problemas de comparabilidad combinando la revisi
 
 ### 1.3.3. Diseño del artefacto
 
-El artefacto es una herramienta compuesta por cuatro elementos, que se describen en detalle en el capítulo 3:
+El artefacto es una herramienta compuesta por cuatro elementos principales, que el capítulo 3 descompone en siete componentes al separar las fuentes, la contextualización y la interfaz:
 
 - **Un lector propio de Inline XBRL**, escrito en Python, que extrae los hechos numéricos del paquete ESEF con su contexto (entidad, periodo y dimensiones), su unidad y su identificador en el documento. Se prefiere a un procesador XBRL completo porque el objetivo es leer cifras, no validar el informe, y así se evita depender de la descarga de taxonomías externas.
 - **Un diccionario semántico en formato YAML**, que define los conceptos financieros canónicos (por ejemplo, «patrimonio atribuido a la dominante»), las etiquetas XBRL que los representan en cada entidad y el catálogo de ratios con su fórmula, sus variantes de definición y una pauta de interpretación. YAML es legible por un analista sin formación técnica y, a la vez, procesable por un programa.
 - **Un motor de ratios determinista**, que calcula cada ratio a partir del diccionario y guarda una traza completa hasta los hechos XBRL de origen.
-- **Una capa de consulta en lenguaje natural**, en la que un modelo de lenguaje interpreta la pregunta del usuario y redacta la respuesta, pero obtiene las cifras exclusivamente del motor a través de una herramienta con un esquema de entrada cerrado.
+- **Una capa de consulta en lenguaje natural**, diseñada para que un modelo de lenguaje interprete la pregunta y redacte la respuesta obteniendo las cifras exclusivamente del motor, a través de una herramienta con un esquema de entrada cerrado. En este trabajo la capa se demuestra con un intérprete por reglas, sin integrar un modelo por API.
 
 El principio de diseño que articula los cuatro componentes es la separación entre interpretación y cálculo: el conocimiento financiero se hace explícito en el diccionario, el cálculo es determinista y el modelo de lenguaje se limita a las tareas en las que es fiable.
 
@@ -69,7 +69,7 @@ El principio de diseño que articula los cuatro componentes es la separación en
 La demostración consiste en aplicar la herramienta a las seis entidades de la muestra para los ejercicios 2024 y 2025. La evaluación se realiza en dos planos:
 
 1. **Validación de los ratios.** Cada ratio calculado se compara con el valor publicado por la entidad. Las diferencias no se tratan como errores sin más, sino que se explican a partir de las diferencias de definición documentadas en el diccionario. Una herramienta fiable no es la que reproduce exactamente la cifra publicada, sino la que permite saber por qué difiere.
-2. **Evaluación de la capa de consulta.** Se formula un conjunto de veinte preguntas sobre los ratios de la muestra a un modelo de lenguaje consultado directamente y al mismo modelo apoyado en la capa semántica. Las respuestas del modelo consultado directamente las obtiene el autor mediante una interfaz de chat, sin uso de API, y se valoran según su exactitud numérica, la corrección de la fórmula y la presencia de advertencias de comparabilidad.
+2. **Evaluación de la capa de consulta.** Se formula un conjunto de veinte preguntas sobre los ratios de la muestra a un asistente de IA generalista consultado directamente, sin búsqueda web ni documentos, y al prototipo con su capa de consulta. Las respuestas del asistente las obtiene el autor mediante una interfaz de chat, sin uso de API. Todas se valoran con una rúbrica de tres criterios (exactitud de la cifra, trazabilidad de la definición y la fuente, y ausencia de invención con advertencia de los límites de comparabilidad), que aplica un evaluador independiente sobre respuestas anonimizadas.
 
 ### 1.3.5. Fuentes de datos
 
@@ -77,7 +77,7 @@ Se utilizan exclusivamente fuentes oficiales publicadas por las propias entidade
 
 - **Informes financieros anuales consolidados en formato ESEF** del ejercicio 2025, que incluyen el comparativo de 2024. Son la fuente de los ratios calculados.
 - **Informes de gestión y anexos de medidas alternativas de rendimiento**, incluidos en el propio informe anual, como fuente de los ratios publicados y de sus definiciones.
-- **Información regulatoria**: los datos de Pilar 3 publicados por los bancos en aplicación del Reglamento (UE) n.º 575/2013 (2013) y los datos de solvencia de las aseguradoras derivados de la Directiva 2009/138/CE (2009), en la medida en que aparecen en el informe de gestión.
+- **Información regulatoria**: los datos de Pilar 3 publicados por los bancos en aplicación del Reglamento (UE) n.º 575/2013 (2013) y los datos de solvencia de las aseguradoras derivados de la Directiva 2009/138/CE (2009), en la medida en que aparecen en el informe de gestión incluido en el paquete ESEF; no se han procesado los informes de Pilar 3 ni los informes sobre la situación financiera y de solvencia completos.
 
 ### 1.3.6. Herramientas
 
@@ -141,4 +141,4 @@ La memoria se organiza en cinco capítulos, además de las referencias y los ane
 - **Capítulo 4. Resultados:** hallazgos sobre el etiquetado ESEF, ratios calculados, validación frente a los publicados y evaluación del modelo de lenguaje con y sin capa semántica.
 - **Capítulo 5. Conclusiones:** aportaciones, limitaciones y trabajo futuro.
 
-Los anexos recogen el diccionario semántico completo, las preguntas de evaluación y la referencia al repositorio del código.
+Los anexos recogen un resumen del diccionario semántico, las preguntas de evaluación y la referencia al repositorio del código.

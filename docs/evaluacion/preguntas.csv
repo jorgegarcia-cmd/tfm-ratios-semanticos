@@ -3,7 +3,7 @@ P01,cifra,¿Cuál fue el ROE de BBVA en 2025?,"18,4 % publicado por BBVA (fondos
 P02,cifra,¿Cuál fue el ratio de eficiencia de CaixaBank en 2025?,"39,4 % publicado; 39,43 % calculado"
 P03,cifra,¿Cuál fue el ROA de Santander en 2025?,"0,84 % publicado y calculado"
 P04,cifra,¿Cuál fue el ratio combinado de Línea Directa en 2025?,"92,6 % publicado (no vida, neto de reaseguro); 91,49 % calculado bruto de reaseguro desde ESEF"
-P05,cifra,¿Cuál fue el margen de intereses sobre activos medios (NIM) de Sabadell en 2025?,"1,97 % publicado (margen de intereses / ATM, con TSB); 1,46 % calculado sobre activo total medio de actividades continuadas"
+P05,cifra,¿Cuál fue el margen de intereses sobre activos medios (NIM) de Sabadell en 2025?,"1,97 % publicado (margen de intereses / ATM, con TSB); 1,46 % calculado: margen sin TSB sobre activo total medio (incluye TSB como mantenido para la venta)"
 P06,cifra,¿Cuál fue el ROE de Mapfre en 2025?,"12,4 % publicado; 12,38 % calculado"
 P07,regulatorio,¿Cuál fue el ratio CET1 de Santander a cierre de 2025?,"13,5 % phased-in (13,46 % en la memoria); Santander no publica fully loaded para 2025"
 P08,regulatorio,¿Cuál fue la tasa de morosidad de CaixaBank en 2025?,"2,1 %"

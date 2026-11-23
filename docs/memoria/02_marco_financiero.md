@@ -27,13 +27,13 @@ La Tabla 2 resume los doce ratios del catálogo. En este apartado se presentan l
 | Eficiencia | Banca | Gastos de administración y amortizaciones / margen bruto | ESEF |
 | NIM | Banca | Margen de intereses / activo total medio | ESEF |
 | Préstamos/depósitos | Banca | Préstamos a la clientela / depósitos de la clientela | ESEF |
-| Morosidad | Banca | Riesgos dudosos / riesgo crediticio total | Publicado (Pilar 3, APM) |
-| Cobertura | Banca | Provisiones por insolvencias / riesgos dudosos | Publicado (Pilar 3, APM) |
-| CET1 | Banca | Capital CET1 / importe total de la exposición al riesgo | Publicado (Pilar 3) |
+| Morosidad | Banca | Riesgos dudosos / riesgo crediticio total | Publicado en el informe de gestión (origen: Pilar 3) |
+| Cobertura | Banca | Provisiones por insolvencias / riesgos dudosos | Publicado en el informe de gestión (origen: Pilar 3) |
+| CET1 | Banca | Capital CET1 / importe total de la exposición al riesgo | Publicado en el informe de gestión (origen: Pilar 3) |
 | Siniestralidad | Seguros | Siniestralidad / ingresos de seguro (antes, primas imputadas) | ESEF |
 | Ratio de gastos | Seguros | Gastos de explotación / ingresos de seguro | ESEF |
 | Ratio combinado | Seguros | Siniestralidad + ratio de gastos | ESEF |
-| Solvencia II | Seguros | Fondos propios admisibles / capital de solvencia obligatorio | Publicado (SFCR, informe de gestión) |
+| Solvencia II | Seguros | Fondos propios admisibles / capital de solvencia obligatorio | Publicado en el informe de gestión (origen: Solvencia II) |
 
 Fuente: Elaboración propia a partir del diccionario semántico (Anexo A).
 
@@ -69,7 +69,7 @@ Ninguna de las dos se obtiene directamente de los estados financieros. Las entid
 
 La **ratio CET1** es el cociente entre el capital ordinario de nivel 1 y el importe total de la exposición al riesgo (activos ponderados por riesgo), tal como los define el Reglamento (UE) n.º 575/2013 (2013). Las entidades lo publican en la plantilla de métricas clave de su informe de Pilar 3 (Reglamento de Ejecución (UE) 2021/637, 2021).
 
-Su interpretación no debe hacerse frente a un umbral único, sino frente al requerimiento que el supervisor fija a cada entidad. La variante más relevante es la distinción entre el ratio *phased-in*, que aplica las disposiciones transitorias, y el *fully loaded*, que asume su aplicación completa. Las disposiciones transitorias de la NIIF 9 (Financial Stability Institute [FSI], 2017) y la implantación gradual del suelo de capital introducido por la última reforma del reglamento (EBA, s. f.) hacen que esta distinción siga siendo relevante en los ejercicios analizados.
+Su interpretación no debe hacerse frente a un umbral único, sino frente al requerimiento que el supervisor fija a cada entidad. La variante más relevante es la distinción entre el ratio *phased-in*, que aplica las disposiciones transitorias, y el *fully loaded*, que asume su aplicación completa. Las disposiciones transitorias de la NIIF 9 (Financial Stability Institute [FSI], 2017) y la implantación gradual del suelo de capital introducido por la última reforma del reglamento (Reglamento (UE) 2024/1623, 2024) hacen que esta distinción siga siendo relevante en los ejercicios analizados.
 
 ## 2.3. Ratios de seguros
 
@@ -103,7 +103,7 @@ ESMA ha complementado las Directrices con un documento de preguntas y respuestas
 
 Estas exigencias mejoran la transparencia, pero no garantizan la comparabilidad, por cuatro razones. Primera, las Directrices regulan cómo se explica una APM, no cómo se define: dos bancos pueden calcular el ROE con denominadores distintos y cumplir ambos plenamente. Segunda, la coherencia se exige en el tiempo dentro de cada entidad, no entre entidades. Tercera, las medidas prudenciales definidas en la normativa de requerimientos de capital quedan fuera de su ámbito (ESMA, 2015). Cuarta, las definiciones y conciliaciones figuran en el informe de gestión, que en ESEF no se etiqueta con el detalle de los estados financieros.
 
-El primer punto se aprecia con claridad en la muestra de este trabajo. En el ejercicio 2025, las seis entidades definen y concilian su ROE, pero con denominadores distintos: Santander parte del patrimonio sin minoritarios con ajustes por valoración y añade los dividendos; BBVA y CaixaBank suman a los fondos propios los ajustes por valoración, y CaixaBank resta además el cupón de los AT1 del numerador; Sabadell utiliza los fondos propios sin ajustes por valoración; y Línea Directa emplea una media simple de dos cierres minorada por el dividendo propuesto. El tipo de media también varía (diaria, mensual o de dos puntos). Todas cumplen las Directrices y, sin embargo, sus ROE no son directamente comparables. El detalle de estas definiciones y su efecto cuantitativo se presentan en el capítulo 4.
+El primer punto se aprecia con claridad en la muestra de este trabajo. En el ejercicio 2025, los cuatro bancos definen y concilian su ROE en un anexo de medidas alternativas de rendimiento; Mapfre remite sus definiciones a un documento externo y Línea Directa las explica en el propio informe de gestión. Los denominadores son distintos: Santander parte del patrimonio sin minoritarios con ajustes por valoración y añade los dividendos; BBVA y CaixaBank suman a los fondos propios los ajustes por valoración, y CaixaBank resta además el cupón de los AT1 del numerador; Sabadell utiliza los fondos propios sin ajustes por valoración; y Línea Directa emplea una media simple de dos cierres minorada por el dividendo propuesto. El tipo de media también varía (diaria, mensual o de dos puntos). Aun con estas explicaciones, sus ROE no son directamente comparables. El detalle de estas definiciones y su efecto cuantitativo se presentan en el capítulo 4.
 
 ## 2.5. Efectos normativos en la comparabilidad
 

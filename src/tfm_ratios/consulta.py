@@ -101,6 +101,8 @@ def consultar(entidad: str, ratio: str, ejercicio: int) -> dict:
             "valor_pct": float(r.valor_pct), "variante": r.variante if isinstance(r.variante, str) else "",
             "definicion_entidad": r.definicion_entidad, "fuente": r.fuente,
         })
+    if res["calculado"] and not res["publicado"] and ratio != "roe_fondos_propios":
+        res["avisos"].append("La entidad no publica este ratio en su informe anual: solo se dispone del valor calculado.")
     if res["calculado"] and res["publicado"]:
         dif = res["calculado"]["valor_pct"] - res["publicado"][0]["valor_pct"]
         if abs(dif) >= 0.5:

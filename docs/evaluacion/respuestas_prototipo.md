@@ -26,7 +26,7 @@ Ratio de eficiencia de CaixaBank en 2025:
 La entidad publica 39.40 %: Gastos de administración y amortización / margen bruto
 La entidad publica 39.40 % (sin gravamen a la banca): Gastos de administración y amortización / (margen bruto - gravamen a la banca); 2025 sin gravamen
 Comparables del mismo grupo y definición: Banco Sabadell 46.74 %, Banco Santander 42.12 %, CaixaBank 39.43 %, BBVA 38.81 %.
-Interpretación: Menor es mejor; por debajo del 40–50 % se considera eficiente.
+Interpretación: Menor es mejor; compárese con entidades de modelo de negocio similar.
 ```
 
 ## P03 · ¿Cuál fue el ROA de Santander en 2025?
@@ -40,7 +40,7 @@ La entidad publica 0.84 % (RoA): Resultado consolidado del ejercicio (incl. mino
 La entidad publica 2.44 % (RoRWA): Resultado consolidado / promedio de activos ponderados por riesgo (criterios CRR)
 Comparables del mismo grupo y definición: BBVA 1.36 %, CaixaBank 0.91 %, Banco Santander 0.84 %, Banco Sabadell 0.73 %.
 Base del denominador: media de saldos inicial y final.
-Interpretación: En banca, valores típicos por debajo del 1 %; muy sensible al apalancamiento.
+Interpretación: Muy sensible al apalancamiento; compárese solo entre entidades del mismo tipo.
 ```
 
 ## P04 · ¿Cuál fue el ratio combinado de Línea Directa en 2025?
@@ -122,7 +122,7 @@ Interpretación: entidades=['mapfre'], ratios=['solvencia_ii'], ejercicios=[2025
 ```
 Ratio de Solvencia II de Mapfre en 2025:
 La entidad publica 210.40 % (grupo, septiembre 2025 (último disponible)): Fondos propios admisibles / SCR del Grupo; SCR recalculado trimestralmente con estimaciones; dato a 30/09/2025, no a cierre
-Interpretación: Por encima del 100 % cumple; las aseguradoras suelen fijar objetivos internos del 150–200 %.
+Interpretación: Por encima del 100 % cumple el requerimiento de capital de solvencia; compárese con el objetivo interno que publique la entidad.
 ```
 
 ## P11 · ¿Cuál fue el ratio de siniestralidad de Línea Directa en 2025?
@@ -186,27 +186,27 @@ Ratio de eficiencia de Banco Santander en 2025:
 La entidad publica 41.20 % (ordinaria): Costes de explotación ordinarios (gastos generales de administración + amortizaciones, ajustados por actividad no ordinaria) / margen bruto ordinario
 Comparables del mismo grupo y definición: Banco Sabadell 46.74 %, Banco Santander 42.12 %, CaixaBank 39.43 %, BBVA 38.81 %.
 El valor calculado difiere +0.92 p.p. del publicado por la entidad: las definiciones no coinciden (ver definición de la entidad).
-Interpretación: Menor es mejor; por debajo del 40–50 % se considera eficiente.
+Interpretación: Menor es mejor; compárese con entidades de modelo de negocio similar.
 
 Ratio de eficiencia de BBVA en 2025:
 38.81 % calculado (gastos_explotacion_banca / margen_bruto; 14,332 / 36,931 M€).
 La entidad publica 38.80 %: Gastos de explotación (personal + otros gastos de administración + amortización) / margen bruto estatutario
 Comparables del mismo grupo y definición: Banco Sabadell 46.74 %, Banco Santander 42.12 %, CaixaBank 39.43 %, BBVA 38.81 %.
-Interpretación: Menor es mejor; por debajo del 40–50 % se considera eficiente.
+Interpretación: Menor es mejor; compárese con entidades de modelo de negocio similar.
 
 Ratio de eficiencia de CaixaBank en 2025:
 39.43 % calculado (gastos_explotacion_banca / margen_bruto; 6,415 / 16,270 M€).
 La entidad publica 39.40 %: Gastos de administración y amortización / margen bruto
 La entidad publica 39.40 % (sin gravamen a la banca): Gastos de administración y amortización / (margen bruto - gravamen a la banca); 2025 sin gravamen
 Comparables del mismo grupo y definición: Banco Sabadell 46.74 %, Banco Santander 42.12 %, CaixaBank 39.43 %, BBVA 38.81 %.
-Interpretación: Menor es mejor; por debajo del 40–50 % se considera eficiente.
+Interpretación: Menor es mejor; compárese con entidades de modelo de negocio similar.
 
 Ratio de eficiencia de Banco Sabadell en 2025:
 46.74 % calculado (gastos_explotacion_banca / margen_bruto; 2,288 / 4,896 M€).
 La entidad publica 49.30 % (incl. actividades interrumpidas (TSB)): Total costes de explotación (administración + amortización) / margen bruto, sumando actividades continuadas e interrumpidas (TSB)
 Comparables del mismo grupo y definición: Banco Sabadell 46.74 %, Banco Santander 42.12 %, CaixaBank 39.43 %, BBVA 38.81 %.
 El valor calculado difiere -2.56 p.p. del publicado por la entidad: las definiciones no coinciden (ver definición de la entidad).
-Interpretación: Menor es mejor; por debajo del 40–50 % se considera eficiente.
+Interpretación: Menor es mejor; compárese con entidades de modelo de negocio similar.
 ```
 
 ## P14 · ¿Qué aseguradora tuvo mejor ratio combinado en 2025, Mapfre o Línea Directa?
@@ -297,7 +297,7 @@ Ratio de eficiencia de Banco Sabadell en 2025:
 La entidad publica 49.30 % (incl. actividades interrumpidas (TSB)): Total costes de explotación (administración + amortización) / margen bruto, sumando actividades continuadas e interrumpidas (TSB)
 Comparables del mismo grupo y definición: Banco Sabadell 46.74 %, Banco Santander 42.12 %, CaixaBank 39.43 %, BBVA 38.81 %.
 El valor calculado difiere -2.56 p.p. del publicado por la entidad: las definiciones no coinciden (ver definición de la entidad).
-Interpretación: Menor es mejor; por debajo del 40–50 % se considera eficiente.
+Interpretación: Menor es mejor; compárese con entidades de modelo de negocio similar.
 ```
 
 ## P19 · ¿Cuál es el ratio préstamos/depósitos de Santander en 2025 según sus estados ESEF?
@@ -320,5 +320,6 @@ Margen de intereses sobre activos medios (NIM) de BBVA en 2025:
 3.22 % calculado (margen_intereses / media(activo_total); 26,280 / 815,989 M€).
 Comparables del mismo grupo y definición: BBVA 3.22 %, Banco Santander 2.29 %, CaixaBank 1.65 %, Banco Sabadell 1.46 %.
 Base del denominador: media de saldos inicial y final.
+La entidad no publica este ratio en su informe anual: solo se dispone del valor calculado.
 Interpretación: Muy sensible al ciclo de tipos de interés.
 ```

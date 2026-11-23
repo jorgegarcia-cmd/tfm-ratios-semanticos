@@ -31,7 +31,7 @@ La implementación se ha realizado en Python, con un número reducido de depende
 
 ### 3.3.1. Fuentes
 
-Se han utilizado los informes financieros anuales consolidados del ejercicio 2025 de seis entidades: Banco Santander, BBVA, CaixaBank y Banco Sabadell (banca), y Mapfre y Línea Directa Aseguradora (seguros). Cada informe incluye las cifras comparativas de 2024, lo que permite analizar ambos ejercicios con un único documento por entidad. Los paquetes, en formato de paquete de informe XBRL (`.xbri`), contienen un documento XHTML con XBRL incrustado (*Inline XBRL*) y la taxonomía de extensión de la entidad (esquema y bases de enlaces de cálculo, presentación, definición y etiquetas).
+Se han utilizado los informes financieros anuales consolidados del ejercicio 2025 de seis entidades: Banco Santander, BBVA, CaixaBank y Banco Sabadell (banca), y Mapfre y Línea Directa Aseguradora (seguros) (Banco Santander, 2026; Banco Bilbao Vizcaya Argentaria, 2026; CaixaBank, 2026; Banco de Sabadell, 2026; Mapfre, 2026; Línea Directa Aseguradora, 2026). Cada informe incluye las cifras comparativas de 2024, lo que permite analizar ambos ejercicios con un único documento por entidad. Los paquetes, en formato de paquete de informe XBRL (`.xbri`), contienen un documento XHTML con XBRL incrustado (*Inline XBRL*) y la taxonomía de extensión de la entidad (esquema y bases de enlaces de cálculo, presentación, definición y etiquetas).
 
 ### 3.3.2. Un lector propio de Inline XBRL
 
@@ -42,7 +42,7 @@ La opción habitual para procesar XBRL es un procesador completo como Arelle. Si
 - **Etiquetas:** recupera de la base de enlaces de etiquetas del paquete el nombre en español de cada elemento de extensión, lo que permite interpretarlos sin consultar fuentes externas.
 - **Deduplicación:** elimina los hechos repetidos, ya que una misma cifra aparece a menudo en los estados y en las notas.
 
-El resultado es una tabla plana por entidad con una fila por hecho numérico. El procesamiento de los seis paquetes, que suman unos 157 MB, tarda alrededor de nueve segundos y produce 6.835 hechos (Tabla 1).
+El resultado es una tabla plana por entidad con una fila por hecho numérico. El procesamiento de los seis paquetes, que suman unos 157 MB, tarda menos de diez segundos en el entorno de desarrollo utilizado y produce 6.835 hechos (Tabla 1).
 
 **Tabla 1. Hechos numéricos extraídos por entidad (informe ESEF 2025)**
 
@@ -89,8 +89,8 @@ La Tabla 2 resume las reglas aplicadas a los conceptos donde el etiquetado de la
 
 | Concepto | Regla aplicada | Motivo |
 |---|---|---|
-| Patrimonio atribuido | Equity − NoncontrollingInterests (todas) | Solo dos entidades usan el elemento estándar, y una de ellas lo usa para otra magnitud |
-| Fondos propios (variante) | Extensión propia de cada entidad | No existe elemento NIIF equivalente en uso |
+| Patrimonio atribuido | Equity − NoncontrollingInterests (todas; si no hay minoritarios etiquetados, Equity) | Solo dos entidades usan el elemento estándar, y una de ellas lo usa para otra magnitud |
+| Fondos propios (variante) | Extensión propia (Santander, BBVA, Sabadell, Línea Directa); elemento NIIF mal usado (CaixaBank); no disponible (Mapfre) | No existe un elemento NIIF equivalente de uso común |
 | Margen de intereses | InterestRevenueExpense (banca) | Ningún banco usa InterestIncomeExpenseNet |
 | Margen bruto | GrossProfit (banca) | Los bancos reutilizan un elemento pensado para la industria |
 | Préstamos y depósitos de la clientela | Total (CaixaBank, Sabadell); suma de carteras (BBVA); no disponible (Santander) | Distinto nivel de desglose |
@@ -103,7 +103,7 @@ Fuente: Elaboración propia.
 
 La regla del patrimonio atribuido merece una explicación detallada, porque ilustra el valor de la capa semántica. La taxonomía NIIF ofrece un elemento específico para esta magnitud (`EquityAttributableToOwnersOfParent`), pero solo CaixaBank y Mapfre lo utilizan. En el caso de CaixaBank, además, la cifra etiquetada con ese elemento (38.962 millones de euros) es mayor que su patrimonio neto total (38.526 millones). Esto solo es posible si en realidad corresponde a los fondos propios, que excluyen el otro resultado global acumulado, negativo en esta entidad. El resto de bancos etiqueta sus fondos propios con extensiones propias.
 
-Un mapeo literal por nombre de elemento habría tomado para CaixaBank los fondos propios y para las demás entidades nada, o la extensión que cada una haya elegido. La regla adoptada, patrimonio total menos minoritarios, se basa en dos elementos estándar que las seis entidades sí etiquetan. Por tanto, produce una magnitud homogénea. La variante sobre fondos propios se conserva como ratio separado, porque es la base que muchas entidades usan en sus medidas alternativas de rendimiento.
+Un mapeo literal por nombre de elemento habría tomado para CaixaBank los fondos propios y para las demás entidades nada, o la extensión que cada una haya elegido. La regla adoptada, patrimonio total menos minoritarios, se basa en dos elementos estándar. Las seis entidades etiquetan el patrimonio total y cinco de ellas los minoritarios; Línea Directa, sin minoritarios relevantes, no los etiqueta, y Sabadell no lo hace en el saldo de 2023. En esos casos se toma el patrimonio total y el motor lo indica en la traza. El resultado es una magnitud homogénea. La variante sobre fondos propios se conserva como ratio separado, porque es la base que muchas entidades usan en sus medidas alternativas de rendimiento.
 
 ## 3.5. Motor de ratios
 
@@ -125,7 +125,7 @@ Cada ratio se guarda con su traza completa en `data/results/trazas.json`: la reg
 
 ### 3.5.3. Cobertura
 
-El motor calcula 64 de los 72 ratios que le corresponden (89 %). Los ocho restantes no son calculables a partir de los datos etiquetados: la ratio préstamos/depósitos de Santander, la siniestralidad y el ratio de gastos de Línea Directa en ambos ejercicios, y el ROE sobre fondos propios de Mapfre. En todos los casos la herramienta informa del motivo. Los ratios regulatorios (morosidad, cobertura, CET1 y Solvencia II) no se calculan: proceden de la información publicada por las entidades y se tratan en el apartado siguiente.
+El motor calcula 64 de los 72 valores que le corresponden (89 %): los ocho ratios derivables de ESEF más la variante del ROE sobre fondos propios, para cada entidad a la que aplican y para los dos ejercicios. Los ocho restantes no son calculables a partir de los datos etiquetados: la ratio préstamos/depósitos de Santander, la siniestralidad y el ratio de gastos de Línea Directa en ambos ejercicios, y el ROE sobre fondos propios de Mapfre. En todos los casos la herramienta informa del motivo. Los ratios regulatorios (morosidad, cobertura, CET1 y Solvencia II) no se calculan: proceden de la información publicada por las entidades y se tratan en el apartado siguiente.
 
 ## 3.6. Datos publicados por las entidades
 

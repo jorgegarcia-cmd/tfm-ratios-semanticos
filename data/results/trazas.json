@@ -1564,7 +1564,7 @@
    ],
    "motivo": null
   },
-  "nota": "media de saldos inicial y final"
+  "nota": "media de saldos inicial y final; saldo inicial: resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity)"
  },
  {
   "entidad": "sabadell",
@@ -2469,7 +2469,7 @@
   "denominador": {
    "concepto": "patrimonio_atribuido",
    "valor": 335676000.0,
-   "regla": "media(resta)",
+   "regla": "media(resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity))",
    "hechos": [
     {
      "etiqueta": "ifrs-full:Equity",
@@ -2486,7 +2486,7 @@
    ],
    "motivo": null
   },
-  "nota": "media de saldos inicial y final"
+  "nota": "media de saldos inicial y final; saldo inicial: resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity); saldo final: resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity)"
  },
  {
   "entidad": "linea_directa",
@@ -2671,7 +2671,7 @@
   "denominador": {
    "concepto": "patrimonio_atribuido",
    "valor": 381386000.0,
-   "regla": "media(resta)",
+   "regla": "media(resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity))",
    "hechos": [
     {
      "etiqueta": "ifrs-full:Equity",
@@ -2688,7 +2688,7 @@
    ],
    "motivo": null
   },
-  "nota": "media de saldos inicial y final"
+  "nota": "media de saldos inicial y final; saldo inicial: resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity); saldo final: resta (sin ifrs-full:NoncontrollingInterests etiquetado: se toma ifrs-full:Equity)"
  },
  {
   "entidad": "linea_directa",
