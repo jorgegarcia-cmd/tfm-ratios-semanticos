@@ -12,7 +12,7 @@ A esta dificultad se suma la aparición de los grandes modelos de lenguaje (LLM)
 
 El problema que motiva este Trabajo Fin de Máster se sitúa en la intersección de estas tres circunstancias: la heterogeneidad de las definiciones de los ratios, la calidad desigual del etiquetado XBRL y la falta de fiabilidad numérica de los modelos de lenguaje. La hipótesis de trabajo es que una capa de contextualización semántica, que haga explícito qué significa cada partida y cada ratio, permite calcular ratios trazables y comparables y, al mismo tiempo, ofrecer a un modelo de lenguaje una base factual sobre la que responder sin inventar cifras.
 
-El trabajo se centra en el sector financiero español por tres razones. Primera, sus entidades cotizadas publican informes ESEF y, en paralelo, información regulatoria específica (Pilar 3 en banca, informe sobre la situación financiera y de solvencia en seguros), lo que permite contrastar ambas fuentes. Segunda, la entrada en vigor de la NIIF 17 en 2023 ha alterado la presentación de la cuenta de resultados de las aseguradoras y, con ella, la base de sus ratios técnicos (IASB, 2017b). Tercera, es un sector en el que la comparabilidad tiene consecuencias directas: los ratios se utilizan para fijar precios de las acciones, para valorar la calidad crediticia y para la supervisión.
+El trabajo se centra en el sector financiero español porque sus entidades cotizadas publican, junto al informe ESEF, información regulatoria específica (Pilar 3 en banca, informe sobre la situación financiera y de solvencia en seguros) que permite contrastar ambas fuentes, y porque la entrada en vigor de la NIIF 17 en 2023 ha alterado la base de los ratios técnicos de las aseguradoras (IASB, 2017b).
 
 ## 1.2. Objetivos
 

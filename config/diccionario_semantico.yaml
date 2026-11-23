@@ -77,6 +77,19 @@ conceptos:
     tipo: flujo
     xbrl_candidatos: [ifrs-full:InsuranceServiceExpensesFromInsuranceContractsIssued]
 
+  fondos_propios:
+    nombre: Fondos propios (patrimonio atribuido sin otro resultado global acumulado)
+    tipo: stock
+    xbrl_candidatos: []   # extensiones propias de cada entidad
+  siniestralidad_neta:
+    nombre: Gastos por siniestros y prestaciones del servicio de seguro
+    tipo: flujo
+    xbrl_candidatos: []
+  gastos_adquisicion_seguro:
+    nombre: Gastos de adquisición atribuibles a contratos de seguro
+    tipo: flujo
+    xbrl_candidatos: []
+
 # ---------------------------------------------------------------------------
 # RATIOS
 # ---------------------------------------------------------------------------
