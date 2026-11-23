@@ -1,44 +1,44 @@
-entidad,ratio,ejercicio,base_calculada,calculado_pct,publicado_pct,variante_publicada,diferencia_pp,coincide,definicion_entidad
-santander,roe,2024,roe,12.96,13.0,,-0.04,True,Beneficio atribuido a la dominante / promedio de patrimonio neto sin minoritarios (capital y reservas + OCI acumulado + beneficio atribuido + dividendos y retribuciones); promedio = media de saldos mensuales
-santander,roa,2024,roa,0.76,0.76,RoA,0.0,True,Resultado consolidado del ejercicio (incl. minoritarios) / promedio de activos totales (media mensual)
-santander,eficiencia,2024,eficiencia,43.08,41.8,ordinaria,1.28,False,"Costes de explotación ordinarios (gastos generales de administración + amortizaciones, ajustados por actividad no ordinaria) / margen bruto ordinario"
-santander,ltd,2024,ltd,,100.0,,,,Préstamos y anticipos a la clientela netos de fondos de insolvencias / depósitos de la clientela (saldos de cierre)
-santander,roe,2025,roe,13.98,13.9,,0.08,True,Beneficio atribuido a la dominante / promedio de patrimonio neto sin minoritarios (capital y reservas + OCI acumulado + beneficio atribuido + dividendos y retribuciones); promedio = media de saldos mensuales
-santander,roa,2025,roa,0.84,0.84,RoA,0.0,True,Resultado consolidado del ejercicio (incl. minoritarios) / promedio de activos totales (media mensual)
-santander,eficiencia,2025,eficiencia,42.12,41.2,ordinaria,0.92,False,"Costes de explotación ordinarios (gastos generales de administración + amortizaciones, ajustados por actividad no ordinaria) / margen bruto ordinario"
-santander,ltd,2025,ltd,,98.0,,,,Préstamos y anticipos a la clientela netos de fondos de insolvencias / depósitos de la clientela (saldos de cierre)
-bbva,roe,2024,roe,18.73,18.9,,-0.17,True,"Resultado atribuido / (fondos propios medios + OCI acumulado medio); medias móviles ponderadas de cierres mensuales, ajustadas por dividendo-opción"
-bbva,roa,2024,roa,1.37,1.36,ROA,0.01,True,Resultado del ejercicio (incl. minoritarios) / total activo medio (media móvil ponderada mensual)
-bbva,eficiencia,2024,eficiencia,40.0,40.0,,0.0,True,Gastos de explotación (personal + otros gastos de administración + amortización) / margen bruto estatutario
-bbva,roe,2025,roe,18.6,18.4,,0.2,True,"Resultado atribuido / (fondos propios medios + OCI acumulado medio); medias móviles ponderadas de cierres mensuales, ajustadas por dividendo-opción"
-bbva,roa,2025,roa,1.36,1.36,ROA,0.0,True,Resultado del ejercicio (incl. minoritarios) / total activo medio (media móvil ponderada mensual)
-bbva,eficiencia,2025,eficiencia,38.81,38.8,,0.01,True,Gastos de explotación (personal + otros gastos de administración + amortización) / margen bruto estatutario
-caixabank,roe,2024,roe,15.82,15.4,,0.42,True,(Resultado atribuido - cupón AT1) / (fondos propios + ajustes de valoración) medios 12M (media de saldos medios mensuales)
-caixabank,roa,2024,roa,0.94,0.9,ROA,0.04,True,(Resultado después de impuestos y antes de minoritarios - cupón AT1) / activos totales medios 12M (media de saldos diarios)
-caixabank,eficiencia,2024,eficiencia,38.48,38.5,,-0.02,True,Gastos de administración y amortización / margen bruto
-caixabank,ltd,2024,ltd,82.92,85.5,,-2.58,False,Crédito a la clientela de gestión neto (bruto - fondos insolvencias - crédito de mediación) / (depósitos de clientes + periodificadoras en cesión temporal y otros)
-caixabank,roe,2025,roe,15.64,14.9,,0.74,False,(Resultado atribuido - cupón AT1) / (fondos propios + ajustes de valoración) medios 12M (media de saldos medios mensuales)
-caixabank,roa,2025,roa,0.91,0.9,ROA,0.01,True,(Resultado después de impuestos y antes de minoritarios - cupón AT1) / activos totales medios 12M (media de saldos diarios)
-caixabank,eficiencia,2025,eficiencia,39.43,39.4,,0.03,True,Gastos de administración y amortización / margen bruto
-caixabank,ltd,2025,ltd,83.81,86.9,,-3.09,False,Crédito a la clientela de gestión neto (bruto - fondos insolvencias - crédito de mediación) / (depósitos de clientes + periodificadoras en cesión temporal y otros)
-sabadell,roe,2024,roe_fondos_propios,11.87,12.4,,-0.53,False,"Beneficio atribuido al grupo / fondos propios medios (media aritmética del último día de cada mes, 12 meses); sin OCI ni ajuste AT1"
-sabadell,roa,2024,roa,0.76,0.8,ROA,-0.04,True,Resultado consolidado / activos totales medios (media de saldos diarios 12 meses)
-sabadell,eficiencia,2024,eficiencia,45.62,48.7,incl. actividades interrumpidas (TSB),-3.08,False,"Total costes de explotación (administración + amortización) / margen bruto, sumando actividades continuadas e interrumpidas (TSB)"
-sabadell,nim,2024,nim,1.57,2.07,margen de intereses / ATM,-0.5,False,Margen de intereses / activos totales medios (no definido como MAR formal)
-sabadell,ltd,2024,ltd,93.54,93.2,,0.34,True,Préstamos y anticipos a la clientela sin ATA ni créditos de mediación / recursos de clientes en balance (pasivos a coste amortizado minoristas)
-sabadell,roe,2025,roe_fondos_propios,11.83,11.9,,-0.07,True,"Beneficio atribuido al grupo / fondos propios medios (media aritmética del último día de cada mes, 12 meses); sin OCI ni ajuste AT1"
-sabadell,roa,2025,roa,0.73,0.7,ROA,0.03,True,Resultado consolidado / activos totales medios (media de saldos diarios 12 meses)
-sabadell,eficiencia,2025,eficiencia,46.74,49.3,incl. actividades interrumpidas (TSB),-2.56,False,"Total costes de explotación (administración + amortización) / margen bruto, sumando actividades continuadas e interrumpidas (TSB)"
-sabadell,nim,2025,nim,1.46,1.97,margen de intereses / ATM,-0.51,False,Margen de intereses / activos totales medios (no definido como MAR formal)
-sabadell,ltd,2025,ltd,89.79,93.5,,-3.71,False,Préstamos y anticipos a la clientela sin ATA ni créditos de mediación / recursos de clientes en balance (pasivos a coste amortizado minoristas)
-mapfre,roe,2024,roe,10.88,11.1,,-0.22,True,Beneficio neto atribuible a la sociedad matriz (deducidos socios externos) / fondos propios medios
-mapfre,ratio_combinado,2024,ratio_combinado,86.53,93.0,no vida,-6.47,False,Relación entre costes del seguro y volumen de ingresos No Vida (neto de reaseguro)
-mapfre,roe,2025,roe,12.38,12.4,,-0.02,True,Beneficio neto atribuible a la sociedad matriz (deducidos socios externos) / fondos propios medios (detalle de cálculo remitido a documento MAR externo)
-mapfre,ratio_combinado,2025,ratio_combinado,84.42,90.2,no vida,-5.78,False,"Relación entre costes del seguro y volumen de ingresos No Vida; suma de siniestralidad y gastos, 'normalmente sobre primas imputadas netas de reaseguro' (bajo NIIF 17)"
-linea_directa,siniestralidad,2024,siniestralidad,,72.6,total (tabla ratios de gestión),,,Siniestralidad neta de reaseguro / ingresos de seguro netos de reaseguro
-linea_directa,ratio_gastos,2024,ratio_gastos,,22.1,total (tabla ratios de gestión),,,Gastos de explotación netos / ingresos de seguro netos de reaseguro
-linea_directa,ratio_combinado,2024,ratio_combinado,94.29,94.7,"no vida (total, neto de reaseguro)",-0.41,True,"(Reclamaciones incurridas + otros gastos atribuibles al servicio del seguro) / ingresos de seguro, todo neto de reaseguro (PAA, NIIF 17)"
-linea_directa,roe,2025,roe,22.47,22.9,RoAE,-0.43,True,"Beneficio después de impuestos / patrimonio neto promedio de 2024 y 2025 (media de dos cierres), con patrimonio 2025 minorado por el dividendo complementario propuesto (15 M€)"
-linea_directa,siniestralidad,2025,siniestralidad,,71.6,total (tabla ratios de gestión),,,Siniestralidad neta de reaseguro / ingresos de seguro netos de reaseguro
-linea_directa,ratio_gastos,2025,ratio_gastos,,21.0,total (tabla ratios de gestión),,,Gastos de explotación netos / ingresos de seguro netos de reaseguro
-linea_directa,ratio_combinado,2025,ratio_combinado,91.49,92.6,"no vida (total, neto de reaseguro)",-1.11,False,"(Reclamaciones incurridas + otros gastos atribuibles al servicio del seguro) / ingresos de seguro, todo neto de reaseguro (PAA, NIIF 17)"
+entidad,ratio,ejercicio,diferencia_pp
+santander,roe,2024,-0.04
+santander,roa,2024,0.0
+santander,eficiencia,2024,1.28
+santander,ltd,2024,
+santander,roe,2025,0.08
+santander,roa,2025,0.0
+santander,eficiencia,2025,0.92
+santander,ltd,2025,
+bbva,roe,2024,-0.17
+bbva,roa,2024,0.01
+bbva,eficiencia,2024,0.0
+bbva,roe,2025,0.2
+bbva,roa,2025,0.0
+bbva,eficiencia,2025,0.01
+caixabank,roe,2024,0.42
+caixabank,roa,2024,0.04
+caixabank,eficiencia,2024,-0.02
+caixabank,ltd,2024,-2.58
+caixabank,roe,2025,0.74
+caixabank,roa,2025,0.01
+caixabank,eficiencia,2025,0.03
+caixabank,ltd,2025,-3.09
+sabadell,roe,2024,-0.53
+sabadell,roa,2024,-0.04
+sabadell,eficiencia,2024,-3.08
+sabadell,nim,2024,-0.5
+sabadell,ltd,2024,0.34
+sabadell,roe,2025,-0.07
+sabadell,roa,2025,0.03
+sabadell,eficiencia,2025,-2.56
+sabadell,nim,2025,-0.51
+sabadell,ltd,2025,-3.71
+mapfre,roe,2024,-0.22
+mapfre,ratio_combinado,2024,-6.47
+mapfre,roe,2025,-0.02
+mapfre,ratio_combinado,2025,-5.78
+linea_directa,siniestralidad,2024,
+linea_directa,ratio_gastos,2024,
+linea_directa,ratio_combinado,2024,-0.41
+linea_directa,roe,2025,-0.43
+linea_directa,siniestralidad,2025,
+linea_directa,ratio_gastos,2025,
+linea_directa,ratio_combinado,2025,-1.11

@@ -161,7 +161,7 @@ function fillRatios(){const e=$('#se').value;const rs=[...new Set(D.filas.filter
 async function traza(){
   const t=await (await fetch(`/api/traza?entidad=${$('#se').value}&ratio=${$('#sr').value}&ejercicio=${$('#sy').value}`)).json();
   if(t.error){$('#traza').innerHTML='<p class="lead">Sin traza.</p>';return;}
-  const part=(n,x)=>`<h3>${n}: ${esc(x.concepto.replaceAll('_',' '))}</h3><p class="formula">Regla: <code>${esc(x.regla)}</code></p>${x.hechos?.length?`<div class="scroll"><table><thead><tr><th>Etiqueta XBRL</th><th>Fecha</th><th>Valor</th><th>Id</th></tr></thead><tbody>${x.hechos.map(h=>`<tr><td><code>${esc(h.etiqueta)}</code></td><td>${h.fecha_fin}</td><td>${meur(h.valor/1e6)}</td><td>${esc(h.id_hecho)}</td></tr>`).join('')}</tbody></table></div>`:''}${x.motivo?`<ul class="avisos"><li>${esc(x.motivo)}</li></ul>`:''}`;
+  const part=(n,x)=>`<h3>${n}: ${esc(x.concepto.replaceAll('_',' '))}</h3><p class="formula">Regla: <code>${esc(x.regla)}</code></p>${x.hechos?.length?`<div class="scroll"><table><thead><tr><th>Etiqueta XBRL</th><th>Fecha</th><th>Valor</th><th>Id</th></tr></thead><tbody>${x.hechos.map(h=>`<tr><td><code>${esc(h.etiqueta)}</code></td><td>${h.fecha_fin}</td><td>${meur(h.valor)}</td><td>${esc(h.id_hecho)}</td></tr>`).join('')}</tbody></table></div>`:''}${x.motivo?`<ul class="avisos"><li>${esc(x.motivo)}</li></ul>`:''}`;
   $('#traza').innerHTML=`<div class="figs"><div><div class="fig-num calc">${pct(t.valor_pct)}</div><div class="figlab">${esc(t.nota||'')}</div></div></div>${part('Numerador',t.numerador)}${part('Denominador',t.denominador)}`;
 }
 ['#se','#sr','#sy'].forEach(s=>$(s).addEventListener('change',()=>{if(s==='#se')fillRatios();traza();}));

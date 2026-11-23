@@ -1,303 +1,73 @@
-# Diccionario semántico v0 — TFM "Contextualización semántica de ratios financieros"
-# Catálogo de 12 ratios para banca y seguros + conceptos canónicos que intervienen.
-#
-# Convenciones:
-#   - fuente: esef (calculable desde estados XBRL) | publicado (Pilar 3, SFCR, APM del informe de gestión)
-#   - xbrl_candidatos: etiquetas NIIF (ifrs-full) de partida; las reglas verificadas están en `mapeo`.
-#   - variantes: diferencias de definición conocidas entre entidades (núcleo del problema semántico).
-
-version: 0.2
-fecha: 2026-11-01
-
-entidades:
-  banca: [santander, bbva, caixabank, sabadell, bankinter, unicaja]
-  seguros: [mapfre, linea_directa]
-ejercicios: [2024, 2025]
-
-# ---------------------------------------------------------------------------
-# CONCEPTOS CANÓNICOS
-# ---------------------------------------------------------------------------
-conceptos:
-  resultado_atribuido:
-    nombre: Resultado atribuido a la entidad dominante
-    tipo: flujo          # flujo = cifra del periodo; stock = saldo a fecha
-    xbrl_candidatos: [ifrs-full:ProfitLossAttributableToOwnersOfParent]
-  resultado_ejercicio:
-    nombre: Resultado consolidado del ejercicio (incluye minoritarios)
-    tipo: flujo
-    xbrl_candidatos: [ifrs-full:ProfitLoss]
-  patrimonio_atribuido:
-    nombre: Patrimonio neto atribuido a la dominante
-    tipo: stock
-    xbrl_candidatos: [ifrs-full:EquityAttributableToOwnersOfParent]
-  activos_intangibles:
-    nombre: Activos intangibles (incluido fondo de comercio)
-    tipo: stock
-    xbrl_candidatos: [ifrs-full:IntangibleAssetsAndGoodwill, ifrs-full:Goodwill, ifrs-full:IntangibleAssetsOtherThanGoodwill]
-  activo_total:
-    nombre: Total activo
-    tipo: stock
-    xbrl_candidatos: [ifrs-full:Assets]
-  ingresos_intereses:
-    nombre: Ingresos por intereses
-    tipo: flujo
-    xbrl_candidatos: [ifrs-full:RevenueFromInterest, ifrs-full:InterestRevenueCalculatedUsingEffectiveInterestMethod]
-  gastos_intereses:
-    nombre: Gastos por intereses
-    tipo: flujo
-    xbrl_candidatos: [ifrs-full:InterestExpense]
-  margen_intereses:
-    nombre: Margen de intereses
-    tipo: flujo
-    derivado: ingresos_intereses - gastos_intereses
-    xbrl_candidatos: [ifrs-full:InterestIncomeExpenseNet]
-  margen_bruto:
-    nombre: Margen bruto
-    tipo: flujo
-    xbrl_candidatos: []   # normalmente extensión propia de cada banco
-  gastos_explotacion_banca:
-    nombre: Gastos de administración + amortización
-    tipo: flujo
-    xbrl_candidatos: [ifrs-full:AdministrativeExpense, ifrs-full:DepreciationAndAmortisationExpense]
-  prestamos_clientela:
-    nombre: Préstamos y anticipos a la clientela (netos)
-    tipo: stock
-    xbrl_candidatos: []   # suele ser extensión; verificar
-  depositos_clientela:
-    nombre: Depósitos de la clientela
-    tipo: stock
-    xbrl_candidatos: []   # suele ser extensión; verificar
-  ingresos_seguros:
-    nombre: Ingresos por contratos de seguro (NIIF 17) / primas imputadas
-    tipo: flujo
-    xbrl_candidatos: [ifrs-full:InsuranceRevenue]
-  gastos_servicio_seguro:
-    nombre: Gastos del servicio de seguro (NIIF 17)
-    tipo: flujo
-    xbrl_candidatos: [ifrs-full:InsuranceServiceExpensesFromInsuranceContractsIssued]
-
-  fondos_propios:
-    nombre: Fondos propios (patrimonio atribuido sin otro resultado global acumulado)
-    tipo: stock
-    xbrl_candidatos: []   # extensiones propias de cada entidad
-  siniestralidad_neta:
-    nombre: Gastos por siniestros y prestaciones del servicio de seguro
-    tipo: flujo
-    xbrl_candidatos: []
-  gastos_adquisicion_seguro:
-    nombre: Gastos de adquisición atribuibles a contratos de seguro
-    tipo: flujo
-    xbrl_candidatos: []
-
-# ---------------------------------------------------------------------------
-# RATIOS
-# ---------------------------------------------------------------------------
 ratios:
-
-  # --- Comunes -------------------------------------------------------------
   roe:
     nombre: Rentabilidad sobre recursos propios (ROE)
-    familia: rentabilidad
-    aplica_a: [banca, seguros]
-    formula: resultado_atribuido / media(patrimonio_atribuido)
-    fuente: esef
-    variantes:
-      - patrimonio de cierre en lugar de media
-      - media de 2 puntos (inicio y fin) frente a media trimestral o mensual
-      - excluye cupones de AT1 del numerador e instrumentos AT1 del denominador (banca)
-      - excluye ajustes por valoración (OCI) del denominador
-      - resultado ajustado por partidas no recurrentes
     interpretacion: Mayor es mejor; debe compararse con el coste de capital de la entidad.
-
+    variantes:
+    - patrimonio de cierre en lugar de media
+    - media de 2 puntos (inicio y fin) frente a media trimestral o mensual
+    - excluye cupones de AT1 del numerador e instrumentos AT1 del denominador (banca)
+    - excluye ajustes por valoración (OCI) del denominador
+    - resultado ajustado por partidas no recurrentes
   roa:
     nombre: Rentabilidad sobre activos (ROA)
-    familia: rentabilidad
-    aplica_a: [banca, seguros]
-    formula: resultado_ejercicio / media(activo_total)
-    fuente: esef
-    variantes:
-      - resultado atribuido en lugar de consolidado
-      - activo de cierre en lugar de medio
     interpretacion: Muy sensible al apalancamiento; compárese solo entre entidades del mismo tipo.
-
-  # --- Banca ---------------------------------------------------------------
+    variantes:
+    - resultado atribuido en lugar de consolidado
+    - activo de cierre en lugar de medio
   eficiencia:
     nombre: Ratio de eficiencia (cost-to-income)
-    familia: eficiencia
-    aplica_a: [banca]
-    formula: gastos_explotacion_banca / margen_bruto
-    fuente: esef
-    variantes:
-      - incluye o excluye amortizaciones
-      - excluye gastos extraordinarios (reestructuraciones)
-      - margen bruto con o sin contribuciones al FUR/FGD (impuesto a la banca)
     interpretacion: Menor es mejor; compárese con entidades de modelo de negocio similar.
-
+    variantes:
+    - incluye o excluye amortizaciones
+    - excluye gastos extraordinarios (reestructuraciones)
+    - margen bruto con o sin contribuciones al FUR/FGD (impuesto a la banca)
   nim:
     nombre: Margen de intereses sobre activos medios (NIM)
-    familia: rentabilidad
-    aplica_a: [banca]
-    formula: margen_intereses / media(activo_total)
-    fuente: esef
-    variantes:
-      - denominador en activos rentables medios en lugar de activo total
-      - diferencial de clientes (rendimiento de la cartera menos coste de los depósitos)
     interpretacion: Muy sensible al ciclo de tipos de interés.
-
+    variantes:
+    - denominador en activos rentables medios en lugar de activo total
+    - diferencial de clientes (rendimiento de la cartera menos coste de los depósitos)
   ltd:
     nombre: Préstamos sobre depósitos (loan-to-deposit)
-    familia: liquidez
-    aplica_a: [banca]
-    formula: prestamos_clientela / depositos_clientela
-    fuente: esef
-    variantes:
-      - excluye adquisiciones temporales de activos (repos)
-      - incluye en el denominador fondos de mediación o emisiones minoristas
     interpretacion: Por debajo del 100 % indica financiación estable con depósitos.
-
+    variantes:
+    - excluye adquisiciones temporales de activos (repos)
+    - incluye en el denominador fondos de mediación o emisiones minoristas
   morosidad:
     nombre: Tasa de morosidad (NPL ratio)
-    familia: calidad_activo
-    aplica_a: [banca]
-    formula: riesgos_dudosos / riesgo_crediticio_total
-    fuente: publicado        # Pilar 3 / APM del informe de gestión
-    variantes:
-      - incluye o excluye riesgos contingentes (avales)
-      - perímetro (grupo frente a negocio en España)
     interpretacion: Menor es mejor; contextualizar por mix de cartera y geografía.
-
+    variantes:
+    - incluye o excluye riesgos contingentes (avales)
+    - perímetro (grupo frente a negocio en España)
   cobertura:
     nombre: Tasa de cobertura de dudosos
-    familia: calidad_activo
-    aplica_a: [banca]
-    formula: provisiones_insolvencias / riesgos_dudosos
-    fuente: publicado
-    variantes:
-      - provisiones totales frente a solo las de stage 3
     interpretacion: Mayor es más prudente; depende de las garantías de la cartera.
-
+    variantes:
+    - provisiones totales frente a solo las de stage 3
   cet1:
     nombre: Ratio de capital CET1
-    familia: solvencia
-    aplica_a: [banca]
-    formula: capital_cet1 / activos_ponderados_por_riesgo
-    fuente: publicado        # Pilar 3
-    variantes:
-      - phased-in frente a fully loaded
     interpretacion: Comparar con el requerimiento SREP de cada entidad, no con un umbral único.
-
-  # --- Seguros -------------------------------------------------------------
+    variantes:
+    - phased-in frente a fully loaded
   siniestralidad:
     nombre: Ratio de siniestralidad (no vida)
-    familia: tecnica_aseguradora
-    aplica_a: [seguros]
-    formula: siniestralidad_neta / ingresos_seguros
-    fuente: esef             # aproximación desde estados y notas
-    variantes:
-      - bruto frente a neto de reaseguro
-      - terminología NIIF 17 frente a la anterior (primas imputadas)
-      - perímetro (no vida total frente a ramos concretos)
     interpretacion: Menor es mejor; muy dependiente del ramo (autos, hogar, salud).
-
+    variantes:
+    - bruto frente a neto de reaseguro
+    - terminología NIIF 17 frente a la anterior (primas imputadas)
+    - perímetro (no vida total frente a ramos concretos)
   ratio_gastos:
     nombre: Ratio de gastos
-    familia: eficiencia
-    aplica_a: [seguros]
-    formula: (gastos_servicio_seguro - siniestralidad_neta) / ingresos_seguros
-    fuente: esef
-    variantes:
-      - incluye o excluye gastos de adquisición
     interpretacion: Equivalente asegurador del ratio de eficiencia bancario.
-
+    variantes:
+    - incluye o excluye gastos de adquisición
   ratio_combinado:
     nombre: Ratio combinado (no vida)
-    familia: tecnica_aseguradora
-    aplica_a: [seguros]
-    formula: gastos_servicio_seguro / ingresos_seguros
-    fuente: esef
-    variantes:
-      - la entidad lo publica como APM con su propia definición (validar contra ella)
     interpretacion: Por debajo del 100 % hay beneficio técnico antes de ingresos financieros.
-
+    variantes:
+    - la entidad lo publica como APM con su propia definición (validar contra ella)
   solvencia_ii:
     nombre: Ratio de solvencia (Solvencia II)
-    familia: solvencia
-    aplica_a: [seguros]
-    formula: fondos_propios_admisibles / scr
-    fuente: publicado        # Informe SFCR
-    variantes:
-      - con o sin medidas transitorias
     interpretacion: Por encima del 100 % cumple el requerimiento de capital de solvencia; compárese con el objetivo interno que publique la entidad.
-
-# ---------------------------------------------------------------------------
-# MAPEO VERIFICADO CONTRA DATOS REALES (ESEF ejercicio 2025, incluye comparativo 2024)
-# Verificado: 2026-11-01 · 6 entidades (faltan Bankinter y Unicaja)
-# Formato: concepto -> entidad -> etiqueta(s) XBRL (se suman si hay varias)
-# ---------------------------------------------------------------------------
-lei:
-  santander: 5493006QMFDDMYWIAM13
-  bbva: K8MS7FD7N5Z2WQ51AZ71
-  caixabank: 7CUNS533WID6K7DGFI87
-  sabadell: SI5RG2M0WQQLZCXKRM20
-  mapfre: 95980020140005693107
-  linea_directa: 95980079E2NBJT967T79
-
-mapeo:
-  # Reglas de resolución concepto -> dato XBRL, por entidad.
-  # Clave "_todas" / "_banca" / "_seguros" = regla por defecto del grupo; una clave de entidad la sustituye.
-  # Formas admitidas:
-  #   [tag1, tag2]          -> suma de los hechos (sin dimensiones)
-  #   {resta: [a, b]}       -> a - b
-  #   {no_disponible: motivo} -> el concepto no está etiquetado; se usa el dato publicado si existe
-  resultado_atribuido:
-    _todas: [ifrs-full:ProfitLossAttributableToOwnersOfParent]
-  resultado_ejercicio:
-    _todas: [ifrs-full:ProfitLoss]
-  activo_total:
-    _todas: [ifrs-full:Assets]
-  activos_intangibles:
-    _todas: [ifrs-full:IntangibleAssetsAndGoodwill]
-    linea_directa: [ifrs-full:IntangibleAssetsOtherThanGoodwill]   # sin fondo de comercio
-  patrimonio_atribuido:
-    # REGLA SEMÁNTICA: patrimonio total menos minoritarios. Es la única definición que se puede
-    # aplicar igual a las 6 entidades. HALLAZGOS:
-    #  - CaixaBank etiqueta como EquityAttributableToOwnersOfParent (38.962 M€) una cifra MAYOR que su
-    #    patrimonio total (38.526 M€): en realidad son sus fondos propios (sin OCI).
-    #  - BBVA, Sabadell y Línea Directa usan extensiones "FondosPropios"; Santander una extensión
-    #    "Patrimonio neto atribuible ... excluido el otro resultado global" (141.144 M€ frente a 103.170 M€).
-    _todas: {resta: [ifrs-full:Equity, ifrs-full:NoncontrollingInterests]}
-  fondos_propios:
-    # Variante: patrimonio atribuido SIN otro resultado global acumulado (base de muchas APM de ROE)
-    santander: [san:PatrimonioNetoAtribuibleALosPropietariosDeLaDominanteExcluidoElOtroResultadoGlobalAcumulado]
-    bbva: [bbva:FondosPropios]
-    sabadell: [sab:FondosPropios]
-    linea_directa: [lda:FondosPropios]
-    caixabank: [ifrs-full:EquityAttributableToOwnersOfParent]   # mal etiquetado como atribuido
-    mapfre: {no_disponible: "sin desglose etiquetado"}
-  margen_intereses:
-    _banca: [ifrs-full:InterestRevenueExpense]      # ningún banco usa InterestIncomeExpenseNet
-  margen_bruto:
-    _banca: [ifrs-full:GrossProfit]                 # reutilización de un elemento industrial
-  gastos_explotacion_banca:
-    _banca: [ifrs-full:AdministrativeExpense, ifrs-full:DepreciationAndAmortisationExpense]
-  prestamos_clientela:
-    caixabank: [ifrs-full:LoansAndAdvancesToCustomers]
-    sabadell: [ifrs-full:LoansAndAdvancesToCustomers]
-    bbva: [ifrs-full:LoansAndAdvancesToCustomersAtAmortisedCost, ifrs-full:LoansAndAdvancesToCustomersAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading]
-    santander: {no_disponible: "el balance solo etiqueta carteras contables (p. ej. FinancialAssetsAtAmortisedCost), no la clientela"}
-  depositos_clientela:
-    caixabank: [ifrs-full:DepositsFromCustomers]
-    sabadell: [ifrs-full:DepositsFromCustomers]
-    bbva: [ifrs-full:DepositsFromCustomersAtAmortisedCost, ifrs-full:DepositsFromCustomersAtFairValueThroughProfitOrLossThatMeetDefinitionOfHeldForTrading, ifrs-full:DepositsFromCustomersAtFairValueThroughProfitOrLossDesignatedUponInitialRecognitionOrSubsequently]
-    santander: {no_disponible: "idem"}
-  ingresos_seguros:
-    linea_directa: [ifrs-full:InsuranceRevenue]
-    mapfre: [map:IncomeArisingFromInsuranceContracts]   # extensión propia en lugar de InsuranceRevenue
-  gastos_servicio_seguro:
-    _seguros: [ifrs-full:InsuranceServiceExpensesFromInsuranceContractsIssued]
-  siniestralidad_neta:
-    mapfre: [map:IncurredClaimsAndOtherInsuranceServiceExpenses]
-    linea_directa: {no_disponible: "solo etiqueta el total de gastos del servicio de seguro"}
-  gastos_adquisicion_seguro:
-    mapfre: [map:GastosCosteAdquisicion]
-    linea_directa: {no_disponible: "idem"}
+    variantes:
+    - con o sin medidas transitorias
