@@ -139,8 +139,12 @@ def interpretar(pregunta: str) -> dict:
     t = _norm(pregunta)
     entidades = [e for e, p in PATRONES_ENTIDAD.items() if re.search(p, t)]
     ratio = next((r for r, p in PATRONES_RATIO if re.search(p, t)), None)
-    anio = re.search(r"20(24|25)", t)
-    return {"entidades": entidades, "ratio": ratio, "ejercicio": int(anio.group(0)) if anio else 2025}
+    ratios = [ratio] if ratio else []
+    if ratio == "roe_fondos_propios" and "patrimonio" in t:  # pide ambas definiciones
+        ratios.append("roe")
+    anios = sorted({int(a) for a in re.findall(r"20(?:24|25)", t)}) or [2025]
+    return {"entidades": entidades, "ratio": ratio, "ratios": ratios,
+            "ejercicio": anios[-1], "ejercicios": anios}
 
 
 def redactar(r: dict) -> str:
@@ -167,7 +171,8 @@ def responder(pregunta: str) -> str:
     q = interpretar(pregunta)
     if not q["entidades"] or not q["ratio"]:
         return "No he identificado entidad o ratio en la pregunta."
-    return "\n\n".join(redactar(consultar(e, q["ratio"], q["ejercicio"])) for e in q["entidades"])
+    return "\n\n".join(redactar(consultar(e, r, a))
+                       for e in q["entidades"] for r in q["ratios"] for a in q["ejercicios"])
 
 
 if __name__ == "__main__":
