@@ -160,7 +160,8 @@ El prototipo se ha verificado con un plan de pruebas en once niveles, automatiza
 | Unitarias (lector, motor, consulta, validación) | 34 | Formatos numéricos, escala y signo; reglas de mapeo; que la consulta devuelva exactamente la cifra del motor y ninguna cuando el dato no existe |
 | Integración | 9 | Los seis informes reales (6.835 hechos), el cálculo completo y las identidades contables (activo igual a pasivo más patrimonio) |
 | Regresión | 30 | Que las cifras citadas en esta memoria siguen saliendo del prototipo |
-| Calidad de datos | 3 | Que los 203 hechos de las trazas y las 104 citas de ratios publicados existen literalmente en los informes |
+| Calidad de datos | 2 | Que los 203 hechos de las trazas y las 104 citas de ratios publicados existen literalmente en los informes |
+| Asistencia al diccionario | 3 | Anclajes ESEF, detector de anomalías y propuesta de reglas (apartado 4.6) |
 | Versión web | 33 | API ante entradas anómalas, latencia y recorrido completo en navegador en escritorio y móvil |
 
 Fuente: Elaboración propia.
@@ -171,5 +172,5 @@ Todas las pruebas se superan. La versión web se ha comprobado además en produc
 
 - **Muestra:** el diccionario se ha verificado con seis entidades. Su extensión a otras exige revisar sus etiquetas de extensión, aunque las reglas por defecto cubren la mayoría de conceptos.
 - **Hechos con dimensiones:** no se usan, lo que impide, por ejemplo, separar el negocio de vida y no vida de Mapfre.
-- **Mapeo manual asistido:** las reglas se han definido a partir de la exploración de los datos. La propuesta inicial de usar un modelo de lenguaje para sugerir el mapeo de extensiones queda como línea de trabajo futuro.
+- **Mapeo validado a mano:** las reglas se han definido y revisado a partir de la exploración de los datos. El apartado 4.6 muestra que un modelo de lenguaje puede proponerlas con un acierto alto, pero la revisión del analista sigue siendo necesaria.
 - **Perímetro:** los cambios de perímetro, como activos mantenidos para la venta o desinversiones en curso, afectan a los saldos y deben interpretarse con la información narrativa del informe (capítulo 4).

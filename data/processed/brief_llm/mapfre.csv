@@ -1,0 +1,203 @@
+elemento,etiqueta_extension,periodo_tipo,valor_meur,anclaje
+ifrs-full:IntangibleAssetsAndGoodwill,,instante,2322.2,
+ifrs-full:Goodwill,,instante,1239.0,
+ifrs-full:IntangibleAssetsOtherThanGoodwill,,instante,1083.2,
+ifrs-full:PropertyPlantAndEquipment,,instante,1194.8,
+map:InmueblesDeUsoPropio,Inmuebles de uso propio,instante,966.3,ifrs-full:Buildings
+ifrs-full:OtherPropertyPlantAndEquipment,,instante,228.5,
+map:Inversiones,Inversiones,instante,45365.4,
+ifrs-full:InvestmentProperty,,instante,980.6,
+ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition,,instante,17488.4,
+ifrs-full:FinancialAssetsAtFairValueThroughOtherComprehensiveIncome,,instante,23297.4,
+ifrs-full:FinancialAssetsAtAmortisedCost,,instante,1265.7,
+ifrs-full:InvestmentAccountedForUsingEquityMethod,,instante,1292.6,
+ifrs-full:DerivativeFinancialAssetsHeldForHedging,,instante,0.0,
+ifrs-full:OtherFinancialAssets,,instante,1040.7,
+ifrs-full:InsuranceContractsThatAreAssets,,instante,4.5,
+map:E,Valoracion BBA para activos por cobertura restante,instante,6.5,ifrs-full:InsuranceContractsThatAreAssets
+map:ValoracionBBAParaActivosPorPrestacionesIncurridas,Valoracion BBA para Activos por prestaciones incurridas,instante,-2.0,ifrs-full:InsuranceContractsThatAreAssets
+map:MeasurementUnderVFAForAssetsForRemainingCoverage,Valoracion VFA para activos cobertura restante,instante,0.0,ifrs-full:InsuranceContractsThatAreAssets
+map:S,Valoracio VFA para activos por prestaciones incurridas,instante,0.0,ifrs-full:InsuranceContractsThatAreAssets
+map:ValoracionPAAParaActivosPorCobreturaRestante,Valoracion PAA para activos por cobretura restante,instante,0.0,ifrs-full:InsuranceContractsThatAreAssets
+map:ValoracionPAAParaActivosPorPrestacionesIncurridas,Valoracion PAA para activos por prestaciones incurridas,instante,0.0,ifrs-full:InsuranceContractsThatAreAssets
+ifrs-full:ReinsuranceContractsHeldThatAreAssets,,instante,5616.0,
+map:MeasurementUnderBBAForAssetsForRemainingCoverageReinsurance,Reaseguro Valoracion BAA para activos por cobertura restante,instante,0.0,ifrs-full:ReinsuranceContractsHeldThatAreAssets
+map:MeasurementUnderBBAForAssetsForIncurredClaimsReinsurance,Reaseguro Valoracion BAA para activos por prestaciones incurridas,instante,0.0,ifrs-full:ReinsuranceContractsHeldThatAreAssets
+map:MeasurementUnderPAAForAssetsForRemainingCoverageReinsurance,Reaseguro Valoracion PAA para activos por cobertura restante,instante,1349.1,ifrs-full:ReinsuranceContractsHeldThatAreAssets
+map:MeasurementUnderPAAForAssetsForIncurredClaimsReinsurance,Reaseguro valoracion PAA para activos por prestaciones incurridos,instante,4266.9,ifrs-full:ReinsuranceContractsHeldThatAreAssets
+ifrs-full:InventoriesTotal,,instante,54.1,
+ifrs-full:DeferredTaxAssets,,instante,297.4,
+ifrs-full:LoansAndAdvancesAtAmortisedCost,,instante,1296.0,
+ifrs-full:CurrentTaxAssets,,instante,228.8,
+ifrs-full:ReceivablesFromTaxesOtherThanIncomeTax,,instante,295.1,
+map:CorporateAndOtherReceivables,Creditos sociales y otros,instante,772.1,ifrs-full:LoansAndReceivables
+map:CuentaACobrarALosAccionistasPorDesembolsosIncurridas,Cuenta a cobrar a los accionistas por desembolsos incurridas,instante,0.0,ifrs-full:LoansAndReceivables
+ifrs-full:CashAndCashEquivalents,,instante,1947.4,
+map:AjustesPorPeriodificacionActivo,Ajustes por periodificacion activo,instante,204.6,ifrs-full:Assets
+ifrs-full:OtherAssets,,instante,99.1,
+ifrs-full:NoncurrentAssetsOrDisposalGroupsClassifiedAsHeldForSale,,instante,111.2,
+ifrs-full:Assets,,instante,58512.7,
+ifrs-full:Equity,,instante,10514.3,
+ifrs-full:IssuedCapital,,instante,308.0,
+ifrs-full:SharePremium,,instante,1506.7,
+ifrs-full:RetainedEarnings,,instante,8721.8,
+map:DividendoACuenta,Dividendo a cuenta,instante,215.6,ifrs-full:OtherReserves
+ifrs-full:TreasuryShares,,instante,52.0,
+map:ResultadoDelEjercicioAtribuibleSociedadDominante,Resultado del ejercicio atribuible sociedad dominante,instante,1132.6,ifrs-full:EquityAttributableToOwnersOfParent
+ifrs-full:OtherEquityInterest,,instante,0.0,
+ifrs-full:AccumulatedOtherComprehensiveIncome,,instante,-218.0,
+ifrs-full:ReserveOfExchangeDifferencesOnTranslation,,instante,-1773.6,
+ifrs-full:EquityAttributableToOwnersOfParent,,instante,9409.9,
+ifrs-full:NoncontrollingInterests,,instante,1104.4,
+ifrs-full:DatedSubordinatedLiabilities,,instante,1631.3,
+ifrs-full:InsuranceContractsThatAreLiabilities,,instante,40540.5,
+map:ValoracionBBAPasivosCoberturaRestante,valoracion BBA pasivos cobertura restante,instante,11589.6,ifrs-full:InsuranceContractsThatAreLiabilities
+map:ValoracionBBAPasivosPrestacionesIncurridas,Valoracion BBA pasivos prestaciones incurridas,instante,439.4,ifrs-full:InsuranceContractsThatAreLiabilities
+map:ValoracionVFAParaPasivosPorCoberturaRestante,Valoracion VFA para pasivos por cobertura restante,instante,8936.0,ifrs-full:InsuranceContractsThatAreLiabilities
+map:ValoracionVFAPasivoPorPrestacionesIncurridas,Valoracion VFA Pasivo por prestaciones incurridas,instante,230.5,ifrs-full:InsuranceContractsThatAreLiabilities
+map:ValoracionPAAPasivosCoberturaRestante,Valoracion PAA pasivos cobertura restante,instante,5796.2,ifrs-full:InsuranceContractsThatAreLiabilities
+map:ValoracionPAAPasivosPorPrestacionesIncurridas,Valoracion PAA pasivos por prestaciones incurridas,instante,13548.8,ifrs-full:InsuranceContractsThatAreLiabilities
+ifrs-full:ReinsuranceContractsHeldThatAreLiabilities,,instante,15.3,
+map:V,Reaseguro valoracion BAA para pasivos por cobertura restante,instante,19.7,ifrs-full:ReinsuranceContractsHeldThatAreLiabilities
+map:ReaseguroB,Reaseguro B,instante,-4.4,ifrs-full:ReinsuranceContractsHeldThatAreLiabilities
+map:ReaseguroValoracionPAAPasivosCoberturaRestante,Reaseguro Valoracion PAA pasivos cobertura restante,instante,0.0,ifrs-full:ReinsuranceContractsHeldThatAreLiabilities
+map:ReaseguroValoracionPAAPasivosPrestacionesIncurridas,Reaseguro Valoracion PAA pasivos prestaciones incurridas,instante,0.0,ifrs-full:ReinsuranceContractsHeldThatAreLiabilities
+map:ProvisionesPorRiesgosYGastos,Provisiones por riesgos y gastos,instante,640.9,ifrs-full:OtherProvisions
+ifrs-full:DeferredTaxLiabilities,,instante,258.2,
+map:I,Deudas (pasivo),instante,4801.4,
+map:PasivosFinancieorsPorEmisionObligacionesYValoresNegociables,Pasivos financieros por emision obligaciones y valores negociables,instante,865.6,ifrs-full:FinancialLiabilities
+ifrs-full:UnsecuredBankLoansReceived,,instante,125.0,
+ifrs-full:OtherFinancialLiabilities,,instante,1815.9,
+ifrs-full:DerivativeFinancialLiabilitiesHeldForHedging,,instante,0.0,
+ifrs-full:CurrentTaxLiabilities,,instante,247.6,
+map:ImportePasivoOtrasDeudasFiscales,Importe pasivo otras deudas fiscales,instante,326.4,ifrs-full:CurrentTaxLiabilities
+ifrs-full:OtherPayables,,instante,1420.9,
+ifrs-full:Accruals,,instante,89.1,
+ifrs-full:LiabilitiesIncludedInDisposalGroupsClassifiedAsHeldForSale,,instante,21.7,
+ifrs-full:EquityAndLiabilities,,instante,58512.7,
+map:IncomeArisingFromInsuranceContracts,Income arising from insurance contracts,duracion,26352.4,
+map:LiberacionPasivosPorCoberturaRestante,Liberacion Pasivos por cobertura restante,duracion,25971.8,ifrs-full:InsuranceServiceResult
+ifrs-full:InsuranceRevenueOtherAmounts,,duracion,380.6,
+ifrs-full:InsuranceServiceExpensesFromInsuranceContractsIssued,,duracion,22246.2,
+map:IncurredClaimsAndOtherInsuranceServiceExpenses,Gastos servicios seguro prestaciones y otros gastos,duracion,15710.3,ifrs-full:InsuranceServiceResult
+map:GastosCosteAdquisicion,Gastos Coste Adquisicion,duracion,6050.9,ifrs-full:InsuranceServiceExpensesFromInsuranceContractsIssued
+map:GastosServicioSeguroPerdidasEnContratosOnerosos,Gastos servicio seguro perdidas en contratos onerosos,duracion,117.7,ifrs-full:InsuranceServiceResult
+map:ChangesInLiabilityForIncurredClaims,Gastos servicio seguro cambios pasivos por prestaciones incurridas,duracion,367.3,ifrs-full:InsuranceServiceResult
+ifrs-full:InsuranceServiceResult,,duracion,4106.2,
+map:IngresosDelServicioReaseguro,Ingresos del servicio reaseguro,duracion,2135.4,ifrs-full:InsuranceServiceResult
+map:GastosServicioReaseguro,Gastos servicio reaseguro,duracion,4128.6,ifrs-full:InsuranceServiceResult
+map:ResultadoDelServicioDeReaseguro,Resultado del servicio de reaseguro,duracion,-1993.2,ifrs-full:ProfitLossBeforeTax
+map:RESULTADODELSERVICIODESEGUROYREASEGURO,RESULTADO DEL SERVICIO DE SEGURO Y REASEGURO,duracion,2113.0,ifrs-full:ProfitLossBeforeTax
+map:IngresosGatosFinancierosContratosDeSeguro,Ingresos gatos financieros contratos de seguro,duracion,-1187.3,ifrs-full:InsuranceFinanceIncomeExpenses
+map:IngresosGastosContratosReaseguro,Ingresos gastos contratos reaseguro,duracion,168.2,ifrs-full:InsuranceFinanceIncomeExpenses
+ifrs-full:InsuranceFinanceIncomeExpenses,,duracion,-1355.5,
+ifrs-full:FinanceIncome,,duracion,3082.2,
+ifrs-full:FinanceCosts,,duracion,732.2,
+map:ParticipacionBeneficiosSociedadesPuestaEquivalencia,Participacion beneficios sociedades puesta equivalencia,duracion,34.5,ifrs-full:FinanceIncomeCost
+map:BShareInLossesFromEquityAccountedCompanies,Participacion perdidas sociedades puesta equivalencia,duracion,3.5,ifrs-full:FinanceIncomeCost
+map:ReversionDeterioroActivosFinancieros,Reversion deterioro activos financieros,duracion,12.2,ifrs-full:FinanceIncomeCost
+ifrs-full:ImpairmentLossImpairmentGainAndReversalOfImpairmentLossDeterminedInAccordanceWithIFRS9,,duracion,22.2,
+map:ResultadoFinancieroContratosSeguroReaseguro,Resultado financiero contratos seguro reaseguro,duracion,2371.0,ifrs-full:FinanceIncomeCost
+ifrs-full:FinanceIncomeCost,,duracion,1015.5,
+map:OtrosIngresosNoTecnicos,otros ingresos no tecnicos,duracion,82.7,ifrs-full:OtherRevenue
+map:OtherNonTechnicalExpenses,Otros gastos no tecnicos,duracion,200.8,ifrs-full:OtherExpenseByFunction
+ifrs-full:ForeignExchangeGain,,duracion,903.1,
+ifrs-full:ForeignExchangeLoss,,duracion,1143.2,
+ifrs-full:ReversalOfImpairmentLossRecognisedInProfitOrLoss,,duracion,0.0,
+ifrs-full:ImpairmentLossReversalOfImpairmentLossRecognisedInProfitOrLoss,,duracion,48.4,
+map:RESULTADODEINGRESOSYGASTOSDEASEGURADORES,RESULTADO DE INGRESOS Y GASTOS DE ASEGURADORES,duracion,-406.6,ifrs-full:IncomeTaxExpenseContinuingOperations
+ifrs-full:OtherIncome,,duracion,572.1,
+ifrs-full:OtherExpenseByFunction,,duracion,686.1,
+map:IngresoDelInmovilizadoYDeLasInversiones,Ingreso del inmovilizado y de las inversiones,duracion,37.7,ifrs-full:ProfitLossBeforeTax
+map:GastoDelInmovilizadoYDeLasInversiones,Gasto del inmovilizado y de las inversiones,duracion,12.8,ifrs-full:ProfitLossBeforeTax
+map:IngresosFinancierosNetos,Ingresos financieros netos,duracion,-73.6,ifrs-full:ProfitLossBeforeTax
+map:NegativeConsolidationDifferences,Diferencias negativas consolidacion,duracion,0.0,ifrs-full:ProfitLossBeforeTax
+map:ShareInProfitsFromEquityAccountedCompaniesOtherActivities,participación en beneficios de sociedades puestas en equivalencia otras actividades,duracion,25.1,ifrs-full:ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+map:ShareInLossesFromEquityAccountedCompaniesOtherActivities,Participacion perdida sociedades puesta equivalencia otras actividades,duracion,-12.3,ifrs-full:ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod
+map:DiferenciasPositivasCambioOtrasActi,diferencias positivas cambio otras acti,duracion,0.0,ifrs-full:ProfitLossBeforeTax
+map:DiferenciasNegativasCambioOtrasActividades,Diferencias negativas cambio otras actividades,duracion,-0.6,ifrs-full:ProfitLossBeforeTax
+map:ReversionProvisionDeterioroActivosOtrasActividades,Reversion provision deterioro activos otras actividades,duracion,5.7,ifrs-full:ImpairmentLossReversalOfImpairmentLossRecognisedInProfitOrLoss
+map:DotacionProvIsionDeterioroActivosOtrasActividaes,Dotacion prov ision deterioro activos otras actividaes,duracion,10.0,ifrs-full:ImpairmentLossReversalOfImpairmentLossRecognisedInProfitOrLoss
+map:ResultadoOtrasActividades,Resultado otras actividades,duracion,-154.8,ifrs-full:ProfitLossBeforeTax
+map:ResultadoReexpresionEstadosFinancieros,Resultado reexpresion estados financieros,duracion,-42.3,ifrs-full:ProfitLossBeforeTax
+ifrs-full:ProfitLossBeforeTax,,duracion,2524.8,
+ifrs-full:IncomeTaxExpenseContinuingOperations,,duracion,727.5,
+ifrs-full:ProfitLossFromContinuingOperations,,duracion,1797.3,
+ifrs-full:ProfitLossFromDiscontinuedOperations,,duracion,0.0,
+ifrs-full:ProfitLoss,,duracion,1797.3,
+ifrs-full:ProfitLossAttributableToNoncontrollingInterests,,duracion,664.7,
+ifrs-full:ProfitLossAttributableToOwnersOfParent,,duracion,1132.6,
+ifrs-full:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossNetOfTax,,duracion,32.6,
+ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax,,duracion,-106.1,
+ifrs-full:GainsLossesOnFinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncomeBeforeTax,,duracion,210.4,
+ifrs-full:ReclassificationAdjustmentsOnFinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncomeBeforeTax,,duracion,31.8,
+map:ImportesTransferidosAReservasActivosFinancierosAValorRazonable,Importes transferidos a reservas Activos financieros a valor razonable,duracion,-32.6,ifrs-full:OtherComprehensiveIncomeBeforeTaxAvailableforsaleFinancialAssets
+map:OtrasReclasificacionesActivosVRCambiosPN,Otras reclasificaciones activos VR cambios PN,duracion,-23.4,ifrs-full:ReclassificationAdjustmentsOnFinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncomeBeforeTax
+ifrs-full:GainsLossesOnExchangeDifferencesOnTranslationBeforeTax,,duracion,-417.2,
+ifrs-full:ReclassificationAdjustmentsOnExchangeDifferencesOnTranslationBeforeTax,,duracion,2.5,
+map:OtrasReclasificacionesDiferenciasDeConversion,"Otras reclasificaciones, diferencias de conversion",duracion,0.0,ifrs-full:ProfitLoss
+map:AGananciasPerdidasPorValoracion,Ganancias perdidas valoracion contratos seguros,duracion,237.6,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax
+map:BImportesTransferidosALaCuentaDeResultados,Importes transferidos a la cuenta resultados contratos seguros,duracion,0.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax
+map:COtrasReclasificaciones,Otras reclasificaciones contratos seguros reaseguro,duracion,0.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax
+map:PerdidasGananciasValoracionEntidadesMetodoParticipacion,Perdidas ganancias valoracion entidades metodo participacion,duracion,-0.7,ifrs-full:ShareOfOtherComprehensiveIncomeOfAssociatesAndJointVenturesAccountedForUsingEquityMethodBeforeTax
+map:R,Importes transferidos cuenta resultado metodo participacion,duracion,0.0,ifrs-full:ShareOfOtherComprehensiveIncomeOfAssociatesAndJointVenturesAccountedForUsingEquityMethodThatWillNotBeReclassifiedToProfitOrLossBeforeTax
+map:OtrasReclasificacionesEntidadesValoradasMetodoParticipacion,Otras reclasificaciones entidades valoradas metodo participacion,duracion,0.0,ifrs-full:ShareOfOtherComprehensiveIncomeOfAssociatesAndJointVenturesAccountedForUsingEquityMethodBeforeTax
+map:P,Otros ingresos y gastos reconocidos,duracion,-4.4,ifrs-full:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossNetOfTax
+ifrs-full:IncomeTaxRelatingToComponentsOfOtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLoss,,duracion,88.3,
+ifrs-full:ComprehensiveIncome,,duracion,1723.8,
+ifrs-full:ComprehensiveIncomeAttributableToOwnersOfParent,,duracion,1067.0,
+ifrs-full:ComprehensiveIncomeAttributableToNoncontrollingInterests,,duracion,656.8,
+ifrs-full:IncreaseDecreaseThroughTransactionsWithOwners,,duracion,-1170.3,
+map:AumentoReduccionCapital,Aumento reduccion capital,duracion,16.4,ifrs-full:IncreaseDecreaseThroughTransfersAndOtherChangesEquity
+ifrs-full:DividendsPaid,,duracion,1183.4,
+ifrs-full:IncreaseDecreaseThroughChangesInOwnershipInterestsInSubsidiariesThatDoNotResultInLossOfControl,,duracion,0.0,
+map:OtrasOperacionesAccionesParticipacionesPropinas,Otras operaciones acciones participaciones propinas,duracion,-20.8,ifrs-full:IncreaseDecreaseThroughTransfersAndOtherChangesEquity
+ifrs-full:IncreaseDecreaseThroughTreasuryShareTransactions,,duracion,17.5,
+map:OtrasVariacionesPatrimonioNeto,Otras variaciones patrimonio neto,duracion,-24.7,
+map:TraspasosPartidasPatrimonioNeto,traspasos partidas patrimonio neto,duracion,0.0,ifrs-full:IncreaseDecreaseThroughTransfersAndOtherChangesEquity
+ifrs-full:IncreaseDecreaseThroughTransfersAndOtherChangesEquity,,duracion,-24.7,
+map:FlujoDeCajaActividadAseguradora,Flujo de caja actividad aseguradora,duracion,2676.6,
+map:CobrosEfectivoActividadAseguradora,Cobros Efectivo actividad aseguradora,duracion,29813.6,ifrs-full:CashFlowsFromUsedInOperatingActivities
+map:PagosEnEfectivoActividadAseguradora,Pagos en efectivo actividad aseguradora,duracion,27137.0,ifrs-full:CashFlowsFromUsedInOperations
+map:OtrosFlujosDeCajaDeLaActividadOperativa,Otros flujos de caja de la actividad operativa,duracion,-466.0,
+ifrs-full:OtherCashReceiptsFromOperatingActivities,,duracion,865.6,
+ifrs-full:OtherCashPaymentsFromOperatingActivities,,duracion,1331.6,
+ifrs-full:IncomeTaxesPaidRefundClassifiedAsOperatingActivities,,duracion,-569.8,
+ifrs-full:CashFlowsFromUsedInOperatingActivities,,duracion,1640.8,
+ifrs-full:InflowsOfCashFromInvestingActivities,,duracion,23807.1,
+ifrs-full:ProceedsFromSalesOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities,,duracion,2.8,
+ifrs-full:ProceedsFromSalesOfInvestmentProperty,,duracion,136.0,
+ifrs-full:ProceedsFromSalesOfIntangibleAssetsClassifiedAsInvestingActivities,,duracion,0.0,
+ifrs-full:ProceedsFromSalesOrMaturityOfFinancialInstrumentsClassifiedAsInvestingActivities,,duracion,20873.8,
+map:CobrosPorCambiosEnElImporteParticipaciones,cobros por cambios en el importe participaciones,duracion,1698.3,ifrs-full:InflowsOfCashFromInvestingActivities
+ifrs-full:ProceedsFromSalesOfInterestsInAssociates,,duracion,1.5,
+ifrs-full:InterestReceivedClassifiedAsInvestingActivities,,duracion,951.2,
+ifrs-full:DividendsReceivedClassifiedAsInvestingActivities,,duracion,100.7,
+map:OtrosCobrosActividadesInversion,Otros cobros actividades inversion,duracion,42.8,ifrs-full:OtherInflowsOutflowsOfCashClassifiedAsInvestingActivities
+ifrs-full:OutflowsOfCashFromInvestingActivities,,duracion,24212.3,
+ifrs-full:PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities,,duracion,65.0,
+ifrs-full:PurchaseOfInvestmentProperty,,duracion,196.7,
+ifrs-full:PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities,,duracion,152.0,
+ifrs-full:PurchaseOfFinancialInstrumentsClassifiedAsInvestingActivities,,duracion,21525.3,
+map:C,Salida caja compra participaciones actividad inversion,duracion,2193.1,ifrs-full:OtherCashPaymentsToAcquireEquityOrDebtInstrumentsOfOtherEntitiesClassifiedAsInvestingActivities
+ifrs-full:PurchaseOfInterestsInAssociates,,duracion,20.5,
+map:OtrosPagosActividadInversion,Otros pagos actividad inversion,duracion,59.7,ifrs-full:OtherInflowsOutflowsOfCashClassifiedAsInvestingActivities
+ifrs-full:CashFlowsFromUsedInInvestingActivities,,duracion,-405.2,
+map:CobrosActividadFinanciacion,Cobros actividad financiacion,duracion,895.9,
+ifrs-full:ProceedsFromIssueOfSubordinatedLiabilities,,duracion,0.0,
+map:CobrosEmisionInstrumentoCapitalAmpliacionCapital,Cobros emision instrumento capital ampliacion capital,duracion,0.0,ifrs-full:ProceedsFromIssueOfPreferenceShares; ifrs-full:ProceedsFromIssuingOtherEquityInstruments; ifrs-full:ProceedsFromIssuingShares
+ifrs-full:ProceedsFromSaleOrIssueOfTreasuryShares,,duracion,7.4,
+map:OtrosCobrosActividadFinanciacio,Otros cobros actividad financiacio,duracion,888.5,ifrs-full:OtherInflowsOutflowsOfCashClassifiedAsFinancingActivities
+map:O,Pagos total actividad financiacio,duracion,1829.9,
+ifrs-full:DividendsPaidClassifiedAsFinancingActivities,,duracion,1183.4,
+ifrs-full:InterestPaidClassifiedAsFinancingActivities,,duracion,89.8,
+ifrs-full:RepaymentsOfSubordinatedLiabilities,,duracion,0.0,
+map:PagosDevolucionAportacionesAccionistas,Pagos devolucion aportaciones accionistas,duracion,0.0,ifrs-full:OtherInflowsOutflowsOfCashClassifiedAsFinancingActivities
+ifrs-full:PaymentsToAcquireOrRedeemEntitysShares,,duracion,40.4,
+map:OtrosPagosActividadFinanciacion,Otros pagos actividad financiacion,duracion,516.3,ifrs-full:OtherInflowsOutflowsOfCashClassifiedAsFinancingActivities
+ifrs-full:CashFlowsFromUsedInFinancingActivities,,duracion,-934.0,
+ifrs-full:EffectOfExchangeRateChangesOnCashAndCashEquivalents,,duracion,-100.9,
+ifrs-full:IncreaseDecreaseInCashAndCashEquivalents,,duracion,200.7,
+ifrs-full:DividendsProposedOrDeclaredBeforeFinancialStatementsAuthorisedForIssueButNotRecognisedAsDistributionToOwners,,duracion,0.0,
+ifrs-full:DividendsRecognisedAsDistributionsToOwnersPerShare,,duracion,0.0,
+ifrs-full:DividendsProposedOrDeclaredBeforeFinancialStatementsAuthorisedForIssueButNotRecognisedAsDistributionToOwnersPerShare,,duracion,0.0,

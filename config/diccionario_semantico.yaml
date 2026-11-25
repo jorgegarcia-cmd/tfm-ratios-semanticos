@@ -235,12 +235,12 @@ ratios:
 # Formato: concepto -> entidad -> etiqueta(s) XBRL (se suman si hay varias)
 # ---------------------------------------------------------------------------
 lei:
-  santander: 5493006QMFDDMYWIAM13
-  bbva: K8MS7FD7N5Z2WQ51AZ71
-  caixabank: 7CUNS533WID6K7DGFI87
-  sabadell: SI5RG2M0WQQLZCXKRM20
-  mapfre: 95980020140005693107
-  linea_directa: 95980079E2NBJT967T79
+  santander: "5493006QMFDDMYWIAM13"
+  bbva: "K8MS7FD7N5Z2WQ51AZ71"
+  caixabank: "7CUNS533WID6K7DGFI87"
+  sabadell: "SI5RG2M0WQQLZCXKRM20"
+  mapfre: "95980020140005693107"
+  linea_directa: "95980079E2NBJT967T79"
 
 mapeo:
   # Reglas de resolución concepto -> dato XBRL, por entidad.

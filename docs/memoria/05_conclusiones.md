@@ -10,7 +10,7 @@ El objetivo general de este trabajo era diseñar y validar una herramienta de co
 - **Definiciones divergentes:** las medidas alternativas de rendimiento se definen de forma distinta pese a llevar el mismo nombre; el ROE de los seis informes usa al menos cuatro bases de patrimonio diferentes.
 - **Perímetro y normativa:** los cambios de perímetro y las distintas variantes regulatorias (CET1 *phased-in*, *fully loaded* o de gestión; Solvencia II individual o de grupo) impiden comparar cifras que en apariencia son homogéneas.
 
-**Objetivo 2. Diseñar un diccionario semántico.** Se ha construido un diccionario declarativo con diecisiete conceptos canónicos y doce ratios. Sus reglas de mapeo (suma, diferencia, excepción por entidad y no disponibilidad motivada) bastan para resolver todos los casos encontrados en las seis entidades. La regla del patrimonio atribuido como diferencia entre patrimonio total e intereses minoritarios es un buen ejemplo: sustituye a un elemento NIIF que las entidades usan de forma inconsistente por una definición homogénea basada en dos elementos estándar, con un tratamiento explícito y trazado de los casos en que falta uno de ellos.
+**Objetivo 2. Diseñar un diccionario semántico.** Se ha construido un diccionario declarativo con diecisiete conceptos canónicos y doce ratios. Sus reglas de mapeo (suma, diferencia, excepción por entidad y no disponibilidad motivada) bastan para resolver todos los casos encontrados en las seis entidades. La regla del patrimonio atribuido como diferencia entre patrimonio total e intereses minoritarios es un buen ejemplo: sustituye a un elemento NIIF que las entidades usan de forma inconsistente por una definición homogénea basada en dos elementos estándar, con un tratamiento explícito y trazado de los casos en que falta uno de ellos. Además, el apartado 4.6 muestra que su construcción puede asistirse: un modelo de lenguaje sin acceso al diccionario propuso correctamente el 96,6 % de las reglas, frente al 57 % de un mapeo literal por nombre y el 59 % del anclaje ESEF.
 
 **Objetivo 3. Desarrollar un prototipo trazable.** El prototipo calcula 64 de los 72 valores que le corresponden (los ocho ratios derivables de ESEF y la variante del ROE sobre fondos propios) a partir de los informes oficiales, e integra los cuatro ratios regulatorios publicados. Cada cifra conserva su traza hasta el hecho XBRL de origen y, cuando un dato no está etiquetado, el sistema lo declara con su motivo. El lector propio de Inline XBRL procesa los seis informes en pocos segundos y sin conexión a internet.
 
@@ -28,7 +28,7 @@ Desde el punto de vista tecnológico, el trabajo propone una arquitectura en la 
 
 - **Muestra reducida:** seis entidades y dos ejercicios. El diccionario debe revisarse para incorporar nuevas entidades, aunque las reglas por defecto cubren la mayoría de conceptos.
 - **Solo hechos sin dimensiones:** no se aprovechan los desgloses dimensionales, lo que impide, por ejemplo, separar los negocios de vida y no vida.
-- **Mapeo manual asistido:** las reglas se han definido a partir de la exploración de los datos, no de forma automática.
+- **Mapeo revisado a mano:** las reglas se han definido a partir de la exploración de los datos; la propuesta automática se ha evaluado, pero no sustituye la revisión del analista.
 - **Ratios regulatorios no calculables:** la morosidad, la cobertura, el CET1 y la Solvencia II dependen de la información publicada, porque no están en los estados estructurados.
 - **Evaluación limitada:** se ha usado un número reducido de preguntas y un único modelo generalista, y la capa de consulta se ha probado con un intérprete por reglas, sin integrar un modelo de lenguaje por API.
 - **Tolerancia de validación:** el umbral absoluto de 0,5 puntos es holgado para ratios de nivel bajo; una tolerancia relativa o específica por ratio daría una validación más exigente.
@@ -37,6 +37,6 @@ Desde el punto de vista tecnológico, el trabajo propone una arquitectura en la 
 
 - **Ampliar la muestra:** incorporar Bankinter y Unicaja y una serie temporal más larga.
 - **Usar las dimensiones XBRL** para calcular ratios por segmento.
-- **Automatizar el mapeo de extensiones:** las extensiones ESEF deben anclarse a un elemento de la taxonomía NIIF, y un modelo de lenguaje podría proponer reglas para que un analista las valide.
+- **Integrar la propuesta de reglas en el flujo de alta de entidades:** el modelo de lenguaje propone el diccionario de una entidad nueva, el detector de anomalías y las identidades contables lo verifican, y el analista lo aprueba.
 - **Integrar un modelo de lenguaje por API** con llamada a herramientas y repetir la evaluación con un conjunto de preguntas más amplio.
 - **Incorporar la información regulatoria estructurada** (Pilar 3 y los informes de Solvencia II) para calcular, y no solo consultar, los ratios de solvencia y calidad del activo.

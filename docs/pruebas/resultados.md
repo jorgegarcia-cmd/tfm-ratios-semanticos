@@ -1,6 +1,6 @@
 # Resultados de la ejecución de pruebas (23/11/2026)
 
-Resultado global: **89 pruebas automáticas superadas de 89**, **20 de 20 comprobaciones de navegador** (escritorio y móvil) y **prueba de humo en producción superada**.
+Resultado global: **91 pruebas automáticas superadas de 91**, **20 de 20 comprobaciones de navegador** (escritorio y móvil) y **prueba de humo en producción superada**.
 
 | Nivel | Pruebas | Resultado | Evidencia clave |
 |---|---|---|---|
@@ -10,7 +10,8 @@ Resultado global: **89 pruebas automáticas superadas de 89**, **20 de 20 compro
 | 4. Validación | 5 | 5 superadas | Variante RoA frente a RoRWA, exclusión de aproximaciones, base de Sabadell, umbral estricto (−0,50 no coincide) |
 | 5. Integración | 9 | 9 superadas | 6.835 hechos en los 6 paquetes; 64 de 72 valores; activo = pasivo + patrimonio en las 6 entidades y los 2 ejercicios; patrimonio atribuido ≤ total |
 | 6. Regresión | 30 | 30 superadas | Las 28 cifras de la memoria, el resultado de la validación (23 de 37; 0,22) y la diferencia de 4,5 puntos del ROE |
-| 7. Calidad de datos | 3 | 3 superadas | Los 203 hechos de las trazas existen en el informe con el mismo valor; las 104 citas de ratios publicados aparecen literalmente en el informe |
+| 7. Calidad de datos | 2 | 2 superadas | Los 203 hechos de las trazas existen en el informe con el mismo valor; las 104 citas de ratios publicados aparecen literalmente en el informe |
+| 7b. Asistencia al diccionario | 3 | 3 superadas | 595 anclajes en 560 extensiones; el detector encuentra los hallazgos conocidos; literal 33 y anclaje 34 de 58 reglas |
 | 8. API | 13 | 13 superadas | JSON válido sin NaN; entradas vacías, HTML, comillas y caracteres especiales sin errores 500; más de 300 caracteres rechazados (422) |
 | 9. Extremo a extremo | 20 | 20 superadas | Consulta, ejemplos, tabla, cambio de ejercicio, traza y gráfico en Chromium a 1.280 y 400 px, sin errores de JavaScript ni desbordamiento lateral |
 | 10. Rendimiento | 2 | 2 superadas | Lectura de los 6 paquetes < 30 s (unos 4 s); API < 1 s por consulta en local |

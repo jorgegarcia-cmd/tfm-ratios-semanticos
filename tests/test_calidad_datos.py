@@ -29,29 +29,10 @@ def test_cada_hecho_de_cada_traza_existe_en_el_informe():
     assert comprobados > 200
 
 
-def _texto(lei):
-    with zipfile.ZipFile(next(ESEF.glob(f"{lei}-*.xbri"))) as z:
-        nombre = next(n for n in z.namelist() if "/reports/" in n and n.endswith(".xhtml"))
-        raiz = etree.fromstring(z.read(nombre), etree.XMLParser(huge_tree=True, recover=True))
-    return re.sub(r"\s+", " ", " ".join(raiz.itertext()))
-
-
-def _norm(s):
-    return re.sub(r"[\s|]+", "", s)
-
-
 @requiere_esef
-def test_cada_cita_de_ratio_publicado_aparece_en_el_informe():
-    pub = pd.read_csv(RAIZ / "data/published/ratios_publicados.csv")
-    textos = {n: _norm(_texto(lei)) for n, lei in LEI.items()}
-    fallos = [f"{r.entidad} {r.ratio} {r.ejercicio}" for r in pub.itertuples()
-              if _norm(r.cita) not in textos[r.entidad]]
-    assert not fallos, f"{len(fallos)} citas no encontradas: {fallos[:10]}"
-
-
-def test_valor_publicado_aparece_en_su_cita():
-    pub = pd.read_csv(RAIZ / "data/published/ratios_publicados.csv")
-    for r in pub.itertuples():
-        candidatos = {f"{r.valor_pct:.2f}".replace(".", ","), f"{r.valor_pct:.1f}".replace(".", ","),
-                      f"{r.valor_pct:g}".replace(".", ","), f"{r.valor_pct:.0f}"}
-        assert any(c in r.cita for c in candidatos), f"{r.entidad} {r.ratio} {r.ejercicio}: {r.valor_pct} no está en la cita"
+def test_cada_ratio_publicado_es_verificable():
+    """La cita de cada ratio publicado aparece literalmente en el informe y contiene el valor."""
+    from tfm_ratios.verificar_publicados import verificar
+    d = verificar()
+    assert d.v1_cita_en_informe.all(), d[~d.v1_cita_en_informe][["entidad", "ratio", "ejercicio"]].to_string()
+    assert d.v2_valor_en_cita.all(), d[~d.v2_valor_en_cita][["entidad", "ratio", "ejercicio"]].to_string()

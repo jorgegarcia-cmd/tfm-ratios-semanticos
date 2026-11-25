@@ -1,0 +1,13 @@
+entidad,codigo,gravedad,detalle
+santander,A3,media,usa ifrs-full:GrossProfit (pensado para beneficio bruto (ventas − coste de ventas)) en una entidad financiera
+santander,A6,baja,usa ifrs-full:InterestRevenueExpense en lugar de ifrs-full:InterestIncomeExpenseNet
+bbva,A3,media,usa ifrs-full:GrossProfit (pensado para beneficio bruto (ventas − coste de ventas)) en una entidad financiera
+bbva,A6,baja,usa ifrs-full:InterestRevenueExpense en lugar de ifrs-full:InterestIncomeExpenseNet
+caixabank,A2,alta,"2024-12-31: EquityAttributableToOwnersOfParent (37,425 M€) > Equity (36,865 M€)"
+caixabank,A2,alta,"2025-12-31: EquityAttributableToOwnersOfParent (38,962 M€) > Equity (38,526 M€)"
+caixabank,A3,media,usa ifrs-full:GrossProfit (pensado para beneficio bruto (ventas − coste de ventas)) en una entidad financiera
+caixabank,A6,baja,usa ifrs-full:InterestRevenueExpense en lugar de ifrs-full:InterestIncomeExpenseNet
+sabadell,A3,media,usa ifrs-full:GrossProfit (pensado para beneficio bruto (ventas − coste de ventas)) en una entidad financiera
+sabadell,A6,baja,usa ifrs-full:InterestRevenueExpense en lugar de ifrs-full:InterestIncomeExpenseNet
+mapfre,A4,media,"8 de 90 extensiones sin anclaje, p. ej. map:CobrosActividadFinanciacion, map:FlujoDeCajaActividadAseguradora, map:I"
+linea_directa,A4,media,"14 de 71 extensiones sin anclaje, p. ej. lda:ActivosFinancierosAValorRazonableConCambioEnPatrimonioNeto, lda:AjustesPorCambiosDeValor, lda:ReservasTotal"

@@ -1,0 +1,242 @@
+elemento,etiqueta_extension,periodo_tipo,valor_meur,anclaje
+ifrs-full:CashAndCashEquivalents,,instante,45828.0,
+ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading,,instante,5799.0,
+ifrs-full:DerivativeFinancialAssetsHeldForTrading,,instante,4378.0,
+cabk:Equityinstrumentsheldfortrading,Instrumentos de patrimonio de negociación,instante,641.0,ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading
+cabk:Debtinstrumentsheldfortrading,Valores representativos de deuda de negociación,instante,780.0,ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading
+ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue,,instante,21320.0,
+cabk:Equityinstrumentsmandatorilymeasuredatfairvalue,Instrumentos de patrimonio valorados obligatoriamente a valor razonable,instante,21318.0,ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue
+cabk:Debtsecuritiesatfairvaluemandatorilymeasuredatfairvalue,Valores representativos de deuda valorados obligatoriamente a valor razonable,instante,2.0,ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue
+ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition,,instante,5698.0,
+cabk:Debtsecuritiesatfairvaluedesignateduponinitialrecognitionorsubsequently,Valores representativos de deuda a valor razonable designados en el momento de reconocimiento inicial o posteriormente,instante,5698.0,ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition
+ifrs-full:FinancialAssetsAtFairValueThroughOtherComprehensiveIncome,,instante,71182.0,
+cabk:Investmentsinequityinstrumentsdesignatedatfairvaluethroughothercomprehensiveincome,Inversiones en instrumentos de patrimonio designados a valor razonable con cambios en otro resultado global,instante,611.0,ifrs-full:FinancialAssetsAtFairValueThroughOtherComprehensiveIncome
+cabk:Debtinstrumentsatfairvaluethroughothercomprehensiveincome,Valores representativos de deuda a valor razonable con cambios en otro resultado global,instante,70571.0,ifrs-full:FinancialAssetsAtFairValueThroughOtherComprehensiveIncome
+ifrs-full:FinancialAssetsAtAmortisedCost,,instante,479096.0,
+cabk:Debtsecuritiesatamortisedcost,Valores representativos de deuda a coste amortizado,instante,88924.0,ifrs-full:FinancialAssetsAtAmortisedCost
+ifrs-full:LoansAndAdvances,,instante,390172.0,
+ifrs-full:LoansAndAdvancesToBanks,,instante,14844.0,
+ifrs-full:LoansAndAdvancesToCustomers,,instante,375328.0,
+ifrs-full:DerivativeFinancialAssetsHeldForHedging,,instante,1377.0,
+ifrs-full:AccumulatedFairValueHedgeAdjustmentOnHedgedItemIncludedInCarryingAmountAssets,,instante,-169.0,
+ifrs-full:InvestmentAccountedForUsingEquityMethod,,instante,1749.0,
+ifrs-full:InvestmentsInJointVenturesAccountedForUsingEquityMethod,,instante,4.0,
+ifrs-full:InvestmentsInAssociatesAccountedForUsingEquityMethod,,instante,1745.0,
+ifrs-full:ReinsuranceContractsHeldThatAreAssets,,instante,60.0,
+cabk:Tangibleassets,Tangibleassets,instante,6514.0,ifrs-full:Assets; ifrs-full:InvestmentProperty; ifrs-full:PropertyPlantAndEquipment
+ifrs-full:PropertyPlantAndEquipment,,instante,5630.0,
+ifrs-full:PropertyPlantAndEquipmentIncludingRightofuseAssets,,instante,5630.0,
+ifrs-full:InvestmentProperty,,instante,884.0,
+ifrs-full:IntangibleAssetsAndGoodwill,,instante,5269.0,
+ifrs-full:Goodwill,,instante,3094.0,
+ifrs-full:IntangibleAssetsOtherThanGoodwill,,instante,2175.0,
+cabk:Taxassets,Taxassets,instante,17115.0,ifrs-full:Assets; ifrs-full:CurrentTaxAssets; ifrs-full:DeferredTaxAssets
+ifrs-full:CurrentTaxAssets,,instante,2843.0,
+ifrs-full:DeferredTaxAssets,,instante,14272.0,
+ifrs-full:OtherAssets,,instante,1423.0,
+ifrs-full:Inventories,,instante,53.0,
+ifrs-full:OtherNonfinancialAssets,,instante,1370.0,
+ifrs-full:NoncurrentAssetsOrDisposalGroupsClassifiedAsHeldForSale,,instante,1779.0,
+ifrs-full:Assets,,instante,664040.0,
+cabk:Exposuretocreditriskonloancommitments,Exposición al riesgo de crédito por compromisos de préstamos concedidos,instante,127411.0,ifrs-full:ExposureToCreditRiskOnLoanCommitmentsAndFinancialGuaranteeContracts
+cabk:Exposuretocreditriskfinancialguaranteecommitments,Exposición al riesgo de crédito por garantías financieras concedidas,instante,9305.0,ifrs-full:ExposureToCreditRiskOnLoanCommitmentsAndFinancialGuaranteeContracts
+cabk:Exposuretocreditriskothercommitments,Exposición al riesgo de crédito por otros compromisos concedidos,instante,38396.0,ifrs-full:ExposureToCreditRiskOnLoanCommitmentsAndFinancialGuaranteeContracts
+cabk:Noncashassetspledgedascollateralforwhichtransfereehasrightbycontractorcustomtosellorrepledgecollateralclassifiedasheldfortrading,Activos financieros mantenidos para negociar prestados o entregados como garantía con derecho de venta o pignoración,instante,73.0,ifrs-full:NoncashAssetsPledgedAsCollateralForWhichTransfereeHasRightByContractOrCustomToSellOrRepledgeCollateral
+cabk:Noncashassetspledgedascollateralforwhichtransfereehasrightbycontractorcustomtosellorrepledgecollateralfvoci,Activos financieros a valor razonable prestados o entregados como garantía con derecho de venta o pignoración,instante,2115.0,ifrs-full:NoncashAssetsPledgedAsCollateralForWhichTransfereeHasRightByContractOrCustomToSellOrRepledgeCollateral
+cabk:Noncashassetspledgedascollateralforwhichtransfereehasrightbycontractorcustomtosellorrepledgecollateralclassifiedatamortisedcost,Activos financieros a coste amortizado prestados o entregados como garantía con derecho de venta o pignoración,instante,33420.0,ifrs-full:NoncashAssetsPledgedAsCollateralForWhichTransfereeHasRightByContractOrCustomToSellOrRepledgeCollateral
+cabk:Propertyplantandequipmentbyoperatinglease,Activo material adquirido en arrendamiento,instante,1489.0,ifrs-full:ExposureToCreditRiskOnLoanCommitmentsAndFinancialGuaranteeContracts
+cabk:Realestateinvestmentsbyoperatinglease,Inversiones inmobiliarias cedido en arrendamiento operativo,instante,818.0,ifrs-full:ExposureToCreditRiskOnLoanCommitmentsAndFinancialGuaranteeContracts
+ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading,,instante,3133.0,
+ifrs-full:DerivativeFinancialLiabilitiesHeldForTrading,,instante,2826.0,
+cabk:Shortpositionsfinancialliabilitiesheldfortrading,Posiciones cortas de valores mantenidas para negociar,instante,307.0,ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading
+ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition,,instante,4273.0,
+cabk:Depositsatfairvaluethroughprofitorlossdesignatedasuponinitialrecognition,DepositsAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition,instante,4269.0,ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition
+cabk:Loansandadvancestocustomersatfairvaluethroughprofitorlossdesignatedasuponinitialrecognition,Depósitos a la clientela a valor razonable con cambios en resultados,instante,4269.0,ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition
+cabk:Otherliabilitiesatfairvaluethroughprofitorloss,Otros pasivos financieros a valor razonable con cambios en resultados,instante,4.0,ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLoss
+ifrs-full:FinancialLiabilitiesAtAmortisedCost,,instante,526391.0,
+ifrs-full:DepositsAtAmortisedCost,,instante,467784.0,
+ifrs-full:LiabilitiesDueToCentralBanks,,instante,85.0,
+ifrs-full:DepositsFromBanks,,instante,19887.0,
+ifrs-full:DepositsFromCustomers,,instante,447812.0,
+ifrs-full:DebtSecurities,,instante,52206.0,
+ifrs-full:OtherFinancialLiabilities,,instante,6401.0,
+ifrs-full:DerivativeFinancialLiabilitiesHeldForHedging,,instante,3999.0,
+ifrs-full:AccumulatedFairValueHedgeAdjustmentOnHedgedItemIncludedInCarryingAmountLiabilities,,instante,-1235.0,
+ifrs-full:InsuranceContractsThatAreLiabilities,,instante,79892.0,
+ifrs-full:Provisions,,instante,3785.0,
+ifrs-full:ProvisionsForEmployeeBenefits,,instante,497.0,
+cabk:Otherlongtermemployeebenefits,Otras retribuciones a los empleados a largo plazo,instante,1348.0,ifrs-full:ProvisionsForEmployeeBenefits
+ifrs-full:LegalProceedingsProvision,,instante,1227.0,
+ifrs-full:WarrantyProvision,,instante,416.0,
+ifrs-full:OtherProvisions,,instante,297.0,
+cabk:Taxliabilities,Tax Liabilities,instante,2923.0,ifrs-full:CurrentTaxLiabilities; ifrs-full:DeferredTaxLiabilities; ifrs-full:Liabilities
+ifrs-full:CurrentTaxLiabilities,,instante,2018.0,
+ifrs-full:DeferredTaxLiabilities,,instante,905.0,
+ifrs-full:OtherLiabilities,,instante,2337.0,
+ifrs-full:LiabilitiesIncludedInDisposalGroupsClassifiedAsHeldForSale,,instante,16.0,
+ifrs-full:Liabilities,,instante,625514.0,
+cabk:Subordinatedliabilitiesamortisedcost,Pasivos subordinados a coste amortizado,instante,11380.0,ifrs-full:SubordinatedLiabilities
+ifrs-full:EquityAttributableToOwnersOfParent,,instante,38962.0,
+ifrs-full:IssuedCapital,,instante,7025.0,
+ifrs-full:SharePremium,,instante,11463.0,
+ifrs-full:OtherEquityInterest,,instante,45.0,
+ifrs-full:RetainedEarnings,,instante,18446.0,
+ifrs-full:OtherReserves,,instante,-2584.0,
+ifrs-full:TreasuryShares,,instante,145.0,
+cabk:Profitlossattributabletoownersofparentshareholdersfunds,Resultado del ejercicio atribuido a los propietarios de la dominante,instante,5891.0,ifrs-full:RetainedEarnings
+cabk:Interimdividend,Dividendos a cuenta,instante,-1179.0,ifrs-full:Equity
+ifrs-full:AccumulatedOtherComprehensiveIncome,,instante,-452.0,
+cabk:Othercomprehensiveincomethatwillnotbereclassifiedtoprofitorlossnetoftaxbalance,Other comprehensive income that will not be reclassified to profit or loss net of tax balance,instante,-266.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Othercomprehensiveincomenetoftaxgainslossesonremeasurementsofdefinedbenefitplansbalance,Ganancias o pérdidas actuariales en planes de pensiones de prestaciones definidas,instante,-407.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Shareofothercomprehensiveincomeofassociatesandjointventuresthatwillnotbereclassifiedtoprofitorloss,Participaciones en otros ingresos y gastos reconocidos de inversiones en negocios conjuntos y asociadas,instante,-1.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Othercomprehensiveincomenetoftaxchangeatfairvalueofequityinstrumentsmeasuredatfairvalue,Cambios en el valor razonable de instrumentos de patrimonio medidos a valor razonable con cambios en otro resultado global,instante,142.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Hedgeineffectivenessoffairvaluehedgesforequityinstrumentsmeasuredatfairvaluethroughothercomprehensiveincome,Hedge ineffectiveness of fair value hedges for equity instruments measured at fair value through other comprehensive income,instante,0.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Fairvaluechangesofequityinstrumentsmeasuredatfairvaluethroughothercomprehensiveincomehedgeditem,Cambios en el valor razonable de instrumentos de patrimonio medidos a valor razonable con cambios en otro resultado global (instrumento cubierto),instante,0.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Fairvaluechangesofequityinstrumentsmeasuredatfairvaluethroughothercomprehensiveincomehedginginstrument,Cambios en el valor razonable de instrumentos de patrimonio medidos a valor razonable con cambios en otro resultado global (instrumento cobertura),instante,0.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Itemsthatmaybereclassifiedtoprofitorloss,Items that may be reclassified to profit or loss,instante,-186.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Othercomprehensiveincomenetoftaxexchangedifferences,Otro resultado global acumulado de conversión en divisas,instante,-78.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Othercomprehensiveincomenetofcashflowhedgesbalance,Otro resultado global acumulado de reservas de cobertura de flujos de efectivo,instante,-240.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Changesinthefairvalueofdebtinstrumentsmeasuredatfairvaluewithchangesinothercomprehensiveincome,Cambios en el valor razonable de los valores representativos de deuda medidos a valor razonable con cambios en otro resultado global,instante,-427.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Insurancefinanceexpensesfrominsurancecontractsissuedrecognisedinothercomprehensiveincome,Gastos financieros por contratos de seguros emitidos en otro resultado global acumulado,instante,512.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+cabk:Shareofothercomprehensiveincomeofassociatesandjointventuresthatwillbereclassifiedtoprofitorloss,Participación en otros ingresos y gastos reconocidos de inversiones en negocios conjuntos y asociadas,instante,47.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+ifrs-full:NoncontrollingInterests,,instante,16.0,
+cabk:Accumulatedothercomprehensiveincomerestnoncontrollinginterest,Otro resultado global acumulado de intereses minoritarios en participaciones no dominantes,instante,0.0,ifrs-full:NoncontrollingInterests
+cabk:Restnoncontrollinginterest,Otras partidas de intereses minoritarios en participaciones no dominantes,instante,16.0,ifrs-full:NoncontrollingInterests
+ifrs-full:Equity,,instante,38526.0,
+ifrs-full:EquityAndLiabilities,,instante,664040.0,
+ifrs-full:RevenueFromInterest,,duracion,18021.0,
+cabk:Interestincomefrombankingactivity,InterestIncomeFromBankingActivity,duracion,16119.0,ifrs-full:RevenueFromInterest
+ifrs-full:InterestRevenueForFinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncome,,duracion,259.0,
+ifrs-full:InterestIncomeForFinancialAssetsMeasuredAtAmortisedCost,,duracion,14871.0,
+ifrs-full:InterestIncomeOnOtherFinancialAssets,,duracion,989.0,
+cabk:Interestincomefrominsuranceactivity,InterestIncomeFromInsuranceActivity,duracion,1902.0,ifrs-full:RevenueFromInterest
+cabk:Interestrevenueforinsuranceassetsmeasuredatfairvaluethroughothercomprehensiveincome,Ingresos por intereses de la actividad de seguros por activos financieros a valor razonable,duracion,1947.0,ifrs-full:RevenueFromInterest
+cabk:Interestincomeforinsuranceassetsmeasuredatamortisedcost,Ingresos por intereses de la actividad de seguros por activos financieros a coste amortizado,duracion,130.0,ifrs-full:RevenueFromInterest
+cabk:Otherinterestincomefrominsuranceactivity,Otros ingresos por intereses de la actividad de seguros,duracion,-175.0,ifrs-full:RevenueFromInterest
+ifrs-full:InterestExpense,,duracion,7350.0,
+cabk:Interestexpensefrombankingactivity,Gastos por intereses de la actividad bancaria,duracion,-5581.0,ifrs-full:InterestExpense
+cabk:Interestexpensefrominsuranceactivity,InterestExpenseFromInsuranceActivity,duracion,-1769.0,ifrs-full:InterestExpense
+cabk:Financialinterestexpensefrominsuranceactivity,Gastos financieros por intereses de contratos de seguros,duracion,-1756.0,ifrs-full:InterestExpense
+cabk:Otherinterestexpensefrominsuranceactivity,Otros gastos por intereses de la actividad de seguros,duracion,-13.0,ifrs-full:InterestExpense
+ifrs-full:InterestRevenueExpense,,duracion,10671.0,
+ifrs-full:RevenueFromDividends,,duracion,61.0,
+ifrs-full:ShareOfProfitLossOfAssociatesAccountedForUsingEquityMethod,,duracion,288.0,
+ifrs-full:FeeAndCommissionIncome,,duracion,4413.0,
+ifrs-full:FeeAndCommissionExpense,,duracion,446.0,
+cabk:Gainslossesonfinancialassetsandliabilitiesnotmeasuredatfairvaluethroughprofitorlossnet,Gains Losses On Financial Assets And Liabilities Not Measured At Fair Value Through Profit Or Loss Net,duracion,41.0,ifrs-full:GainLossArisingFromDerecognitionOfFinancialAssetsMeasuredAtAmortisedCost; ifrs-full:GainsLossesOnFinancialAssetsAtAmortisedCost; ifrs-full:GrossProfit
+ifrs-full:GainsLossesOnFinancialAssetsAtAmortisedCost,,duracion,13.0,
+cabk:Gainslossesonotherfinancialassetsandliabilities,Ganancias o pérdidas en otros activos y pasivos financieros,duracion,28.0,ifrs-full:GrossProfit
+cabk:Gainsorlossesonfinancialliabilitiesassetsatfairvalueclassifiedasheldfortrading,Gains Or Losses On Financial Liabilities Assets At Fair Value Classified As Held For Trading,duracion,292.0,ifrs-full:GrossProfit
+cabk:Othergainsorlossesonfinancialliabilitiesassetsatfairvalueclassifiedasheldfortrading,Otras ganancias o pérdidas por activos y pasivos financieros mantenidos para negociar,duracion,292.0,ifrs-full:GrossProfit
+ifrs-full:GainsLossesOnFinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue,,duracion,3.0,
+cabk:Othergainsorlossesonnontradingfinancialassetsandliabilitiesmandatorilyatfairvaluethroughprofitorloss,Otras ganancias o pérdidas por activos financieros a valor razonable con cambios en resultados valorados obligatoriamente a valor razonable,duracion,3.0,ifrs-full:GainsLossesOnFinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue
+ifrs-full:GainsLossesOnHedgingInstrument,,duracion,34.0,
+ifrs-full:GainsLossesOnExchangeDifferencesOnTranslationRecognisedInProfitOrLoss,,duracion,-124.0,
+ifrs-full:MiscellaneousOtherOperatingIncome,,duracion,517.0,
+ifrs-full:MiscellaneousOtherOperatingExpense,,duracion,780.0,
+ifrs-full:InsuranceServiceResult,,duracion,1320.0,
+ifrs-full:InsuranceRevenue,,duracion,3262.0,
+ifrs-full:InsuranceServiceExpensesFromInsuranceContractsIssued,,duracion,1942.0,
+ifrs-full:IncomeExpensesFromReinsuranceContractsHeldOtherThanFinanceIncomeExpenses,,duracion,-20.0,
+ifrs-full:GrossProfit,,duracion,16270.0,
+ifrs-full:AdministrativeExpense,,duracion,5624.0,
+ifrs-full:EmployeeBenefitsExpense,,duracion,3972.0,
+ifrs-full:OtherExpenseByFunction,,duracion,1652.0,
+ifrs-full:DepreciationAndAmortisationExpense,,duracion,791.0,
+cabk:Provisionsandreversalofprovisions,Provisiones o reversión de provisiones,duracion,-189.0,ifrs-full:AdditionalProvisionsOtherProvisions; ifrs-full:OtherReversalsOfProvisions; ifrs-full:ProfitLossBeforeTax
+ifrs-full:ImpairmentLossOnFinancialAssets,,duracion,935.0,
+cabk:Impairmentlossonassetsatfairvaluethroughothercomprehensiveincome,Impairment Loss On Assets At Fair Value Through Other Comprehensive Income,duracion,0.0,ifrs-full:ImpairmentLossOnFinancialAssets
+cabk:Impairmentlossonassetsatamortisedcost,Impairment Loss On Assets At Amortised Cost,duracion,935.0,ifrs-full:ImpairmentLossOnFinancialAssets
+cabk:Impairmentlossreversalofimpairmentofinvestmentsinsubsidiariesjointventuresandassociates,Deterioro o reversión del deterioro del valor de inversiones en negocios conjuntos o asociadas,duracion,-56.0,ifrs-full:ImpairmentLossImpairmentGainAndReversalOfImpairmentLossDeterminedInAccordanceWithIFRS9; ifrs-full:ProfitLossBeforeTax
+cabk:Impairmentlossinprofitorlossonnonfinancialassets,Impairment loss in profit or loss on non financial assets,duracion,-107.0,ifrs-full:ImpairmentLossRecognisedInProfitOrLossIntangibleAssetsAndGoodwill; ifrs-full:ImpairmentLossRecognisedInProfitOrLossPropertyPlantAndEquipment; ifrs-full:ProfitLossBeforeTax
+ifrs-full:ImpairmentLossRecognisedInProfitOrLossPropertyPlantAndEquipment,,duracion,61.0,
+ifrs-full:ImpairmentLossRecognisedInProfitOrLossIntangibleAssetsAndGoodwill,,duracion,38.0,
+cabk:Impairmentlossorreversalofimpairmentrecognisedinprofitorlossotherassets,Pérdida por deterioro del valor reconocido en el resultado de otros activos no financieros,duracion,-8.0,ifrs-full:ProfitLossBeforeTax
+ifrs-full:GainsLossesOnDisposalsOfNoncurrentAssets,,duracion,30.0,
+cabk:Gainslossesondisposalsofnoncurrentassetsheldforsale,Ganancias o pérdidas de activos no corrientes mantenidos para la venta,duracion,76.0,ifrs-full:GainsOnDisposalsOfNoncurrentAssets
+ifrs-full:ProfitLossBeforeTax,,duracion,8674.0,
+ifrs-full:IncomeTaxExpenseContinuingOperations,,duracion,2775.0,
+ifrs-full:ProfitLossFromContinuingOperations,,duracion,5899.0,
+ifrs-full:ProfitLossFromDiscontinuedOperations,,duracion,2.0,
+ifrs-full:ProfitLoss,,duracion,5901.0,
+ifrs-full:ProfitLossAttributableToNoncontrollingInterests,,duracion,10.0,
+ifrs-full:ProfitLossAttributableToOwnersOfParent,,duracion,5891.0,
+ifrs-full:OtherComprehensiveIncome,,duracion,141.0,
+ifrs-full:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossNetOfTax,,duracion,150.0,
+ifrs-full:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRemeasurementsOfDefinedBenefitPlans,,duracion,-17.0,
+ifrs-full:ShareOfOtherComprehensiveIncomeOfAssociatesAndJointVenturesAccountedForUsingEquityMethodThatWillNotBeReclassifiedToProfitOrLossBeforeTax,,duracion,0.0,
+ifrs-full:OtherComprehensiveIncomeBeforeTaxGainsLossesFromInvestmentsInEquityInstruments,,duracion,193.0,
+cabk:Othercomprehensiveincomebeforetaxgainslossesonhedgeditem,"Otro resultado global, antes de impuestos, ganancias (pérdidas) en instrumento cubierto",duracion,0.0,ifrs-full:OtherComprehensiveIncomeBeforeTaxGainsLossesOnHedgingInstrumentsThatHedgeInvestmentsInEquityInstruments
+cabk:Othercomprehensiveincomebeforetaxgainslossesonhedgedinstrument,"Otro resultado global, antes de impuestos, ganancias (pérdidas) en instrumento de cobertura",duracion,0.0,ifrs-full:OtherComprehensiveIncomeBeforeTaxGainsLossesOnHedgingInstrumentsThatHedgeInvestmentsInEquityInstruments
+ifrs-full:IncomeTaxRelatingToComponentsOfOtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLoss,,duracion,26.0,
+ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax,,duracion,-9.0,
+ifrs-full:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation,,duracion,-201.0,
+ifrs-full:GainsLossesOnExchangeDifferencesOnTranslationBeforeTax,,duracion,-201.0,
+ifrs-full:OtherComprehensiveIncomeBeforeTaxCashFlowHedges,,duracion,14.0,
+ifrs-full:GainsLossesOnCashFlowHedgesBeforeTax,,duracion,-12.0,
+ifrs-full:ReclassificationAdjustmentsOnCashFlowHedgesBeforeTax,,duracion,-26.0,
+ifrs-full:OtherComprehensiveIncomeBeforeTaxFinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncome,,duracion,-470.0,
+ifrs-full:GainsLossesOnFinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncomeBeforeTax,,duracion,-452.0,
+ifrs-full:ReclassificationAdjustmentsOnFinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncomeBeforeTax,,duracion,18.0,
+ifrs-full:InsuranceFinanceIncomeExpensesFromInsuranceContractsIssuedExcludedFromProfitOrLossThatWillBeReclassifiedToProfitOrLossNetOfTax,,duracion,650.0,
+ifrs-full:ShareOfOtherComprehensiveIncomeOfAssociatesAndJointVenturesAccountedForUsingEquityMethodThatWillBeReclassifiedToProfitOrLossBeforeTax,,duracion,1.0,
+ifrs-full:IncomeTaxRelatingToComponentsOfOtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLoss,,duracion,3.0,
+ifrs-full:ComprehensiveIncome,,duracion,6042.0,
+ifrs-full:ComprehensiveIncomeAttributableToNoncontrollingInterests,,duracion,9.0,
+ifrs-full:ComprehensiveIncomeAttributableToOwnersOfParent,,duracion,6033.0,
+cabk:Otherchangesinequity,Otras variaciones en el patrimonio neto,duracion,-4381.0,ifrs-full:ChangesInEquity; ifrs-full:DividendsPaid; ifrs-full:IncreaseDecreaseThroughSharebasedPaymentTransactions; ifrs-full:IncreaseDecreaseThroughTransactionsWithOwners; ifrs-full:IncreaseDecreaseThroughTransfersAndOtherChangesEquity; ifrs-full:IssueOfEquity; ifrs-full:PurchaseOfTreasuryShares; ifrs-full:SaleOrIssueOfTreasuryShares
+ifrs-full:ReductionOfIssuedCapital,,duracion,996.0,
+ifrs-full:DividendsPaid,,duracion,3211.0,
+ifrs-full:PurchaseOfTreasuryShares,,duracion,872.0,
+ifrs-full:SaleOrIssueOfTreasuryShares,,duracion,1026.0,
+ifrs-full:IncreaseDecreaseThroughTransactionsWithOwners,,duracion,0.0,
+ifrs-full:IncreaseDecreaseThroughTransfersAndOtherChangesEquity,,duracion,-328.0,
+cabk:AT1changesinequity,Pago de instrumentos AT1,duracion,-278.0,ifrs-full:ChangesInEquity
+ifrs-full:CashFlowsFromUsedInOperatingActivities,,duracion,4410.0,
+ifrs-full:AdjustmentsForReconcileProfitLoss,,duracion,2059.0,
+ifrs-full:AdjustmentsForDepreciationAndAmortisationExpense,,duracion,791.0,
+ifrs-full:OtherAdjustmentsToReconcileProfitLoss,,duracion,1268.0,
+cabk:Adjustmentsforincreasedecreaseinoperatingassets,Adjustments For Increase Decrease In Operating Assets,duracion,-38487.0,ifrs-full:AdjustmentsForDecreaseIncreaseInFinancialAssetsHeldForTrading; ifrs-full:AdjustmentsForDecreaseIncreaseInOtherAssets; ifrs-full:AdjustmentsForFairValueGainsLosses; ifrs-full:CashFlowsFromUsedInOperatingActivities
+ifrs-full:AdjustmentsForDecreaseIncreaseInFinancialAssetsHeldForTrading,,duracion,-111.0,
+ifrs-full:AdjustmentsForDecreaseIncreaseInFinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue,,duracion,-4073.0,
+cabk:Adjustmentsfordecreaseincreaseinfinancialassetsatfairvaluethroughprofitorloss,Ajustes por aumento o disminución de los activos financieros designados a valor razonable,duracion,800.0,ifrs-full:ProfitLoss
+cabk:Adjustmentsfordecreaseincreaseinfinancialassetsatfairvaluethroughothercomprehensiveincome,Ajustes por aumento o disminución de los activos financieros designados a valor razonable con cambios en otro resultado global,duracion,-2564.0,ifrs-full:AdjustmentsForFairValueGainsLosses
+cabk:Adjustmentsfordecreaseincreaseinfinancialassetsatamortisedcost,Ajustes por aumento o disminución de los activos financieros a coste amortizado,duracion,-31999.0,ifrs-full:AdjustmentsForDecreaseIncreaseInLoansAndAdvancesToCustomers
+ifrs-full:AdjustmentsForDecreaseIncreaseInOtherAssets,,duracion,-540.0,
+cabk:Adjustmentsforincreasedecreaseinoperatingliabilities,Adjustments For Increase Decrease In Operating Liabilities,duracion,35994.0,ifrs-full:AdjustmentsForIncreaseDecreaseInDepositsFromCustomers; ifrs-full:AdjustmentsForIncreaseDecreaseInFinancialLiabilitiesHeldForTrading; ifrs-full:AdjustmentsForIncreaseDecreaseInOtherLiabilities; ifrs-full:CashFlowsFromUsedInOperatingActivities
+ifrs-full:AdjustmentsForIncreaseDecreaseInFinancialLiabilitiesHeldForTrading,,duracion,-498.0,
+cabk:Adjustmentsforincreasedfinancialliabilitiesatfvpl,Ajustes por aumento o disminución de los pasivos financieros designados a valor razonable,duracion,673.0,ifrs-full:ProfitLoss
+cabk:Adjustmentsforincreasedecreaseinfinancialliabilitiesatamortisedcost,Ajustes por aumento o disminución de los pasivos financieros a coste amortizado,duracion,31729.0,ifrs-full:AdjustmentsForIncreaseDecreaseInDepositsFromCustomers
+ifrs-full:AdjustmentsForIncreaseDecreaseInOtherLiabilities,,duracion,4090.0,
+ifrs-full:IncomeTaxesPaidRefundClassifiedAsOperatingActivities,,duracion,1057.0,
+ifrs-full:CashFlowsFromUsedInInvestingActivities,,duracion,-34.0,
+ifrs-full:OutflowsOfCashFromInvestingActivities,,duracion,980.0,
+ifrs-full:PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities,,duracion,386.0,
+ifrs-full:PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities,,duracion,585.0,
+ifrs-full:OtherCashPaymentsToAcquireInterestsInJointVenturesClassifiedAsInvestingActivities,,duracion,3.0,
+cabk:Purchaseofnoncurrentassetsclassifiedasheldforsale,Purchase Of Non Current Assets Classified As Held For Sale,duracion,6.0,ifrs-full:OutflowsOfCashFromInvestingActivities
+ifrs-full:InflowsOfCashFromInvestingActivities,,duracion,946.0,
+ifrs-full:ProceedsFromSalesOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities,,duracion,105.0,
+ifrs-full:ProceedsFromSalesOfIntangibleAssetsClassifiedAsInvestingActivities,,duracion,6.0,
+ifrs-full:OtherCashReceiptsFromSalesOfInterestsInJointVenturesClassifiedAsInvestingActivities,,duracion,99.0,
+ifrs-full:ProceedsFromDisposalOfNoncurrentAssetsOrDisposalGroupsClassifiedAsHeldForSaleAndDiscontinuedOperations,,duracion,736.0,
+ifrs-full:CashFlowsFromUsedInFinancingActivities,,duracion,-8349.0,
+cabk:Outflowsofcashfromfinancingactivities,Outflows Of Cash From Financing Activities,duracion,-19404.0,ifrs-full:CashFlowsFromUsedInFinancingActivities; ifrs-full:DividendsPaidClassifiedAsFinancingActivities; ifrs-full:OtherInflowsOutflowsOfCashClassifiedAsFinancingActivities; ifrs-full:PaymentsToAcquireOrRedeemEntitysShares; ifrs-full:RepaymentsOfSubordinatedLiabilities
+ifrs-full:DividendsPaidClassifiedAsFinancingActivities,,duracion,3211.0,
+ifrs-full:RepaymentsOfSubordinatedLiabilities,,duracion,2005.0,
+cabk:Paymentstoacquireentityshares,Payments To Acquire Entity Shares,duracion,872.0,ifrs-full:PaymentsToAcquireOrRedeemEntitysShares
+cabk:Otheroutflowsofcashclassifiedasfinancingactivities,Otras salidas de efectivo relacionadas con actividades de financiación,duracion,-13316.0,ifrs-full:CashFlowsFromUsedInFinancingActivities
+cabk:Inflowsofcashfromfinancingactivities,Inflows Of Cash From Financing Activities,duracion,11055.0,ifrs-full:CashFlowsFromUsedInFinancingActivities; ifrs-full:ProceedsFromIssueOfSubordinatedLiabilities; ifrs-full:ProceedsFromIssuingOtherEquityInstruments; ifrs-full:ProceedsFromSaleOrIssueOfTreasuryShares
+ifrs-full:ProceedsFromIssueOfSubordinatedLiabilities,,duracion,3500.0,
+ifrs-full:ProceedsFromSaleOrIssueOfTreasuryShares,,duracion,30.0,
+cabk:Otherinflowsofcashclassifiedasfinancingactivities,Otras entradas de efectivo relacionadas con actividades de financiación,duracion,7525.0,ifrs-full:CashFlowsFromUsedInFinancingActivities
+ifrs-full:EffectOfExchangeRateChangesOnCashAndCashEquivalents,,duracion,-3.0,
+ifrs-full:IncreaseDecreaseInCashAndCashEquivalents,,duracion,-3976.0,
+ifrs-full:Cash,,instante,2512.0,
+ifrs-full:CashAndBankBalancesAtCentralBanks,,instante,42139.0,
+ifrs-full:OtherCashAndCashEquivalents,,instante,1177.0,
+ifrs-full:InterestReceivedClassifiedAsOperatingActivities,,duracion,17542.0,
+ifrs-full:InterestPaidClassifiedAsOperatingActivities,,duracion,7490.0,
+ifrs-full:DividendsReceivedClassifiedAsOperatingActivities,,duracion,480.0,
+ifrs-full:DividendsProposedOrDeclaredBeforeFinancialStatementsAuthorisedForIssueButNotRecognisedAsDistributionToOwners,,duracion,3499.0,
+ifrs-full:DividendsProposedOrDeclaredBeforeFinancialStatementsAuthorisedForIssueButNotRecognisedAsDistributionToOwnersPerShare,,duracion,0.0,

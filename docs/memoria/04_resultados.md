@@ -1,6 +1,6 @@
 # 4. Resultados
 
-Este capítulo presenta los resultados de aplicar el prototipo a las seis entidades de la muestra. Se organiza en cinco bloques: la heterogeneidad del etiquetado XBRL (4.1), la diversidad de definiciones en las medidas alternativas de rendimiento (4.2), la validación de los ratios calculados frente a los publicados (4.3), la evaluación de la capa de consulta con un modelo de lenguaje (4.4) y el análisis financiero comparado de las entidades (4.5).
+Este capítulo presenta los resultados de aplicar el prototipo a las seis entidades de la muestra. Se organiza en seis bloques: la heterogeneidad del etiquetado XBRL (4.1), la diversidad de definiciones en las medidas alternativas de rendimiento (4.2), la validación de los ratios calculados frente a los publicados (4.3), la evaluación de la capa de consulta con un modelo de lenguaje (4.4), el análisis financiero comparado de las entidades (4.5) y el uso de un modelo de lenguaje para asistir en la construcción del diccionario (4.6).
 
 ## 4.1. Heterogeneidad del etiquetado en los informes ESEF
 
@@ -142,3 +142,56 @@ Fuente: Elaboración propia a partir de los informes ESEF 2025.
 **Seguros.** Línea Directa obtiene un ROE muy superior al de Mapfre (22,5 % frente a 12,4 %, calculados), con un negocio mucho más pequeño y centrado en no vida. Mapfre publica un ratio combinado mejor (90,2 % frente a 92,6 %), con la salvedad de que el suyo corresponde solo al negocio de no vida. La comparación de solvencia está limitada: Mapfre solo publica su ratio de Solvencia II a septiembre de 2025 (210,4 %), y la de Línea Directa (182,6 % tras el dividendo complementario) corresponde a la entidad individual, no al grupo.
 
 **Cambios de perímetro.** La interpretación de 2025 exige tener en cuenta los cambios de perímetro. En Sabadell, TSB figura como actividad interrumpida. Santander presenta 75.011 M€ de activos no corrientes mantenidos para la venta. Ambos hechos afectan a los saldos de balance y a la comparación interanual. Un analista debe incorporar este contexto antes de extraer conclusiones, y la herramienta lo facilita al mostrar la traza de cada cifra.
+
+## 4.6. Asistencia a la construcción del diccionario
+
+Las reglas del diccionario se escribieron a mano tras explorar los datos. Para valorar si esa tarea puede automatizarse, y con qué garantías, se han probado tres tareas «fuera de línea». Todas siguen el mismo principio que la capa de consulta: un método propone y un procedimiento determinista verifica.
+
+### 4.6.1. Propuesta automática de reglas
+
+Se compararon tres métodos para proponer la regla de cada uno de los 58 pares concepto-entidad del catálogo, frente a la sección de mapeo del diccionario como referencia:
+
+1. **Literal:** usar el elemento NIIF que corresponde al concepto si la entidad lo etiqueta. Es lo que haría un mapeo por nombre.
+2. **Anclaje:** el método literal y, si no hay coincidencia, la extensión que la propia entidad declara anclada a ese elemento. El Reglamento ESEF obliga a anclar cada extensión al elemento NIIF más próximo, y los seis paquetes contienen 595 anclajes que cubren el 96 % de las extensiones usadas.
+3. **Modelo de lenguaje a ciegas:** un modelo de lenguaje recibió, para cada entidad, sus hechos de 2025 con etiqueta, valor y anclaje, y la descripción de los conceptos, pero no el diccionario manual. Tuvo que proponer cada regla (suma, diferencia o no disponible) con una justificación.
+
+Una propuesta se considera correcta si usa los mismos elementos que la referencia o si, con otros elementos, da el mismo valor a 31 de diciembre de 2025 (±0,5 %).
+
+**Tabla 13. Propuesta automática de reglas frente al diccionario manual**
+
+| Método | Correctas (de 58) | % | Banca (de 40) | Seguros (de 18) |
+|---|---|---|---|---|
+| Literal | 33 | 56,9 % | 23 | 10 |
+| Anclaje | 34 | 58,6 % | 24 | 10 |
+| Modelo de lenguaje a ciegas | 56 | 96,6 % | 38 | 18 |
+
+Fuente: Elaboración propia.
+
+El anclaje apenas mejora el método literal y, en un caso, introduce un error difícil de detectar. Santander ancla su extensión de patrimonio «excluido el otro resultado global» al elemento de patrimonio atribuido, así que el método la propone como patrimonio atribuido. Es una magnitud distinta, con 38.000 millones de euros de diferencia. El anclaje indica proximidad, no equivalencia.
+
+El modelo de lenguaje detectó por su cuenta las dos trampas semánticas del capítulo: que la cifra que CaixaBank etiqueta como patrimonio atribuido supera su patrimonio total y corresponde a los fondos propios, y que la extensión de Santander excluye el otro resultado global. Las dos discrepancias restantes son una elección de definición, no una invención. Para BBVA, el modelo consideró préstamos y depósitos de la clientela solo los registrados a coste amortizado, y el diccionario incluye también las carteras de negociación, formadas en su mayor parte por adquisiciones temporales. Con su criterio, la ratio préstamos/depósitos pasaría del 92,8 % al 91,6 %.
+
+El resultado sugiere un uso práctico: el modelo de lenguaje puede proponer el diccionario de una entidad nueva con un acierto alto, y el analista revisa las propuestas y las validan las comprobaciones del apartado siguiente, en lugar de escribir las reglas desde cero.
+
+### 4.6.2. Detección de anomalías de etiquetado
+
+Un módulo de comprobaciones deterministas revisa cada informe antes de usarlo (Tabla 14).
+
+**Tabla 14. Anomalías detectadas automáticamente en los informes ESEF 2025**
+
+| Comprobación | Resultado |
+|---|---|
+| Activo igual a pasivo más patrimonio (2024 y 2025) | Se cumple en las seis entidades |
+| Patrimonio «atribuido» mayor que el patrimonio total | CaixaBank, en 2024 y 2025 |
+| Elemento pensado para la industria usado por una entidad financiera | `GrossProfit` en los cuatro bancos |
+| Elemento genérico en lugar del específico | Margen de intereses en los cuatro bancos |
+| Extensiones sin anclaje ESEF | Mapfre (8 de 90, entre ellas sus ingresos por contratos de seguro) y Línea Directa (14 de 71) |
+| Mismo dato con valores contradictorios en el documento | Ninguno |
+
+Fuente: Elaboración propia a partir de los informes ESEF 2025.
+
+El detector encuentra de forma automática todas las incidencias que motivaron excepciones en el diccionario. Además, señala un posible incumplimiento del requisito de anclaje en las dos aseguradoras.
+
+### 4.6.3. Verificación de los ratios publicados
+
+Los 104 ratios publicados del apartado 4.3 los extrajo un modelo de lenguaje leyendo el texto de los informes de gestión. Para que esa extracción sea fiable, un verificador comprueba dos condiciones en cada registro: que la cita aparece literalmente en el informe y que contiene el valor registrado. Los 104 registros superan ambas comprobaciones.

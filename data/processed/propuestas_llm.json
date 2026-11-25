@@ -1,0 +1,522 @@
+[
+ {
+  "entidad": "santander",
+  "concepto": "resultado_atribuido",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLossAttributableToOwnersOfParent"
+  ],
+  "justificacion": "Resultado atribuido a la dominante reportado directamente en la cuenta de resultados."
+ },
+ {
+  "entidad": "santander",
+  "concepto": "resultado_ejercicio",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLoss"
+  ],
+  "justificacion": "Resultado consolidado total, incluidos minoritarios."
+ },
+ {
+  "entidad": "santander",
+  "concepto": "activo_total",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:Assets"
+  ],
+  "justificacion": "Total activo del balance consolidado."
+ },
+ {
+  "entidad": "santander",
+  "concepto": "margen_intereses",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:InterestRevenueExpense"
+  ],
+  "justificacion": "Margen de intereses neto reportado (ingresos menos gastos por intereses, cuadra)."
+ },
+ {
+  "entidad": "santander",
+  "concepto": "margen_bruto",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:GrossProfit"
+  ],
+  "justificacion": "Margen bruto bancario etiquetado como GrossProfit; cuadra con la suma de sus componentes."
+ },
+ {
+  "entidad": "santander",
+  "concepto": "gastos_explotacion_banca",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:AdministrativeExpense",
+   "ifrs-full:DepreciationAndAmortisationExpense"
+  ],
+  "justificacion": "Gastos de administración más amortización."
+ },
+ {
+  "entidad": "bbva",
+  "concepto": "resultado_atribuido",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLossAttributableToOwnersOfParent"
+  ],
+  "justificacion": "Resultado atribuido a la dominante reportado directamente en la cuenta de resultados."
+ },
+ {
+  "entidad": "bbva",
+  "concepto": "resultado_ejercicio",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLoss"
+  ],
+  "justificacion": "Resultado consolidado total, incluidos minoritarios."
+ },
+ {
+  "entidad": "bbva",
+  "concepto": "activo_total",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:Assets"
+  ],
+  "justificacion": "Total activo del balance consolidado."
+ },
+ {
+  "entidad": "bbva",
+  "concepto": "margen_intereses",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:InterestRevenueExpense"
+  ],
+  "justificacion": "Margen de intereses neto reportado (ingresos menos gastos por intereses, cuadra)."
+ },
+ {
+  "entidad": "bbva",
+  "concepto": "margen_bruto",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:GrossProfit"
+  ],
+  "justificacion": "Margen bruto bancario etiquetado como GrossProfit; cuadra con la suma de sus componentes."
+ },
+ {
+  "entidad": "bbva",
+  "concepto": "gastos_explotacion_banca",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:AdministrativeExpense",
+   "ifrs-full:DepreciationAndAmortisationExpense"
+  ],
+  "justificacion": "Gastos de administración más amortización."
+ },
+ {
+  "entidad": "caixabank",
+  "concepto": "resultado_atribuido",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLossAttributableToOwnersOfParent"
+  ],
+  "justificacion": "Resultado atribuido a la dominante reportado directamente en la cuenta de resultados."
+ },
+ {
+  "entidad": "caixabank",
+  "concepto": "resultado_ejercicio",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLoss"
+  ],
+  "justificacion": "Resultado consolidado total, incluidos minoritarios."
+ },
+ {
+  "entidad": "caixabank",
+  "concepto": "activo_total",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:Assets"
+  ],
+  "justificacion": "Total activo del balance consolidado."
+ },
+ {
+  "entidad": "caixabank",
+  "concepto": "margen_intereses",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:InterestRevenueExpense"
+  ],
+  "justificacion": "Margen de intereses neto reportado (ingresos menos gastos por intereses, cuadra)."
+ },
+ {
+  "entidad": "caixabank",
+  "concepto": "margen_bruto",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:GrossProfit"
+  ],
+  "justificacion": "Margen bruto bancario etiquetado como GrossProfit; cuadra con la suma de sus componentes."
+ },
+ {
+  "entidad": "caixabank",
+  "concepto": "gastos_explotacion_banca",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:AdministrativeExpense",
+   "ifrs-full:DepreciationAndAmortisationExpense"
+  ],
+  "justificacion": "Gastos de administración más amortización."
+ },
+ {
+  "entidad": "sabadell",
+  "concepto": "resultado_atribuido",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLossAttributableToOwnersOfParent"
+  ],
+  "justificacion": "Resultado atribuido a la dominante reportado directamente en la cuenta de resultados."
+ },
+ {
+  "entidad": "sabadell",
+  "concepto": "resultado_ejercicio",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLoss"
+  ],
+  "justificacion": "Resultado consolidado total, incluidos minoritarios."
+ },
+ {
+  "entidad": "sabadell",
+  "concepto": "activo_total",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:Assets"
+  ],
+  "justificacion": "Total activo del balance consolidado."
+ },
+ {
+  "entidad": "sabadell",
+  "concepto": "margen_intereses",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:InterestRevenueExpense"
+  ],
+  "justificacion": "Margen de intereses neto reportado (ingresos menos gastos por intereses, cuadra)."
+ },
+ {
+  "entidad": "sabadell",
+  "concepto": "margen_bruto",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:GrossProfit"
+  ],
+  "justificacion": "Margen bruto bancario etiquetado como GrossProfit; cuadra con la suma de sus componentes."
+ },
+ {
+  "entidad": "sabadell",
+  "concepto": "gastos_explotacion_banca",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:AdministrativeExpense",
+   "ifrs-full:DepreciationAndAmortisationExpense"
+  ],
+  "justificacion": "Gastos de administración más amortización."
+ },
+ {
+  "entidad": "santander",
+  "concepto": "patrimonio_atribuido",
+  "tipo": "resta",
+  "elementos": [
+   "ifrs-full:Equity",
+   "ifrs-full:NoncontrollingInterests"
+  ],
+  "justificacion": "No hay total atribuido con OCI; patrimonio total menos minoritarios (103.170 = 141.144 - 37.974)."
+ },
+ {
+  "entidad": "santander",
+  "concepto": "fondos_propios",
+  "tipo": "suma",
+  "elementos": [
+   "san:PatrimonioNetoAtribuibleALosPropietariosDeLaDominanteExcluidoElOtroResultadoGlobalAcumulado"
+  ],
+  "justificacion": "Extensión cuya etiqueta excluye explícitamente el OCI acumulado; cuadra con capital+reservas+resultado."
+ },
+ {
+  "entidad": "bbva",
+  "concepto": "patrimonio_atribuido",
+  "tipo": "resta",
+  "elementos": [
+   "ifrs-full:Equity",
+   "ifrs-full:NoncontrollingInterests"
+  ],
+  "justificacion": "Patrimonio total menos minoritarios = fondos propios + OCI atribuido (57.357)."
+ },
+ {
+  "entidad": "bbva",
+  "concepto": "fondos_propios",
+  "tipo": "suma",
+  "elementos": [
+   "bbva:FondosPropios"
+  ],
+  "justificacion": "Extensión 'Fondos propios' (sin OCI), cuadra con sus componentes pese a anclaje genérico a Equity."
+ },
+ {
+  "entidad": "caixabank",
+  "concepto": "patrimonio_atribuido",
+  "tipo": "resta",
+  "elementos": [
+   "ifrs-full:Equity",
+   "ifrs-full:NoncontrollingInterests"
+  ],
+  "justificacion": "EquityAttributableToOwnersOfParent (38.962) supera el patrimonio total (38.526): es en realidad fondos propios; se usa total menos minoritarios."
+ },
+ {
+  "entidad": "caixabank",
+  "concepto": "fondos_propios",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:EquityAttributableToOwnersOfParent"
+  ],
+  "justificacion": "Su valor (38.962) es la suma de capital, prima, reservas y resultado sin OCI (-452): son los fondos propios, pese al nombre IFRS."
+ },
+ {
+  "entidad": "sabadell",
+  "concepto": "patrimonio_atribuido",
+  "tipo": "resta",
+  "elementos": [
+   "ifrs-full:Equity",
+   "ifrs-full:NoncontrollingInterests"
+  ],
+  "justificacion": "Patrimonio total menos minoritarios = fondos propios + OCI (14.047,1)."
+ },
+ {
+  "entidad": "sabadell",
+  "concepto": "fondos_propios",
+  "tipo": "suma",
+  "elementos": [
+   "sab:FondosPropios"
+  ],
+  "justificacion": "Extensión 'Fondos propios' (sin OCI), cuadra con sus componentes."
+ },
+ {
+  "entidad": "santander",
+  "concepto": "prestamos_clientela",
+  "tipo": "no_disponible",
+  "elementos": [],
+  "justificacion": "Solo se reporta el total de activos a coste amortizado, sin desglose por clientela."
+ },
+ {
+  "entidad": "santander",
+  "concepto": "depositos_clientela",
+  "tipo": "no_disponible",
+  "elementos": [],
+  "justificacion": "Solo se reporta el total de pasivos a coste amortizado, sin desglose de depósitos de clientela."
+ },
+ {
+  "entidad": "bbva",
+  "concepto": "prestamos_clientela",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:LoansAndAdvancesToCustomersAtAmortisedCost"
+  ],
+  "justificacion": "Préstamos y anticipos a la clientela a coste amortizado (partida principal de crédito)."
+ },
+ {
+  "entidad": "bbva",
+  "concepto": "depositos_clientela",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:DepositsFromCustomersAtAmortisedCost"
+  ],
+  "justificacion": "Depósitos de la clientela a coste amortizado."
+ },
+ {
+  "entidad": "caixabank",
+  "concepto": "prestamos_clientela",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:LoansAndAdvancesToCustomers"
+  ],
+  "justificacion": "Préstamos y anticipos a la clientela dentro de activos a coste amortizado."
+ },
+ {
+  "entidad": "caixabank",
+  "concepto": "depositos_clientela",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:DepositsFromCustomers"
+  ],
+  "justificacion": "Depósitos de la clientela dentro de pasivos a coste amortizado."
+ },
+ {
+  "entidad": "sabadell",
+  "concepto": "prestamos_clientela",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:LoansAndAdvancesToCustomers"
+  ],
+  "justificacion": "Préstamos y anticipos a la clientela a coste amortizado."
+ },
+ {
+  "entidad": "sabadell",
+  "concepto": "depositos_clientela",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:DepositsFromCustomers"
+  ],
+  "justificacion": "Depósitos de la clientela a coste amortizado."
+ },
+ {
+  "entidad": "mapfre",
+  "concepto": "resultado_atribuido",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLossAttributableToOwnersOfParent"
+  ],
+  "justificacion": "Resultado atribuido a la dominante (flujo)."
+ },
+ {
+  "entidad": "mapfre",
+  "concepto": "resultado_ejercicio",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLoss"
+  ],
+  "justificacion": "Resultado consolidado total, incluidos minoritarios."
+ },
+ {
+  "entidad": "mapfre",
+  "concepto": "activo_total",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:Assets"
+  ],
+  "justificacion": "Total activo."
+ },
+ {
+  "entidad": "mapfre",
+  "concepto": "patrimonio_atribuido",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:EquityAttributableToOwnersOfParent"
+  ],
+  "justificacion": "Patrimonio atribuido con OCI; cuadra con patrimonio total menos minoritarios."
+ },
+ {
+  "entidad": "mapfre",
+  "concepto": "fondos_propios",
+  "tipo": "no_disponible",
+  "elementos": [],
+  "justificacion": "No hay subtotal sin OCI; la reserva de conversión (-1.773,6) va fuera de AccumulatedOtherComprehensiveIncome y dividendo/autocartera vienen en positivo, por lo que no se deriva con una suma o una resta."
+ },
+ {
+  "entidad": "mapfre",
+  "concepto": "ingresos_seguros",
+  "tipo": "suma",
+  "elementos": [
+   "map:IncomeArisingFromInsuranceContracts"
+  ],
+  "justificacion": "Ingresos de contratos de seguro NIIF 17 (liberación LRC + otros importes = 26.352,4)."
+ },
+ {
+  "entidad": "mapfre",
+  "concepto": "gastos_servicio_seguro",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:InsuranceServiceExpensesFromInsuranceContractsIssued"
+  ],
+  "justificacion": "Gastos totales del servicio de seguro; cuadra con siniestros+adquisición+onerosos+cambios LIC."
+ },
+ {
+  "entidad": "mapfre",
+  "concepto": "siniestralidad_neta",
+  "tipo": "suma",
+  "elementos": [
+   "map:IncurredClaimsAndOtherInsuranceServiceExpenses"
+  ],
+  "justificacion": "Siniestros incurridos y otros gastos del servicio, separados de los gastos de adquisición."
+ },
+ {
+  "entidad": "mapfre",
+  "concepto": "gastos_adquisicion_seguro",
+  "tipo": "suma",
+  "elementos": [
+   "map:GastosCosteAdquisicion"
+  ],
+  "justificacion": "Extensión de gastos de adquisición dentro de los gastos del servicio de seguro."
+ },
+ {
+  "entidad": "linea_directa",
+  "concepto": "resultado_atribuido",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLossAttributableToOwnersOfParent"
+  ],
+  "justificacion": "Resultado atribuido a la dominante."
+ },
+ {
+  "entidad": "linea_directa",
+  "concepto": "resultado_ejercicio",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:ProfitLoss"
+  ],
+  "justificacion": "Resultado consolidado total (sin minoritarios)."
+ },
+ {
+  "entidad": "linea_directa",
+  "concepto": "activo_total",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:Assets"
+  ],
+  "justificacion": "Total activo."
+ },
+ {
+  "entidad": "linea_directa",
+  "concepto": "patrimonio_atribuido",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:Equity"
+  ],
+  "justificacion": "Sin minoritarios: patrimonio total = fondos propios + ajustes por cambios de valor (404,5)."
+ },
+ {
+  "entidad": "linea_directa",
+  "concepto": "fondos_propios",
+  "tipo": "suma",
+  "elementos": [
+   "lda:FondosPropios"
+  ],
+  "justificacion": "Extensión 'Fondos propios' sin ajustes por cambios de valor; cuadra con capital+reservas+resultado-dividendo."
+ },
+ {
+  "entidad": "linea_directa",
+  "concepto": "ingresos_seguros",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:InsuranceRevenue"
+  ],
+  "justificacion": "Ingresos del seguro NIIF 17 (PAA)."
+ },
+ {
+  "entidad": "linea_directa",
+  "concepto": "gastos_servicio_seguro",
+  "tipo": "suma",
+  "elementos": [
+   "ifrs-full:InsuranceServiceExpensesFromInsuranceContractsIssued"
+  ],
+  "justificacion": "Gastos totales del servicio de seguro NIIF 17."
+ },
+ {
+  "entidad": "linea_directa",
+  "concepto": "siniestralidad_neta",
+  "tipo": "no_disponible",
+  "elementos": [],
+  "justificacion": "La 'total gastos por reclamaciones incurridas' iguala al gasto total del servicio (91,5% de ingresos, ratio combinado) y no hay desglose de adquisición que restar."
+ },
+ {
+  "entidad": "linea_directa",
+  "concepto": "gastos_adquisicion_seguro",
+  "tipo": "no_disponible",
+  "elementos": [],
+  "justificacion": "No se reporta separadamente el gasto de adquisición."
+ }
+]

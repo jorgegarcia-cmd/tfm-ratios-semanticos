@@ -1,0 +1,129 @@
+{
+ "entidades": {
+  "santander": "banca",
+  "bbva": "banca",
+  "caixabank": "banca",
+  "sabadell": "banca",
+  "mapfre": "seguros",
+  "linea_directa": "seguros"
+ },
+ "conceptos": [
+  {
+   "concepto": "resultado_atribuido",
+   "aplica_a": [
+    "banca",
+    "seguros"
+   ],
+   "tipo": "duracion",
+   "descripcion": "Resultado del ejercicio atribuido a los propietarios de la dominante (flujo anual)."
+  },
+  {
+   "concepto": "resultado_ejercicio",
+   "aplica_a": [
+    "banca",
+    "seguros"
+   ],
+   "tipo": "duracion",
+   "descripcion": "Resultado consolidado total del ejercicio, incluidos los minoritarios (flujo anual)."
+  },
+  {
+   "concepto": "activo_total",
+   "aplica_a": [
+    "banca",
+    "seguros"
+   ],
+   "tipo": "instante",
+   "descripcion": "Total del activo del balance consolidado (saldo a 31/12)."
+  },
+  {
+   "concepto": "patrimonio_atribuido",
+   "aplica_a": [
+    "banca",
+    "seguros"
+   ],
+   "tipo": "instante",
+   "descripcion": "Patrimonio neto atribuido a la dominante, INCLUIDO el otro resultado global acumulado (saldo)."
+  },
+  {
+   "concepto": "fondos_propios",
+   "aplica_a": [
+    "banca",
+    "seguros"
+   ],
+   "tipo": "instante",
+   "descripcion": "Fondos propios de la dominante: capital, reservas y resultado, SIN el otro resultado global acumulado (saldo)."
+  },
+  {
+   "concepto": "margen_intereses",
+   "aplica_a": [
+    "banca"
+   ],
+   "tipo": "duracion",
+   "descripcion": "Margen de intereses de un banco: ingresos menos gastos por intereses (flujo anual)."
+  },
+  {
+   "concepto": "margen_bruto",
+   "aplica_a": [
+    "banca"
+   ],
+   "tipo": "duracion",
+   "descripcion": "Margen bruto de un banco: total de ingresos ordinarios netos (intereses, comisiones, otros) (flujo anual)."
+  },
+  {
+   "concepto": "gastos_explotacion_banca",
+   "aplica_a": [
+    "banca"
+   ],
+   "tipo": "duracion",
+   "descripcion": "Gastos de administración más amortizaciones de un banco (flujo anual)."
+  },
+  {
+   "concepto": "prestamos_clientela",
+   "aplica_a": [
+    "banca"
+   ],
+   "tipo": "instante",
+   "descripcion": "Préstamos y anticipos a la clientela, netos, en el balance (saldo)."
+  },
+  {
+   "concepto": "depositos_clientela",
+   "aplica_a": [
+    "banca"
+   ],
+   "tipo": "instante",
+   "descripcion": "Depósitos de la clientela en el balance (saldo)."
+  },
+  {
+   "concepto": "ingresos_seguros",
+   "aplica_a": [
+    "seguros"
+   ],
+   "tipo": "duracion",
+   "descripcion": "Ingresos por contratos de seguro según NIIF 17 (flujo anual)."
+  },
+  {
+   "concepto": "gastos_servicio_seguro",
+   "aplica_a": [
+    "seguros"
+   ],
+   "tipo": "duracion",
+   "descripcion": "Gastos totales del servicio de seguro según NIIF 17 (flujo anual)."
+  },
+  {
+   "concepto": "siniestralidad_neta",
+   "aplica_a": [
+    "seguros"
+   ],
+   "tipo": "duracion",
+   "descripcion": "Siniestros incurridos y otros gastos directos del servicio de seguro, sin gastos de adquisición (flujo anual)."
+  },
+  {
+   "concepto": "gastos_adquisicion_seguro",
+   "aplica_a": [
+    "seguros"
+   ],
+   "tipo": "duracion",
+   "descripcion": "Gastos de adquisición atribuibles a contratos de seguro (flujo anual)."
+  }
+ ]
+}

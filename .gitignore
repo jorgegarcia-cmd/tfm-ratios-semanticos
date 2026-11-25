@@ -6,3 +6,6 @@ data/raw/esef/*.xbri
 data/processed/*.csv
 .env
 !data/results/*.csv
+!data/processed/anclajes.csv
+!data/processed/propuestas_llm.json
+!data/processed/brief_llm/

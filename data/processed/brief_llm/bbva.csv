@@ -1,0 +1,288 @@
+elemento,etiqueta_extension,periodo_tipo,valor_meur,anclaje
+ifrs-full:CashAndCashEquivalents,,instante,58837.0,
+ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading,,instante,123185.0,
+ifrs-full:DerivativeFinancialAssetsHeldForTrading,,instante,32551.0,
+ifrs-full:EquityInstrumentsHeldAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading,,instante,9901.0,
+ifrs-full:DebtInstrumentsHeldAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading,,instante,30846.0,
+bbva:PrestamosYAnticiposABancosCentralesMantenidosParaNegociar,Prestamos y anticipos a bancos centrales mantenidos para negociar,instante,620.0,ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading
+ifrs-full:LoansAndAdvancesToBanksAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading,,instante,17985.0,
+ifrs-full:LoansAndAdvancesToCustomersAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading,,instante,31282.0,
+ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue,,instante,11272.0,
+ifrs-full:EquityInstrumentsHeldAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValueOtherThanThoseClassifiedAsHeldForTrading,,instante,10539.0,
+ifrs-full:DebtInstrumentsHeldAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValueOtherThanThoseClassifiedAsHeldForTrading,,instante,192.0,
+ifrs-full:LoansAndAdvancesAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValueOtherThanThoseClassifiedAsHeldForTrading,,instante,541.0,
+ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition,,instante,1006.0,
+bbva:ValoresRepresentativosDeDeudaDesignadosAValorRazonableConCambiosEnResultados,Valores representativos de deuda designados a valor razonable con cambios en resultados,instante,1006.0,ifrs-full:FinancialAssetsAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition
+ifrs-full:FinancialAssetsAtFairValueThroughOtherComprehensiveIncome,,instante,58809.0,
+ifrs-full:FairValueOfInvestmentsInEquityInstrumentsDesignatedAsMeasuredAtFairValueThroughOtherComprehensiveIncome,,instante,1360.0,
+ifrs-full:DebtInstrumentsHeldMeasuredAtFairValueThroughOtherComprehensiveIncome,,instante,57001.0,
+ifrs-full:LoansAndAdvancesMeasuredAtFairValueThroughOtherComprehensiveIncome,,instante,448.0,
+ifrs-full:FinancialAssetsAtAmortisedCost,,instante,568893.0,
+ifrs-full:DebtInstrumentsHeldAtAmortisedCost,,instante,73379.0,
+bbva:PrestamosYAnticiposABancosCentralesACosteAmortizado,Prestamos y anticipos a bancos centrales a coste amortizado,instante,10869.0,ifrs-full:FinancialAssetsAtAmortisedCost
+ifrs-full:LoansAndAdvancesToBanksAtAmortisedCost,,instante,24244.0,
+ifrs-full:LoansAndAdvancesToCustomersAtAmortisedCost,,instante,460401.0,
+ifrs-full:DerivativeFinancialAssetsHeldForHedging,,instante,570.0,
+ifrs-full:AccumulatedFairValueHedgeAdjustmentOnHedgedItemIncludedInCarryingAmountAssets,,instante,-87.0,
+ifrs-full:InvestmentsInSubsidiariesJointVenturesAndAssociates,,instante,994.0,
+ifrs-full:InvestmentsInJointVentures,,instante,111.0,
+ifrs-full:InvestmentsInAssociates,,instante,883.0,
+bbva:ActivosAmparadosPorContratosDeSeguroYReaseguro,Activos amparados por contratos de seguro y reaseguro,instante,198.0,ifrs-full:Assets
+bbva:ActivosTangibles,Activos tangibles,instante,9482.0,ifrs-full:Assets
+ifrs-full:PropertyPlantAndEquipment,,instante,9247.0,
+bbva:ActivosTangiblesDeUsoPropio,Activos tangibles de uso propio,instante,8367.0,ifrs-full:PropertyPlantAndEquipment
+bbva:ActivosTangiblesCedidosEnArrendamientoOperativo,Activos tangibles cedidos en arrendamiento operativo,instante,879.0,ifrs-full:PropertyPlantAndEquipment
+ifrs-full:InvestmentProperty,,instante,235.0,
+ifrs-full:IntangibleAssetsAndGoodwill,,instante,2856.0,
+ifrs-full:Goodwill,,instante,715.0,
+ifrs-full:IntangibleAssetsOtherThanGoodwill,,instante,2140.0,
+bbva:ActivosPorImpuestos,Activos por impuestos,instante,17867.0,ifrs-full:Assets
+ifrs-full:CurrentTaxAssets,,instante,3998.0,
+ifrs-full:DeferredTaxAssets,,instante,13869.0,
+ifrs-full:OtherAssets,,instante,4985.0,
+bbva:ContratosDeSegurosVinculadosAPensiones,Contratos de seguros vinculados a pensiones,instante,0.0,ifrs-full:OtherAssets
+ifrs-full:InventoriesTotal,,instante,1307.0,
+bbva:RestoDeLosOtrosActivos,Resto de los otros activos,instante,3678.0,ifrs-full:OtherAssets
+ifrs-full:NoncurrentAssetsOrDisposalGroupsClassifiedAsHeldForSale,,instante,709.0,
+ifrs-full:Assets,,instante,859576.0,
+ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading,,instante,91917.0,
+ifrs-full:DerivativeFinancialLiabilitiesHeldForTrading,,instante,30345.0,
+bbva:PosicionesCortasDeValoresMantenidasParaNegociar,Posiciones cortas de valores mantenidas para negociar,instante,13100.0,ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading
+bbva:DepositosDeBancosCentralesMantenidosParaNegociar,Depositos de bancos centrales mantenidos para negociar,instante,3653.0,ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossClassifiedAsHeldForTrading
+ifrs-full:DepositsFromBanksAtFairValueThroughProfitOrLossThatMeetDefinitionOfHeldForTrading,,instante,18138.0,
+ifrs-full:DepositsFromCustomersAtFairValueThroughProfitOrLossThatMeetDefinitionOfHeldForTrading,,instante,26681.0,
+ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition,,instante,18417.0,
+bbva:DepositosDeBancosCentralesAlValorRazonableConCambiosEnResultadosDesignadosComoTalesEnElMomentoDeSuReconocimientoInicialOPosteriormente,"Depósitos de bancos centrales al valor razonable con cambios en resultados, designados como tales en el momento de su reconocimiento inicial o posteriormente",instante,0.0,ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition
+ifrs-full:DepositsFromBanksAtFairValueThroughProfitOrLossDesignatedUponInitialRecognitionOrSubsequently,,instante,0.0,
+ifrs-full:DepositsFromCustomersAtFairValueThroughProfitOrLossDesignatedUponInitialRecognitionOrSubsequently,,instante,897.0,
+bbva:ValoresRepresentativosDeDeudaEmitidosAValorRazonableConCambiosEnResultados,Valores representativos de deuda emitidos a valor razonable con cambios en resultados,instante,5997.0,ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition
+bbva:OtrosPasivosFinancierosAValorRazonableConCambiosEnResultados,Otros pasivos financieros a valor razonable con cambios en resultados,instante,11524.0,ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition
+bbva:PromemoriaPasivosSubordinadosAValorRazonableConCambiosEnResultados,Promemoria pasivos subordinados a valor razonable con cambios en resultados,instante,0.0,ifrs-full:FinancialLiabilitiesAtFairValueThroughProfitOrLossDesignatedAsUponInitialRecognition
+ifrs-full:FinancialLiabilitiesAtAmortisedCost,,instante,658599.0,
+ifrs-full:LiabilitiesDueToCentralBanks,,instante,17226.0,
+ifrs-full:DepositsFromBanksAtAmortisedCost,,instante,36771.0,
+ifrs-full:DepositsFromCustomersAtAmortisedCost,,instante,502501.0,
+ifrs-full:DebtInstrumentsIssuedAtAmortisedCost,,instante,81842.0,
+ifrs-full:OtherFinancialLiabilities,,instante,20258.0,
+ifrs-full:SubordinatedLiabilitiesAtAmortisedCost,,instante,21053.0,
+ifrs-full:DerivativeFinancialLiabilitiesHeldForHedging,,instante,1933.0,
+ifrs-full:AccumulatedFairValueHedgeAdjustmentOnHedgedItemIncludedInCarryingAmountLiabilities,,instante,0.0,
+bbva:PasivosAmparadosPorContratosDeSeguroYReaseguro,Pasivos amparados por contratos de seguro y reaseguro,instante,12760.0,ifrs-full:Liabilities
+ifrs-full:Provisions,,instante,4422.0,
+ifrs-full:ProvisionsForEmployeeBenefits,,instante,2267.0,
+bbva:OtrasRetribucionesALosEmpleadosALargoPlazo,Otras retribuciones a los empleados a largo plazo,instante,332.0,ifrs-full:Provisions
+ifrs-full:LegalProceedingsProvision,,instante,805.0,
+bbva:ProvisionesPorCompromisosYGarantiasConcedidos,Provisiones por compromisos y garantias concedidos,instante,725.0,ifrs-full:Provisions
+ifrs-full:OtherProvisions,,instante,293.0,
+bbva:PasivosPorImpuestos,Pasivos por impuestos,instante,4020.0,ifrs-full:Liabilities
+ifrs-full:CurrentTaxLiabilities,,instante,1480.0,
+ifrs-full:DeferredTaxLiabilities,,instante,2540.0,
+ifrs-full:OtherLiabilities,,instante,5709.0,
+ifrs-full:LiabilitiesIncludedInDisposalGroupsClassifiedAsHeldForSale,,instante,0.0,
+ifrs-full:Liabilities,,instante,797778.0,
+bbva:FondosPropios,Fondos propios,instante,76228.0,ifrs-full:Equity
+ifrs-full:IssuedCapital,,instante,2797.0,
+bbva:CapitalDesembolsado,Capital desembolsado,instante,2797.0,ifrs-full:IssuedCapital
+bbva:CapitalNoDesembolsadoExigido,Capital no desembolsado exigido,instante,0.0,ifrs-full:IssuedCapital
+ifrs-full:SharePremium,,instante,18469.0,
+bbva:InstrumentosDePatrimonioEmitidosDistintosDelCapital,Instrumentos de patrimonio emitidos distintos del capital,instante,0.0,ifrs-full:Equity
+ifrs-full:OtherEquityInterest,,instante,40.0,
+ifrs-full:RetainedEarnings,,instante,46346.0,
+ifrs-full:RevaluationSurplus,,instante,0.0,
+ifrs-full:OtherReserves,,instante,203.0,
+bbva:ReservasOPerdidasAcumuladasDeInversionesEnNegociosConjuntosYAsociadas,Reservas o perdidas acumuladas de inversiones en negocios conjuntos y asociadas,instante,-228.0,ifrs-full:OtherReserves
+bbva:Otras,Otras,instante,431.0,ifrs-full:OtherReserves
+ifrs-full:TreasuryShares,,instante,299.0,
+bbva:ResultadoAtribuibleALosPropietariosDeLaDominante,Resultado atribuible a los propietarios de la dominante,instante,10511.0,ifrs-full:Equity
+bbva:DividendoACuenta,Dividendo a cuenta,instante,-1840.0,ifrs-full:Equity
+ifrs-full:AccumulatedOtherComprehensiveIncome,,instante,-18871.0,
+bbva:ElementosQueNoSeReclasificaranEnResultados,Elementos que no se reclasificaran en resultados,instante,-2505.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:GananciasPerdidasActuarialesEnPlanesDePensionesDePrestacionesDefinidas,Ganancias (perdidas) actuariales en planes de pensiones de prestaciones definidas,instante,-1396.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:ActivosNoCorrientesYGruposEnajenablesDeElementosClasificadosComoMantenidosParaLaVentaQueNoSeReclasificaranEnResultados,Activos no corrientes y grupos enajenables de elementos clasificados como mantenidos para la venta que no se reclasificaran en resultados,instante,0.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:ParticipacionEnOtrosIngresosYGastosReconocidosDeInversionesEnNegociosConjuntosYAsociadasQueNoSeReclasificaranEnResultados,Participación en otros ingresos y gastos reconocidos de inversiones en negocios conjuntos y asociadas que no se reclasificaran en resultados,instante,0.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:CambiosDelValorRazonableDeLosInstrumentosDePatrimonioValoradosAValorRazonableConCambiosEnOtroResultadoGlobal,Cambios del valor razonable de los instrumentos de patrimonio valorados a valor razonable con cambios en otro resultado global,instante,-983.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:IneficaciaDeLasCoberturasDeValorRazonableEnLosInstrumentosDePatrimonioValoradosAValorRazonableConCambiosEnOtroResultadoGlobal,Ineficacia de las coberturas de valor razonable en los instrumentos de patrimonio valorados a valor razonable con cambios en otro resultado global,instante,0.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:CambiosDelValorRazonableDeLosPasivosFinancierosAValorRazonableConCambiosEnResultadosAtribuiblesACambiosEnElRiesgoDeCredito,Cambios del valor razonable de los pasivos financieros a valor razonable con cambios en resultados atribuibles a cambios en el riesgo de credito,instante,-127.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:ElementosQuePuedenReclasificarseEnResultados,Elementos que pueden reclasificarse en resultados,instante,-16366.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:CoberturaDeInversionesNetasEnNegociosEnElExtranjeroPorcionEfectiva,Cobertura de inversiones netas en negocios en el extranjero (porción efectiva),instante,-3117.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:ConversionDeDivisas,Conversion de divisas,instante,-13340.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:DerivadosDeCoberturaCoberturaDeFlujosDeEfectivoPorcionEfectiva,Derivados de cobertura Cobertura de flujos de efectivo (porcion efectiva),instante,311.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:CambiosDelValorRazonableDeLosInstrumentosDeDeudaValoradosAValorRazonableConCambiosEnOtroResultadoGlobal,Cambios del valor razonable de los instrumentos de deuda valorados a valor razonable con cambios en otro resultado global,instante,-209.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:InstrumentosDeCoberturaElementosNoDesignados,Instrumentos de cobertura (elementos no designados),instante,-4.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:ActivosNoCorrientesYGruposEnajenablesDeElementosClasificadosComoMantenidosParaLaVentaQuePuedenReclasificarseEnResultados,Activos no corrientes y grupos enajenables de elementos clasificados como mantenidos para la venta que pueden reclasificarse en resultados,instante,0.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+bbva:ParticipacionEnOtrosIngresosYGastosReconocidosEnInversionesEnNegociosConjuntosYAsociadasQuePuedenReclasificarseEnResultados,Participación en otros ingresos y gastos reconocidos en inversiones en negocios conjuntos y asociadas que pueden reclasificarse en resultados,instante,-7.0,ifrs-full:AccumulatedOtherComprehensiveIncome
+ifrs-full:NoncontrollingInterests,,instante,4441.0,
+bbva:OtroResultadoGlobalAcumuladoParticipacionesNoDominantes,Otro resultado global acumulado (participaciones no dominantes),instante,-3059.0,ifrs-full:NoncontrollingInterests
+bbva:OtrosElementosParticipacionesNoDominantes,Otros elementos (participaciones no dominantes),instante,7500.0,ifrs-full:NoncontrollingInterests
+ifrs-full:Equity,,instante,61798.0,
+ifrs-full:EquityAndLiabilities,,instante,859576.0,
+bbva:PromemoriaCompromisosDePrestamosConcedidos,Promemoria - Compromisos de prestamos concedidos,instante,227554.0,ifrs-full:Equity
+bbva:PromemoriaGarantiasFinancierasConcedidas,Promemoria - Garantias financieras concedidas,instante,24865.0,ifrs-full:Equity
+bbva:PromemoriaOtrosCompromisosConcedidos,Promemoria - Otros compromisos concedidos,instante,60159.0,ifrs-full:Equity
+ifrs-full:RevenueFromInterest,,duracion,58345.0,
+ifrs-full:InterestRevenueCalculatedUsingEffectiveInterestMethod,,duracion,52816.0,
+bbva:RestantesIngresosPorIntereses,Restantes ingresos por intereses,duracion,5530.0,ifrs-full:RevenueFromInterest
+ifrs-full:InterestExpense,,duracion,32065.0,
+ifrs-full:InterestRevenueExpense,,duracion,26280.0,
+ifrs-full:RevenueFromDividends,,duracion,123.0,
+ifrs-full:ShareOfProfitLossOfAssociatesAndJointVenturesAccountedForUsingEquityMethod,,duracion,62.0,
+ifrs-full:FeeAndCommissionIncome,,duracion,13743.0,
+ifrs-full:FeeAndCommissionExpense,,duracion,5528.0,
+bbva:GananciasPerdidasAlDarDeBajaEnCuentasActivosYPasivosFinancierosNoValoradosAValorRazonableConCambiosEnResultadosNetas,"Ganancias (pérdidas) al dar de baja en cuentas activos y pasivos financieros no valorados a valor razonable con cambios en resultados, netas",duracion,423.0,ifrs-full:InterestRevenueExpense
+bbva:GananciasPerdidasAlDarDeBajaActivosFinancierosACosteAmortizado,Ganancias (pérdidas) al dar de baja activos financieros a coste amortizado,duracion,24.0,ifrs-full:InterestRevenueExpense
+bbva:GananciasPerdidasAlDarDeBajaRestantesActivosYPasivosFinancieros,Ganancias (pérdidas) al dar de baja restantes activos y pasivos financieros,duracion,398.0,ifrs-full:InterestRevenueExpense
+bbva:GananciasPerdidasPorActivosYPasivosFinancierosMantenidosParaNegociarNetas,"Ganancias (perdidas) por activos y pasivos financieros mantenidos para negociar, netas",duracion,2255.0,ifrs-full:InterestRevenueExpense
+bbva:ReclasificacionDeActivosFinancierosDesdeValorRazonableConCambiosEnOtroResultadoGlobalHaciaMantenidosParaNegociar,Reclasificacion de activos financieros desde valor razonable con cambios en otro resultado global hacia mantenidos para negociar,duracion,0.0,ifrs-full:InterestRevenueExpense
+bbva:ReclasificacionDeActivosFinancierosDesdeCosteAmortizadoHaciaMantenidosParaNegociar,Reclasificación de activos financieros desde coste amortizado hacia mantenidos para negociar,duracion,0.0,ifrs-full:InterestRevenueExpense
+bbva:OtrasGananciasPerdidasMantenidosParaNegociar,Otras ganancias (pérdidas) mantenidos para negociar,duracion,2255.0,ifrs-full:InterestRevenueExpense
+ifrs-full:GainsLossesOnFinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue,,duracion,236.0,
+bbva:ReclasificacionDeActivosFinancierosDesdeValorRazonableConCambiosEnOtroResultadoGlobalHaciaNoDestinadosANegociacionValoradosAValorRazonableConCambiosEnResultados,Reclasificación de activos financieros desde valor razonable con cambios en otro resultado global hacia no destinados a negociación valorados a valor razonable con cambios en resultados,duracion,0.0,ifrs-full:GainsLossesOnFinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue
+bbva:ReclasificacionDeActivosFinancierosDesdeCosteAmortizadoHaciaNoDestinadosANegociacionValoradosObligatoriamenteAValorRazonableConCambiosEnResultados,Reclasificación de activos financieros desde coste amortizado hacia no destinados a negociacion valorados obligatoriamente a valor razonable con cambios en resultados,duracion,0.0,ifrs-full:GainsLossesOnFinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue
+bbva:OtrasGananciasPerdidasNoDestinadasANegociacionValoradasObligatoriamenteAValorRazonableConCambiosEnResultados,Otras ganancias (pérdidas) no destinadas a negociacion valoradas obligatoriamente a valor razonable con cambios en resultados,duracion,236.0,ifrs-full:GainsLossesOnFinancialAssetsAtFairValueThroughProfitOrLossMandatorilyMeasuredAtFairValue
+bbva:GananciasPerdidasPorActivosYPasivosFinancierosDesignadosAValorRazonableConCambiosEnResultadosNetas,"Ganancias (pérdidas) por activos y pasivos financieros designados a valor razonable con cambios en resultados, netas",duracion,28.0,ifrs-full:InterestRevenueExpense
+ifrs-full:GainLossOnHedgeIneffectivenessRecognisedInProfitOrLoss,,duracion,-1.0,
+ifrs-full:GainsLossesOnExchangeDifferencesOnTranslationRecognisedInProfitOrLoss,,duracion,-285.0,
+ifrs-full:MiscellaneousOtherOperatingIncome,,duracion,688.0,
+ifrs-full:MiscellaneousOtherOperatingExpense,,duracion,2614.0,
+bbva:IngresosDeActivosAmparadosPorContratoDeSeguroOReaseguro,Ingresos de activos amparados por contrato de seguro o reaseguro,duracion,3890.0,ifrs-full:InterestRevenueExpense
+bbva:GastosDePasivosAmparadosPorContratosDeSeguroOReaseguro,Gastos de pasivos amparados por contratos de seguro o reaseguro,duracion,2370.0,ifrs-full:InterestRevenueExpense
+ifrs-full:GrossProfit,,duracion,36931.0,
+ifrs-full:AdministrativeExpense,,duracion,12811.0,
+ifrs-full:EmployeeBenefitsExpense,,duracion,7773.0,
+ifrs-full:OtherExpenseByFunction,,duracion,5038.0,
+ifrs-full:DepreciationAndAmortisationExpense,,duracion,1521.0,
+bbva:ProvisionesOReversionDeProvisiones,Provisiones o reversion de provisiones,duracion,373.0,ifrs-full:GrossProfit
+bbva:DeterioroDelValorOReversionDelDeterioroDeActivosFinancierosNoValoradosAValorRazonableConCambiosEnResultadosYPerdidasOGananciasNetasPorModificacion,Deterioro del valor o reversión del deterioro de activos financieros no valorados a valor razonable con cambios en resultados y pérdidas o ganancias netas por modificación,duracion,6073.0,ifrs-full:GrossProfit
+ifrs-full:GainsLossesOnFinancialAssetsAtAmortisedCost,,duracion,-6101.0,
+bbva:DeterioroActivosFinancierosAValorRazonableConCambiosEnOtroResultadoGlobal,Deterioro activos financieros a valor razonable con cambios en otro resultado global,duracion,-28.0,ifrs-full:ImpairmentLossOnFinancialAssets
+ifrs-full:ProfitLossFromOperatingActivities,,duracion,16153.0,
+bbva:DeterioroDelValorOReversionDelDeterioroDelValorDeInversionesEnNegociosConjuntosOAsociadas,Deterioro del valor o reversion del deterioro del valor de inversiones en negocios conjuntos o asociadas,duracion,32.0,ifrs-full:ProfitLossBeforeTax
+bbva:DeterioroDelValorOReversionDelDeterioroDelValorDeActivosNoFinancieros,Deterioro del valor o reversion del deterioro del valor de activos no financieros,duracion,13.0,ifrs-full:ProfitLossBeforeTax
+ifrs-full:ReversalOfImpairmentLossRecognisedInProfitOrLossPropertyPlantAndEquipmentIncludingRightofuseAssets,,duracion,-5.0,
+ifrs-full:ImpairmentLossRecognisedInProfitOrLossIntangibleAssetsAndGoodwill,,duracion,14.0,
+bbva:DeterioroOtrosActivosNoFinancieros,Deterioro otros activos no financieros,duracion,3.0,ifrs-full:ProfitLossBeforeTax
+bbva:GananciasPerdidasAlDarDeBajaEnCuentasActivosNoFinancierosYParticipacionesNetas,"Ganancias (pérdidas) al dar de baja en cuentas activos no financieros y participaciones, netas",duracion,36.0,ifrs-full:ProfitLossBeforeTax
+bbva:FondoDeComercioNegativoReconocidoEnResultados,Fondo de comercio negativo reconocido en resultados,duracion,0.0,ifrs-full:ProfitLossBeforeTax
+bbva:GananciasPerdidasProcedentesDeActivosNoCorrientesYGruposEnajenablesDeElementosClasificadosComoMantenidosParaLaVentaNoAdmisiblesComoActividadesInterrumpidas,Ganancias perdidas procedentes de activos no corrientes y grupos enajenables de elementos clasificados como mantenidos para la venta no admisibles como actividades interrumpidas,duracion,18.0,ifrs-full:ProfitLossBeforeTax
+ifrs-full:ProfitLossBeforeTax,,duracion,16227.0,
+ifrs-full:IncomeTaxExpenseContinuingOperations,,duracion,5100.0,
+ifrs-full:ProfitLossFromContinuingOperations,,duracion,11126.0,
+ifrs-full:ProfitLossFromDiscontinuedOperations,,duracion,0.0,
+ifrs-full:ProfitLoss,,duracion,11126.0,
+ifrs-full:ProfitLossAttributableToNoncontrollingInterests,,duracion,615.0,
+ifrs-full:ProfitLossAttributableToOwnersOfParent,,duracion,10511.0,
+ifrs-full:BasicEarningsLossPerShare,,duracion,0.0,
+ifrs-full:BasicEarningsLossPerShareFromContinuingOperations,,duracion,0.0,
+ifrs-full:DilutedEarningsLossPerShareFromContinuingOperations,,duracion,0.0,
+ifrs-full:BasicEarningsLossPerShareFromDiscontinuedOperations,,duracion,0.0,
+ifrs-full:DilutedEarningsLossPerShareFromDiscontinuedOperations,,duracion,0.0,
+ifrs-full:OtherComprehensiveIncome,,duracion,-1981.0,
+ifrs-full:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossNetOfTax,,duracion,-514.0,
+ifrs-full:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRemeasurementsOfDefinedBenefitPlans,,duracion,-379.0,
+bbva:ActivosNoCorrientesYGruposEnajenablesDeElementosMantenidosParaLaVentaQueNoSeReclasificaranEnResultadosMantenidosParaLaVenta,Activos no corrientes y grupos enajenables de elementos mantenidos para la venta que no se reclasificaran en resultados mantenidos para la venta,duracion,0.0,ifrs-full:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossNetOfTax
+ifrs-full:ShareOfOtherComprehensiveIncomeOfAssociatesAndJointVenturesAccountedForUsingEquityMethodThatWillNotBeReclassifiedToProfitOrLossBeforeTax,,duracion,0.0,
+ifrs-full:OtherComprehensiveIncomeBeforeTaxGainsLossesFromInvestmentsInEquityInstruments,,duracion,-70.0,
+ifrs-full:OtherComprehensiveIncomeBeforeTaxGainsLossesOnHedgingInstrumentsThatHedgeInvestmentsInEquityInstruments,,duracion,0.0,
+ifrs-full:OtherComprehensiveIncomeBeforeTaxChangeInFairValueOfFinancialLiabilityAttributableToChangeInCreditRiskOfLiability,,duracion,-157.0,
+ifrs-full:IncomeTaxRelatingToComponentsOfOtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLoss,,duracion,-92.0,
+ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax,,duracion,-1466.0,
+ifrs-full:OtherComprehensiveIncomeBeforeTaxHedgesOfNetInvestmentsInForeignOperations,,duracion,-779.0,
+ifrs-full:GainsLossesOnHedgesOfNetInvestmentsInForeignOperationsBeforeTax,,duracion,-779.0,
+ifrs-full:ReclassificationAdjustmentsOnHedgesOfNetInvestmentsInForeignOperationsBeforeTax,,duracion,0.0,
+bbva:OtrasReclasificacionesCoberturasInversionesNetas,Otras reclasificaciones coberturas inversiones netas,duracion,0.0,ifrs-full:OtherComprehensiveIncomeBeforeTaxHedgesOfNetInvestmentsInForeignOperations
+ifrs-full:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation,,duracion,-966.0,
+ifrs-full:GainsLossesOnExchangeDifferencesOnTranslationBeforeTax,,duracion,-966.0,
+ifrs-full:ReclassificationAdjustmentsOnExchangeDifferencesOnTranslationBeforeTax,,duracion,0.0,
+bbva:OtrasReclasificacionesConversionDeDivisas,Otras reclasificaciones conversion de divisas,duracion,0.0,ifrs-full:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation
+ifrs-full:OtherComprehensiveIncomeBeforeTaxCashFlowHedges,,duracion,-82.0,
+ifrs-full:GainsLossesOnCashFlowHedgesBeforeTax,,duracion,-82.0,
+ifrs-full:ReclassificationAdjustmentsOnCashFlowHedgesBeforeTax,,duracion,0.0,
+bbva:TransferidoAlImporteEnLibrosInicialDeLosElementosCubiertos,Transferido al importe en libros inicial de los elementos cubiertos,duracion,0.0,ifrs-full:OtherComprehensiveIncomeBeforeTaxCashFlowHedges
+bbva:OtrasReclasificacionesCoberturasDeFlujosDeEfectivo,Otras reclasificaciones coberturas de flujos de efectivo,duracion,0.0,ifrs-full:OtherComprehensiveIncomeBeforeTaxCashFlowHedges
+bbva:OtroResultadoGlobalAntesDeImpuestosInstrumentosDeCobertura,"Otro resultado global, antes de impuestos, instrumentos de cobertura",duracion,-6.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax
+bbva:GananciasPerdidasPorInstrumentosDeCoberturaAntesDeImpuestos,"Ganancias pérdidas por instrumentos de cobertura, antes de impuestos",duracion,-6.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax
+bbva:AjustesPorReclasificacionRelativosAInstrumentosDeCoberturaAntesDeImpuestos,"Ajustes por reclasificación relativos a instrumentos de cobertura, antes de impuestos",duracion,0.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax
+bbva:OtrasReclasificacionesInstrumentosDeCoberturaAntesDeImpuestos,Otras reclasificaciones instrumentos de cobertura antes de impuestos,duracion,0.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax
+bbva:InstrumentosDeDeudaAValorRazonableConCambiosEnOtroResultadoGlobal,Instrumentos de deuda a valor razonable con cambios en otro resultado global,duracion,535.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax
+ifrs-full:GainsLossesOnFinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncomeBeforeTax,,duracion,925.0,
+ifrs-full:ReclassificationAdjustmentsOnFinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncomeBeforeTax,,duracion,390.0,
+bbva:OtrasReclasificacionesDeDeudaAValorRazonableConCambiosEnOtroResultadoGlobal,Otras reclasificaciones de deuda a valor razonable con cambios en otro resultado global,duracion,0.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax
+bbva:ActivosNoCorrientesYGruposEnajenablesDeElementosQueSeReclasificaraAResultadoClasificadosComoMantenidosParaLaVenta,Activos no corrientes y grupos enajenables de elementos que se reclasificara a resultado clasificados como mantenidos para la venta,duracion,0.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax
+bbva:GananciasPerdidasDeValorContabilizadasEnElPatrimonioNetoActivosNoCorrientesYGruposEnajenablesDeElementosMantenidosParaLaVenta,Ganancias perdidas de valor contabilizadas en el patrimonio neto activos no corrientes y grupos enajenables de elementos mantenidos para la venta,duracion,0.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax
+bbva:TransferidoAResultadosActivosNoCorrientesYGruposEnajenablesDeElementosMantenidosParaLaVenta,Transferido a resultados activos no corrientes y grupos enajenables de elementos mantenidos para la venta,duracion,0.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax
+bbva:OtrasReclasificacionesActivosNoCorrientesYGruposEnajenablesDeElementosMantenidosParaLaVenta,Otras reclasificaciones activos no corrientes y grupos enajenables de elementos mantenidos para la venta,duracion,0.0,ifrs-full:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax
+ifrs-full:ShareOfOtherComprehensiveIncomeOfAssociatesAndJointVenturesAccountedForUsingEquityMethodThatWillBeReclassifiedToProfitOrLossBeforeTax,,duracion,-14.0,
+ifrs-full:IncomeTaxRelatingToComponentsOfOtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLoss,,duracion,155.0,
+ifrs-full:ComprehensiveIncome,,duracion,9146.0,
+ifrs-full:ComprehensiveIncomeAttributableToNoncontrollingInterests,,duracion,285.0,
+ifrs-full:ComprehensiveIncomeAttributableToOwnersOfParent,,duracion,8860.0,
+bbva:CambiosEnElPatrimonioNetoDistintosAlResultadoGlobalTotal,Cambios en el patrimonio neto distintos al resultado global total,duracion,-7362.0,ifrs-full:Equity
+bbva:EmisionDeAccionesOrdinarias,Emision de acciones ordinarias,duracion,0.0,ifrs-full:Equity
+bbva:EmisionDeAccionesPreferentes,Emision de acciones preferentes,duracion,0.0,ifrs-full:Equity
+ifrs-full:IssueOfEquity,,duracion,0.0,
+bbva:EjercicioOVencimientoDeOtrosInstrumentosDePatrimonioEmitidos,Ejercicio o vencimiento de otros instrumentos de patrimonio emitidos,duracion,0.0,ifrs-full:Equity
+ifrs-full:IncreaseDecreaseThroughConversionOfConvertibleInstruments,,duracion,0.0,
+ifrs-full:ReductionOfIssuedCapital,,duracion,0.0,
+ifrs-full:DividendsPaid,,duracion,4450.0,
+ifrs-full:PurchaseOfTreasuryShares,,duracion,1995.0,
+bbva:VentaOCancelacionDeAccionesPropias,Venta o cancelación de acciones propias,duracion,794.0,ifrs-full:Equity
+ifrs-full:EquityReclassifiedIntoFinancialLiabilities,,duracion,0.0,
+ifrs-full:FinancialLiabilitiesReclassifiedIntoEquity,,duracion,0.0,
+bbva:TransferenciasEntreComponentesDelPatrimonioNeto,Transferencias entre componentes del patrimonio neto,duracion,0.0,ifrs-full:Equity
+ifrs-full:IncreaseDecreaseThroughAcquisitionOfSubsidiary,,duracion,0.0,
+ifrs-full:IncreaseDecreaseThroughSharebasedPaymentTransactions,,duracion,-26.0,
+ifrs-full:IncreaseDecreaseThroughTransfersAndOtherChangesEquity,,duracion,-1685.0,
+ifrs-full:CashFlowsFromUsedInOperatingActivities,,duracion,14968.0,
+bbva:DelQueEfectoDeHiperinflaccionDeLasActividadesDeExplotacion,Del que efecto de hiperinflacción de las actividades de explotación,duracion,1540.0,ifrs-full:CashFlowsFromUsedInOperatingActivities
+ifrs-full:AdjustmentsForReconcileProfitLoss,,duracion,14376.0,
+ifrs-full:AdjustmentsForDepreciationAndAmortisationExpense,,duracion,1521.0,
+ifrs-full:OtherAdjustmentsToReconcileProfitLoss,,duracion,12855.0,
+bbva:AumentoDisminucionNetoDeLosActivosDeExplotacion,Aumento disminucion neto de los activos de explotacion,duracion,-102491.0,ifrs-full:CashFlowsFromUsedInOperatingActivities
+ifrs-full:AdjustmentsForDecreaseIncreaseInFinancialAssetsHeldForTrading,,duracion,-13956.0,
+bbva:AumentoDisminucionDeLosActivosFinancierosNoDestinadosANegociacionValoradosObligatoriamenteAValorRazonableConCambiosEnResultados,Aumento (disminución) de los activos financieros no destinados a negociacion valorados obligatoriamente a valor razonable con cambios en resultados,duracion,-628.0,ifrs-full:CashFlowsFromUsedInOperatingActivities
+ifrs-full:AdjustmentsForDecreaseIncreaseInFinancialAssetsMeasuredAtFairValueThroughProfitOrLoss,,duracion,-187.0,
+ifrs-full:AdjustmentsForDecreaseIncreaseInFinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncome,,duracion,680.0,
+ifrs-full:AdjustmentsForDecreaseIncreaseInFinancialAssetsMeasuredAtAmortisedCost,,duracion,-89072.0,
+ifrs-full:AdjustmentsForDecreaseIncreaseInOtherAssets,,duracion,672.0,
+bbva:AumentoDisminucionNetoDeLosPasivosDeExplotacion,Aumento disminucion neto de los pasivos de explotación,duracion,-95286.0,ifrs-full:CashFlowsFromUsedInOperatingActivities
+ifrs-full:AdjustmentsForIncreaseDecreaseInFinancialLiabilitiesHeldForTrading,,duracion,5099.0,
+ifrs-full:AdjustmentsForIncreaseDecreaseInFinancialLiabilitiesMeasuredAtFairValueThroughProfitOrLoss,,duracion,3271.0,
+ifrs-full:AdjustmentsForIncreaseDecreaseInFinancialLiabilitiesMeasuredAtAmortisedCost,,duracion,88266.0,
+ifrs-full:AdjustmentsForIncreaseDecreaseInOtherLiabilities,,duracion,-1350.0,
+ifrs-full:IncomeTaxesPaidRefundClassifiedAsOperatingActivities,,duracion,3328.0,
+ifrs-full:CashFlowsFromUsedInInvestingActivitiesContinuingOperations,,duracion,-1403.0,
+bbva:DelQueEfectoDeHiperinflaccionDeLasActividadesDeInversion,Del que efecto de hiperinflacción de las actividades de inversión,duracion,346.0,ifrs-full:CashFlowsFromUsedInInvestingActivitiesContinuingOperations
+ifrs-full:OutflowsOfCashFromInvestingActivities,,duracion,1807.0,
+ifrs-full:PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities,,duracion,827.0,
+ifrs-full:PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities,,duracion,979.0,
+ifrs-full:OtherCashPaymentsToAcquireInterestsInJointVenturesClassifiedAsInvestingActivities,,duracion,1.0,
+ifrs-full:CashFlowsUsedInObtainingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities,,duracion,0.0,
+bbva:SalidaDeFlujosDeEfectivoPorActivosNoCorrientesYPasivosMantenidosVenta,Salida de flujos de efectivo por activos no corrientes y pasivos mantenidos venta,duracion,0.0,ifrs-full:OutflowsOfCashFromInvestingActivities
+bbva:OtrosPagosRelacionadosConActividadesInversion,Otros pagos relacionados con actividades inversion,duracion,0.0,ifrs-full:OutflowsOfCashFromInvestingActivities
+ifrs-full:InflowsOfCashFromInvestingActivities,,duracion,404.0,
+ifrs-full:ProceedsFromSalesOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities,,duracion,83.0,
+ifrs-full:ProceedsFromSalesOfIntangibleAssetsClassifiedAsInvestingActivities,,duracion,0.0,
+ifrs-full:OtherCashReceiptsFromSalesOfInterestsInJointVenturesClassifiedAsInvestingActivities,,duracion,83.0,
+ifrs-full:CashFlowsFromLosingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities,,duracion,50.0,
+ifrs-full:ProceedsFromDisposalOfNoncurrentAssetsOrDisposalGroupsClassifiedAsHeldForSaleAndDiscontinuedOperations,,duracion,188.0,
+bbva:OtrosCobrosRelacionadosConActividadesDeInversion,Otros cobros relacionados con actividades de inversion,duracion,0.0,ifrs-full:InflowsOfCashFromInvestingActivities
+ifrs-full:CashFlowsFromUsedInFinancingActivitiesContinuingOperations,,duracion,-3673.0,
+bbva:DelQueEfectoDeHiperinflaccionDeLasActividadesDeFinanciacion,Del que efecto de hiperinflacción de las actividades de financiación,duracion,0.0,ifrs-full:CashFlowsFromUsedInFinancingActivitiesContinuingOperations
+bbva:PagosPorActividadesDeFinanciacion,Pagos por actividades de financiacion,duracion,9417.0,ifrs-full:CashFlowsFromUsedInFinancingActivitiesContinuingOperations
+ifrs-full:DividendsPaidClassifiedAsFinancingActivities,,duracion,4196.0,
+ifrs-full:RepaymentsOfSubordinatedLiabilities,,duracion,2647.0,
+bbva:AmortizacionInstrumentosPatrimonioPropio,Amortizacion instrumentos patrimonio propio,duracion,27.0,ifrs-full:CashFlowsFromUsedInFinancingActivitiesContinuingOperations
+bbva:AdquisicionDeInstrumentosDePatrimonioPropio,Adquisicion de instrumentos de patrimonio propio,duracion,1968.0,ifrs-full:CashFlowsFromUsedInFinancingActivitiesContinuingOperations
+bbva:OtrosPagosActividadesDeFinanciacion,Otros pagos actividades de financiacion,duracion,580.0,ifrs-full:CashFlowsFromUsedInFinancingActivitiesContinuingOperations
+bbva:EntradasDeEfectivoProcedentesDeActividadesDeFinanciacion,Entradas de efectivo procedentes de actividades de financiacion,duracion,5744.0,ifrs-full:CashFlowsFromUsedInFinancingActivitiesContinuingOperations
+ifrs-full:ProceedsFromIssueOfSubordinatedLiabilities,,duracion,4987.0,
+ifrs-full:ProceedsFromIssuingShares,,duracion,0.0,
+bbva:EnajenacionDeInstrumentosDePatrimonioPropio,Enajenacion de instrumentos de patrimonio propio,duracion,757.0,ifrs-full:CashFlowsFromUsedInFinancingActivitiesContinuingOperations
+bbva:OtrosCobrosRelacionadosConLasActividadesDeFinanciacion,Otros cobros relacionados con las actividades de financiacion,duracion,0.0,ifrs-full:CashFlowsFromUsedInFinancingActivitiesContinuingOperations
+ifrs-full:EffectOfExchangeRateChangesOnCashAndCashEquivalents,,duracion,-2201.0,
+ifrs-full:IncreaseDecreaseInCashAndCashEquivalents,,duracion,7692.0,
+ifrs-full:Cash,,instante,8050.0,
+ifrs-full:CashAndBankBalancesAtCentralBanks,,instante,42856.0,
+ifrs-full:OtherFinancialAssets,,instante,7931.0,
+ifrs-full:BankOverdraftsClassifiedAsCashEquivalents,,instante,0.0,
+ifrs-full:DividendsRecognisedAsDistributionsToOwnersPerShare,,duracion,0.0,
