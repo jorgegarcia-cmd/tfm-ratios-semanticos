@@ -3,181 +3,231 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ratios con contexto semántico</title>
+<title>Ratios con contexto</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* VOICE work: a research bulletin from a supervisor's statistics desk
-   IDEA a central bank bulletin page: the figure, its definition, its footnote
-   PICTURE the live answer: the ratio drawn large, published value beside it, peers as ruled bars
-   COLOUR white, ink, deep teal for computed figures, ochre for published ones
-   TYPE Libre Caslon Text for figures and titles, Inter for text
-   LAYOUT laptop: query band across the top, answer below in two columns; phone: one column */
-:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0d1416);--ink:light-dark(#14161a,#e8eef0);--soft:light-dark(#5b6168,#9fb0b5);--rule:light-dark(#dfe3e6,#24343a);--teal:light-dark(#0b5d63,#4fb3b9);--ochre:light-dark(#a8661a,#e2a85a);--band:light-dark(#eef5f5,#122023);--warn:light-dark(#fff6e6,#2a2213)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+/* VOICE work, quiet and exact
+   IDEA an analyst's index card: one figure, its definition, its footnote
+   COLOUR white, ink, one teal for computed figures, amber only for warnings
+   TYPE Inter throughout, tabular figures */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0f1114);--ink:light-dark(#111418,#eceff2);--mute:light-dark(#5f666e,#98a1aa);--line:light-dark(#e6e8eb,#262a2f);--soft:light-dark(#f5f6f7,#171a1e);--acc:light-dark(#0b6b70,#5cc3c9);--accs:light-dark(#e3f1f1,#13292b);--warn:light-dark(#8a5a00,#e6b45c);--warns:light-dark(#fbf3e2,#2a2214)}
 *{box-sizing:border-box;min-width:0}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
-.band{padding:clamp(24px,4vw,56px) max(5vw,16px)}
-.wrap{max-width:1240px;margin:0 auto}
-h1,h2,.fig-num{font-family:"Libre Caslon Text",Georgia,serif;letter-spacing:-.02em;line-height:1.05}
-h1{font-size:clamp(32px,4.4vw,48px);margin:0 0 10px;text-wrap:balance}
-h2{font-size:clamp(24px,2.6vw,32px);margin:0 0 6px}
-.lead{color:var(--soft);max-width:70ch;margin:0}
-.query{background:var(--band)}
-form{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-input,select,button{font:inherit;font-size:16px;border-radius:8px}
-input#q{flex:1 1 360px;padding:12px 14px;border:1.5px solid var(--rule);background:var(--bg);color:var(--ink);min-height:48px}
-input#q:focus,select:focus,button:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
-button{min-height:48px;padding:0 20px;border:0;background:var(--teal);color:#fff;font-weight:600;cursor:pointer}
-button.chip{min-height:44px;background:transparent;color:var(--ink);border:1px solid var(--rule);font-weight:500;padding:0 14px}
-button.chip:hover{border-color:var(--teal);color:var(--teal)}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.interp{color:var(--soft);font-size:14px;margin:18px 0 0}
-.cards{display:grid;gap:28px;margin-top:8px}
-.card{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(20px,4vw,56px);padding:26px 0;border-top:2px solid var(--ink)}
-.card h3{margin:0 0 4px;font-size:15px;font-weight:600}
-.figs{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-end;margin:10px 0 14px}
-.fig-num{font-size:clamp(44px,6vw,72px);white-space:nowrap}
-.fig-num.calc{color:var(--teal)}.fig-num.pub{color:var(--ochre);font-size:clamp(32px,4vw,48px)}
-.figlab{font-size:13px;color:var(--soft)}
-.formula{font-size:14px;color:var(--soft)}
-code{font-size:13px;overflow-wrap:anywhere}
-.def{font-size:14px;border-left:3px solid var(--ochre);padding-left:10px;margin:8px 0}
-.avisos{margin:12px 0 0;padding:0;list-style:none}
-.avisos li{background:var(--warn);padding:8px 12px;border-radius:6px;font-size:14px;margin-top:6px}
-.peers .row{display:grid;grid-template-columns:9.5em minmax(0,1fr) 5em;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--rule);font-size:14px}
-.peers .bar{height:12px;background:var(--rule);border-radius:0 3px 3px 0}
-.peers .bar i{display:block;height:100%;background:color-mix(in srgb,var(--teal) 45%,var(--bg));border-radius:0 3px 3px 0}
-.peers .row.me .bar i{background:var(--teal)}.peers .row.me{font-weight:600}
-.peers .v{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-.tlink{background:none;color:var(--teal);padding:0;min-height:44px;font-weight:600;text-decoration:underline}
-.seg{display:inline-flex;border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:10px 0 16px}
-.seg button{background:transparent;color:var(--ink);border-radius:0;min-height:44px}
-.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+.num{font-variant-numeric:tabular-nums}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;max-width:1080px;margin:0 auto;padding:18px max(4vw,16px)}
+.brand{font-weight:600;letter-spacing:-.01em}.brand span{color:var(--mute);font-weight:400}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{color:var(--mute);text-decoration:none;padding:10px 12px;border-radius:8px;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+nav a[aria-current=page]{color:var(--ink);background:var(--soft)}
+main{max-width:1080px;margin:0 auto;padding:0 max(4vw,16px) 64px}
+.view{display:none}.view.on{display:block}
+.narrow{max-width:760px;margin:0 auto}
+h1{font-size:clamp(30px,4.6vw,44px);line-height:1.08;letter-spacing:-.02em;margin:28px 0 8px;font-weight:600;text-wrap:balance}
+.sub{color:var(--mute);margin:0 0 24px;max-width:62ch}
+form.ask{display:flex;gap:8px;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:6px}
+form.ask:focus-within{border-color:var(--acc)}
+#q{flex:1;border:0;background:transparent;color:var(--ink);font:inherit;font-size:17px;padding:12px 10px;outline:0;min-height:48px}
+button{font:inherit;cursor:pointer}
+.go{border:0;border-radius:10px;background:var(--ink);color:var(--bg);padding:0 18px;min-height:48px;font-weight:500}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+.chip{border:1px solid var(--line);background:transparent;color:var(--mute);border-radius:999px;padding:8px 14px;font-size:14px;min-height:44px}
+.chip:hover,.chip:focus-visible{color:var(--ink);border-color:var(--ink);outline:0}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin:22px 0 4px;font-size:13px;color:var(--mute);align-items:center}
+.pill{background:var(--soft);border-radius:6px;padding:3px 8px;color:var(--ink)}
+.card{border:1px solid var(--line);border-radius:16px;padding:22px clamp(16px,3vw,28px);margin-top:16px;animation:in .25s ease-out}
+@keyframes in{from{opacity:0;transform:translateY(6px)}}
+.kicker{font-size:14px;color:var(--mute);margin:0}
+.kicker b{color:var(--ink);font-weight:600}
+.figs{display:flex;align-items:flex-end;gap:28px;flex-wrap:wrap;margin:10px 0 6px}
+.big{font-size:clamp(48px,8vw,68px);font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--acc)}
+.big.nd{color:var(--mute);font-size:clamp(28px,5vw,38px)}
+.pub{font-size:14px;color:var(--mute);padding-bottom:4px}
+.pub strong{display:block;font-size:26px;color:var(--ink);font-weight:500;line-height:1.2}
+.delta{display:inline-block;margin-top:6px;font-size:13px;border-radius:6px;padding:2px 8px;background:var(--accs);color:var(--acc)}
+.delta.w{background:var(--warns);color:var(--warn)}
+.formula{font-size:14px;color:var(--mute);margin:8px 0 0}
+.note{border-left:2px solid var(--warn);padding:2px 0 2px 12px;margin:14px 0 0;font-size:14px}
+.peers{margin-top:18px}
+.row{display:grid;grid-template-columns:8.5em minmax(0,1fr) 4.6em;gap:12px;align-items:center;font-size:14px;padding:5px 0}
+.bar{height:6px;background:var(--soft);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:color-mix(in srgb,var(--acc) 35%,var(--line));border-radius:3px;transition:width .5s}
+.row.me{font-weight:600}.row.me .bar i{background:var(--acc)}
+.rt{text-align:right}
+details{border-top:1px solid var(--line);margin-top:18px;padding-top:4px}
+summary{cursor:pointer;padding:10px 0;font-size:15px;list-style:none;min-height:44px;display:flex;align-items:center;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";color:var(--mute);width:1em}
+details[open] summary::before{content:"−"}
 .scroll{overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-size:14px}
-th,td{padding:8px 10px;border-bottom:1px solid var(--rule);text-align:right;white-space:nowrap}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
 th:first-child,td:first-child{text-align:left;white-space:normal}
-thead th{font-weight:600;border-bottom:2px solid var(--ink)}
-td.na{color:var(--soft)}
-.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px)}
-.sel{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
-select{min-height:44px;padding:0 10px;border:1.5px solid var(--rule);background:var(--bg);color:var(--ink)}
-.diff .row{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr) 4.5em;gap:10px;align-items:center;font-size:13px;padding:3px 0}
-.diff .axis{position:relative;height:12px;background:linear-gradient(to right,transparent calc(50% - .5px),var(--soft) calc(50% - .5px),var(--soft) calc(50% + .5px),transparent calc(50% + .5px))}
-.diff .axis i{position:absolute;top:2px;height:8px;border-radius:2px}
-.diff .v{text-align:right;font-variant-numeric:tabular-nums}
-footer{color:var(--soft);font-size:13px}
-@media(max-width:760px){.card,.grid2{grid-template-columns:minmax(0,1fr)}.peers .row{grid-template-columns:7.5em minmax(0,1fr) 4.5em}.diff .row{grid-template-columns:minmax(0,10em) minmax(0,1fr) 4em}}
-@media(max-width:600px){table{font-size:13px}th,td{padding:6px 4px}}
+th{font-weight:500;color:var(--mute);font-size:13px}
+code{font-size:12.5px;overflow-wrap:anywhere;color:var(--ink)}
+.seg{display:inline-flex;background:var(--soft);border-radius:10px;padding:4px;gap:4px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;color:var(--mute);border-radius:7px;padding:8px 14px;min-height:44px;font-size:14px}
+.seg button[aria-pressed=true]{background:var(--bg);color:var(--ink);box-shadow:0 0 0 1px var(--line)}
+.grid2{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px;align-items:start;margin-top:20px}
+#detail .card{margin-top:0;position:sticky;top:16px}
+.matrix td.c{cursor:pointer}
+.matrix td.c:hover,.matrix td.c:focus-visible{outline:2px solid var(--acc);outline-offset:-2px}
+.matrix td.sel{background:var(--accs);color:var(--acc);font-weight:600}
+.matrix td.na{color:var(--mute)}
+.hint{color:var(--mute);font-size:14px}
+.rank{position:relative;margin-top:24px}
+.rank .r{position:absolute;left:0;right:0;top:0;display:grid;grid-template-columns:9em minmax(0,1fr) 5em;gap:14px;align-items:center;height:40px;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.rank .bar{height:14px;border-radius:4px}.rank .bar i{border-radius:4px;background:var(--acc)}
+.rank .pos{color:var(--mute);margin-right:6px}
+.rank .v{font-size:18px;font-weight:600;text-align:right}
+.finding{margin-top:12px;font-size:17px;max-width:62ch}
+footer{color:var(--mute);font-size:13px;max-width:1080px;margin:0 auto;padding:24px max(4vw,16px) 40px;border-top:1px solid var(--line)}
+@media(max-width:820px){.grid2{grid-template-columns:minmax(0,1fr)}#detail .card{position:static}}
+@media(max-width:520px){.row{grid-template-columns:7em minmax(0,1fr) 4.4em;gap:8px}.rank .r{grid-template-columns:6.5em minmax(0,1fr) 4.4em;gap:8px}.figs{gap:18px}}
+@media (prefers-reduced-motion:reduce){.card{animation:none}.bar i,.rank .r{transition:none}}
 </style>
 </head>
 <body>
-<section class="band query"><div class="wrap">
-  <h1>Ratios de banca y seguros, con su definición a la vista</h1>
-  <p class="lead">Prototipo del TFM: cada cifra se calcula desde el informe oficial ESEF 2025 de la entidad, se compara con la que publica y se rastrea hasta su dato XBRL de origen.</p>
-  <form id="f"><input id="q" aria-label="Pregunta" value="¿Cuál fue el ROE de Santander y de BBVA en 2025?" autocomplete="off"><button type="submit">Consultar</button></form>
-  <div class="chips" id="chips"></div>
-</div></section>
+<header>
+  <div class="brand">Ratios con contexto <span>· TFM</span></div>
+  <nav aria-label="Vistas"><a href="#preguntar">Preguntar</a><a href="#explorar">Explorar</a><a href="#definicion">La definición importa</a></nav>
+</header>
 
-<section class="band"><div class="wrap">
-  <p class="interp" id="interp"></p>
-  <div class="cards" id="cards"><p class="lead">Consultando…</p></div>
-</div></section>
+<main>
+  <section class="view" id="v-preguntar"><div class="narrow">
+    <h1>Pregunta por un ratio y te digo de dónde sale.</h1>
+    <p class="sub">Ratios de banca y seguros de seis entidades, calculados desde sus informes oficiales ESEF 2025 con una misma definición, comparados con la cifra que publica cada una y rastreables hasta el dato de origen.</p>
+    <form class="ask" id="f"><input id="q" aria-label="Pregunta" placeholder="Por ejemplo: ROE de BBVA en 2025" autocomplete="off"><button class="go" type="submit">Preguntar</button></form>
+    <div class="chips" id="chips"></div>
+    <div id="pills"></div>
+    <div id="cards"></div>
+  </div></section>
 
-<section class="band" style="background:var(--band)"><div class="wrap">
-  <h2>Todos los ratios calculados</h2>
-  <p class="lead">Misma definición para todas las entidades de cada grupo. n/d: el dato no está etiquetado en el informe ESEF.</p>
-  <div class="seg" role="group" aria-label="Ejercicio"><button data-y="2025" aria-pressed="true">2025</button><button data-y="2024" aria-pressed="false">2024</button></div>
-  <div class="grid2"><div><h3>Banca</h3><div class="scroll" id="tb"></div></div><div><h3>Seguros</h3><div class="scroll" id="ts"></div></div></div>
-</div></section>
+  <section class="view" id="v-explorar">
+    <h1>Todos los ratios, de un vistazo.</h1>
+    <p class="sub">Misma definición para cada grupo de entidades. Pulsa una celda para ver su ficha.</p>
+    <div class="seg" role="group" aria-label="Ejercicio" id="years"><button data-y="2025" aria-pressed="true">2025</button><button data-y="2024" aria-pressed="false">2024</button></div>
+    <div class="grid2">
+      <div><div class="scroll" id="mb"></div><div class="scroll" id="ms" style="margin-top:22px"></div></div>
+      <div id="detail"><p class="hint">Selecciona una celda.</p></div>
+    </div>
+  </section>
 
-<section class="band"><div class="wrap grid2">
-  <div>
-    <h2>Traza de una cifra</h2>
-    <p class="lead">De qué hechos XBRL sale cada ratio, con su etiqueta, fecha e identificador en el documento.</p>
-    <div class="sel"><select id="se" aria-label="Entidad"></select><select id="sr" aria-label="Ratio"></select><select id="sy" aria-label="Ejercicio"><option>2025</option><option>2024</option></select></div>
-    <div id="traza"></div>
-  </div>
-  <div>
-    <h2>Calculado frente a publicado</h2>
-    <p class="lead">Diferencia en puntos porcentuales; la línea central es cero. En verde azulado, diferencia absoluta inferior a 0,5; en ocre, el resto.</p>
-    <div class="diff" id="diff"></div>
-  </div>
-</div></section>
+  <section class="view" id="v-definicion"><div class="narrow">
+    <h1>El mismo ratio, otra definición, otro orden.</h1>
+    <p class="sub">ROE 2025 de los cuatro bancos según la base de patrimonio. Cambia la definición y observa la clasificación.</p>
+    <div class="seg" role="group" aria-label="Definición" id="defs">
+      <button data-d="roe" aria-pressed="true">Patrimonio atribuido (con OCI)</button>
+      <button data-d="roe_fondos_propios" aria-pressed="false">Fondos propios (sin OCI)</button>
+      <button data-d="pub" aria-pressed="false">Lo que publica cada banco</button>
+    </div>
+    <div class="rank" id="rank" style="height:184px"></div>
+    <p class="finding" id="finding"></p>
+  </div></section>
+</main>
 
-<footer class="band"><div class="wrap">Fuente: informes financieros anuales 2025 en formato ESEF de Banco Santander, BBVA, CaixaBank, Banco Sabadell, Mapfre y Línea Directa; ratios publicados extraídos de sus informes de gestión. Jorge García · TFM, Máster N-World en Finanzas y Tecnología Aplicadas, 2026.</div></footer>
+<footer>Fuente: informes financieros anuales 2025 en formato ESEF de Banco Santander, BBVA, CaixaBank, Banco Sabadell, Mapfre y Línea Directa, y medidas alternativas de rendimiento de sus informes de gestión. Jorge García · TFM, Máster N-World en Finanzas y Tecnología Aplicadas, 2026.</footer>
 
 <script>
 {
-const $=s=>document.querySelector(s);
-const pct=v=>v==null?'n/d':v.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' %';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pct=(v,d=2)=>v==null?'n/d':v.toLocaleString('es-ES',{minimumFractionDigits:d,maximumFractionDigits:d})+' %';
 const meur=v=>v==null?'':Math.round(v).toLocaleString('es-ES')+' M€';
-const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const EJ=['¿Cuál fue el ROE de Santander y de BBVA en 2025?','ROE de Santander 2025 sobre fondos propios y patrimonio','Eficiencia de Sabadell 2025','Préstamos sobre depósitos de Santander 2025','Ratio combinado de Mapfre y Línea Directa 2025','CET1 de CaixaBank 2025'];
-let D=null,year=2025;
+const get=u=>fetch(u).then(r=>r.json());
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+const corto=s=>String(s).replace('Banco ','');
+let D=null, year=2025, sel=null;
+
+const EJ=['ROE de Santander y BBVA en 2025','Eficiencia de Sabadell 2025','Préstamos sobre depósitos de Santander 2025','Ratio combinado de Mapfre y Línea Directa','CET1 de CaixaBank','Morosidad de Sabadell en 2024 y 2025'];
 $('#chips').innerHTML=EJ.map(e=>`<button class="chip" type="button">${esc(e)}</button>`).join('');
-$('#chips').addEventListener('click',e=>{if(e.target.matches('.chip')){$('#q').value=e.target.textContent;ask();}});
+$('#chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){$('#q').value=b.textContent;ask();}});
 $('#f').addEventListener('submit',e=>{e.preventDefault();ask();});
 
+function card(r,keys){
+  const c=r.calculado,p=r.publicado||[],p0=p[0];
+  const dif=c&&p0?c.valor_pct-p0.valor_pct:null, w=dif!=null&&Math.abs(dif)>=0.5;
+  const comp=r.comparables||[], max=Math.max(...comp.map(x=>Math.abs(x.valor_pct)),1e-9);
+  return `<article class="card">
+    <p class="kicker"><b>${esc(cap(r.ratio))}</b> · ${esc(r.entidad)} · ${r.ejercicio}</p>
+    <div class="figs">
+      <div class="big num calc ${c?'':'nd'}">${c?pct(c.valor_pct):'No calculable'}</div>
+      ${p0?`<div class="pub">Publicado por la entidad<strong class="num">${pct(p0.valor_pct)}</strong>${dif!=null?`<span class="delta ${w?'w':''}">${dif>=0?'+':'−'}${Math.abs(dif).toLocaleString('es-ES',{maximumFractionDigits:2})} p.p. · ${w?'definición distinta':'coincide'}</span>`:''}</div>`:`<div class="pub">Sin cifra publicada comparable</div>`}
+    </div>
+    ${c?`<p class="formula">${esc(c.formula.replaceAll('_',' '))} · <span class="num">${meur(c.numerador_meur)} / ${meur(c.denominador_meur)}</span></p>`:''}
+    ${(r.avisos||[]).map(a=>`<p class="note">${esc(a)}</p>`).join('')}
+    ${comp.length>1?`<div class="peers" aria-label="Comparables">${comp.map(x=>`<div class="row ${x.entidad===r.entidad?'me':''}"><span>${esc(corto(x.entidad))}</span><span class="bar"><i style="width:${(Math.abs(x.valor_pct)/max*100).toFixed(1)}%"></i></span><span class="rt num">${pct(x.valor_pct)}</span></div>`).join('')}</div>`:''}
+    ${p.length?`<details><summary>Cómo lo define la entidad</summary>${p.map(x=>`<p style="margin:0 0 10px;font-size:14px">${x.variante?`<b>${esc(x.variante)}:</b> `:''}${esc(x.definicion_entidad)} <span class="hint">(${esc(x.fuente)})</span></p>`).join('')}</details>`:''}
+    ${c?`<details class="tr" data-k="${esc(keys.join('|'))}"><summary>De dónde sale la cifra</summary><div class="trace hint">Cargando…</div></details>`:''}
+    ${r.interpretacion?`<p class="hint" style="margin:14px 0 0">${esc(r.interpretacion)}</p>`:''}
+  </article>`;
+}
+document.addEventListener('toggle',async e=>{
+  const d=e.target; if(!d.classList||!d.classList.contains('tr')||!d.open||d.dataset.done)return; d.dataset.done=1;
+  const [en,ra,ye]=d.dataset.k.split('|');
+  const t=await get(`/api/traza?entidad=${en}&ratio=${ra}&ejercicio=${ye}`);
+  if(t.error){d.querySelector('.trace').textContent='Sin traza disponible.';return;}
+  const part=(n,x)=>`<p style="margin:12px 0 6px;color:var(--ink)">${n}: ${esc(x.concepto.replaceAll('_',' '))} <span class="hint">· regla ${esc(x.regla)}</span></p>${x.hechos&&x.hechos.length?`<div class="scroll"><table><thead><tr><th>Elemento XBRL</th><th>Fecha</th><th>Valor</th></tr></thead><tbody>${x.hechos.map(h=>`<tr><td><code>${esc(h.etiqueta)}</code><br><span class="hint" style="font-size:12px">hecho ${esc(h.id_hecho)}</span></td><td class="num">${esc(h.fecha_fin)}</td><td class="num">${meur(h.valor)}</td></tr>`).join('')}</tbody></table></div>`:''}${x.motivo?`<p class="note">${esc(x.motivo)}</p>`:''}`;
+  d.querySelector('.trace').outerHTML=`<div class="trace">${t.nota?`<p class="hint" style="margin:0">Base: ${esc(t.nota)}</p>`:''}${part('Numerador',t.numerador)}${part('Denominador',t.denominador)}</div>`;
+},true);
+
+const keyE=n=>Object.keys(D.nombres).find(k=>D.nombres[k]===n), keyR=n=>Object.keys(D.ratios).find(k=>D.ratios[k]===n);
 async function ask(){
   const q=$('#q').value.trim(); if(!q)return;
-  $('#cards').innerHTML='<p class="lead">Consultando…</p>';
+  $('#cards').innerHTML='<p class="hint" style="margin-top:20px">Consultando…</p>';
   try{
-    const r=await fetch('/api/pregunta?q='+encodeURIComponent(q)); const j=await r.json();
-    const i=j.interpretacion;
-    $('#interp').textContent=`Interpretación: ${i.entidades.length?i.entidades.join(', '):'ninguna entidad'} · ${i.ratios.join(', ')||'ningún ratio'} · ${i.ejercicios.join(', ')}`;
-    if(!j.respuestas.length){$('#cards').innerHTML='<p class="lead">No he reconocido una entidad y un ratio en la pregunta. Prueba con uno de los ejemplos.</p>';return;}
-    $('#cards').innerHTML=j.respuestas.map(x=>card(x.estructurada,i)).join('');
-  }catch(err){$('#cards').innerHTML='<p class="lead">No se ha podido consultar la API.</p>';}
+    const j=await get('/api/pregunta?q='+encodeURIComponent(q)), i=j.interpretacion;
+    $('#pills').innerHTML=j.respuestas.length?`<div class="pills">Entendido:${i.entidades.map(e=>`<span class="pill">${esc(D.nombres[e]||e)}</span>`).join('')}${i.ratios.map(r=>`<span class="pill">${esc(D.ratios[r]||r)}</span>`).join('')}${i.ejercicios.map(a=>`<span class="pill">${a}</span>`).join('')}</div>`:'';
+    $('#cards').innerHTML=j.respuestas.length?j.respuestas.map(x=>{const r=x.estructurada;return card(r,[keyE(r.entidad),keyR(r.ratio),r.ejercicio]);}).join(''):'<p class="note">No he reconocido una entidad y un ratio. Prueba con uno de los ejemplos.</p>';
+  }catch(err){$('#cards').innerHTML='<p class="note">No se ha podido consultar. Inténtalo de nuevo.</p>';}
 }
-function card(r){
-  const c=r.calculado, p=r.publicado||[];
-  const max=Math.max(...r.comparables.map(x=>x.valor_pct),1);
-  const peers=r.comparables.length>1?`<h3>Comparables con la misma definición</h3><div class="peers">${r.comparables.map(x=>`<div class="row ${x.entidad===r.entidad?'me':''}"><span>${esc(x.entidad)}</span><span class="bar"><i style="width:${(x.valor_pct/max*100).toFixed(1)}%"></i></span><span class="v">${pct(x.valor_pct)}</span></div>`).join('')}</div>`:'';
-  return `<article class="card"><div>
-    <h3>${esc(r.ratio.charAt(0).toUpperCase()+r.ratio.slice(1))} · ${esc(r.entidad)} · ${r.ejercicio}</h3>
-    <div class="figs">${c?`<div><div class="fig-num calc">${pct(c.valor_pct)}</div><div class="figlab">calculado desde ESEF</div></div>`:''}
-    ${p.map(x=>`<div><div class="fig-num pub">${pct(x.valor_pct)}</div><div class="figlab">publicado${x.variante?' · '+esc(x.variante):''}</div></div>`).join('')}</div>
-    ${c?`<div class="formula"><code>${esc(c.formula)}</code><br>${meur(c.numerador_meur)} / ${meur(c.denominador_meur)}</div>`:''}
-    ${p.map(x=>`<p class="def">Definición de la entidad: ${esc(x.definicion_entidad)}</p>`).join('')}
-    ${c?`<button class="tlink" type="button" data-t='${esc(JSON.stringify([keyOf(r.entidad),keyRatio(r.ratio),r.ejercicio]))}'>Ver la traza de esta cifra</button>`:''}
-  </div><div>${peers}<ul class="avisos">${r.avisos.map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${r.interpretacion?`<p class="formula">${esc(r.interpretacion)}</p>`:''}</div></article>`;
-}
-const keyOf=n=>D?Object.keys(D.nombres).find(k=>D.nombres[k]===n):n;
-const keyRatio=n=>D?Object.keys(D.ratios).find(k=>D.ratios[k]===n):n;
-$('#cards').addEventListener('click',e=>{const b=e.target.closest('.tlink');if(!b)return;const [en,ra,ye]=JSON.parse(b.dataset.t);$('#se').value=en;fillRatios();$('#sr').value=ra;$('#sy').value=ye;traza();document.querySelector('#traza').scrollIntoView({behavior:'smooth',block:'center'});});
 
-function tables(){
+function matrix(){
   const rows=D.filas.filter(f=>f.ejercicio===year);
-  for(const [g,el] of [['banca','#tb'],['seguros','#ts']]){
-    const R=rows.filter(f=>f.grupo===g); const ents=[...new Set(R.map(f=>f.entidad))]; const rats=[...new Set(R.map(f=>f.ratio))];
-    $(el).innerHTML=`<table><thead><tr><th>Ratio</th>${ents.map(e=>`<th>${esc(D.nombres[e].replace('Banco ',''))}</th>`).join('')}</tr></thead><tbody>${rats.map(ra=>`<tr><td>${esc(D.ratios[ra]||ra)}</td>${ents.map(e=>{const f=R.find(x=>x.entidad===e&&x.ratio===ra);return `<td class="${f&&f.valor_pct!=null?'':'na'}">${pct(f?.valor_pct)}</td>`}).join('')}</tr>`).join('')}</tbody></table>`;
+  for(const [g,el] of [['banca','#mb'],['seguros','#ms']]){
+    const R=rows.filter(f=>f.grupo===g), ents=[...new Set(R.map(f=>f.entidad))], rats=[...new Set(R.map(f=>f.ratio))];
+    $(el).innerHTML=`<table class="matrix"><thead><tr><th>${g==='banca'?'Banca':'Seguros'}</th>${ents.map(e=>`<th>${esc(corto(D.nombres[e]))}</th>`).join('')}</tr></thead><tbody>${rats.map(ra=>`<tr><td>${esc(D.ratios[ra]||ra)}</td>${ents.map(e=>{const f=R.find(x=>x.entidad===e&&x.ratio===ra),v=f?f.valor_pct:null,on=sel&&sel[0]===e&&sel[1]===ra;return `<td class="c num ${v==null?'na':''} ${on?'sel':''}" tabindex="0" data-e="${e}" data-r="${ra}">${pct(v)}</td>`}).join('')}</tr>`).join('')}</tbody></table>`;
   }
 }
-document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{year=+b.dataset.y;document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-pressed',x===b));tables();}));
-
-function fillRatios(){const e=$('#se').value;const rs=[...new Set(D.filas.filter(f=>f.entidad===e).map(f=>f.ratio))];const cur=$('#sr').value;$('#sr').innerHTML=rs.map(r=>`<option value="${r}">${esc(D.ratios[r]||r)}</option>`).join('');if(rs.includes(cur))$('#sr').value=cur;}
-async function traza(){
-  const t=await (await fetch(`/api/traza?entidad=${$('#se').value}&ratio=${$('#sr').value}&ejercicio=${$('#sy').value}`)).json();
-  if(t.error){$('#traza').innerHTML='<p class="lead">Sin traza.</p>';return;}
-  const part=(n,x)=>`<h3>${n}: ${esc(x.concepto.replaceAll('_',' '))}</h3><p class="formula">Regla: <code>${esc(x.regla)}</code></p>${x.hechos?.length?`<div class="scroll"><table><thead><tr><th>Etiqueta XBRL</th><th>Fecha</th><th>Valor</th><th>Id</th></tr></thead><tbody>${x.hechos.map(h=>`<tr><td><code>${esc(h.etiqueta)}</code></td><td>${h.fecha_fin}</td><td>${meur(h.valor)}</td><td>${esc(h.id_hecho)}</td></tr>`).join('')}</tbody></table></div>`:''}${x.motivo?`<ul class="avisos"><li>${esc(x.motivo)}</li></ul>`:''}`;
-  $('#traza').innerHTML=`<div class="figs"><div><div class="fig-num calc">${pct(t.valor_pct)}</div><div class="figlab">${esc(t.nota||'')}</div></div></div>${part('Numerador',t.numerador)}${part('Denominador',t.denominador)}`;
+async function pick(e,r){
+  sel=[e,r]; matrix();
+  const c=await get(`/api/consulta?entidad=${e}&ratio=${r}&ejercicio=${year}`);
+  $('#detail').innerHTML=c.error?'<p class="note">Sin datos.</p>':card(c,[e,r,year]);
+  if(matchMedia('(max-width:820px)').matches)$('#detail').scrollIntoView({behavior:'smooth',block:'start'});
 }
-['#se','#sr','#sy'].forEach(s=>$(s).addEventListener('change',()=>{if(s==='#se')fillRatios();traza();}));
-
-async function diff(){
-  const j=await (await fetch('/api/comparacion')).json();
-  const R=j.filas.filter(f=>f.diferencia_pp!=null).sort((a,b)=>a.diferencia_pp-b.diferencia_pp);
-  const m=Math.max(...R.map(f=>Math.abs(f.diferencia_pp)));
-  $('#diff').innerHTML=R.map(f=>{const w=Math.abs(f.diferencia_pp)/m*50,ok=Math.abs(f.diferencia_pp)<0.5;
-    return `<div class="row"><span>${esc(D.nombres[f.entidad].replace('Banco ',''))} · ${esc(D.ratios[f.ratio]||f.ratio)} ${f.ejercicio}</span><span class="axis"><i style="left:${f.diferencia_pp<0?50-w:50}%;width:${Math.max(w,.6)}%;background:${ok?'var(--teal)':'var(--ochre)'}"></i></span><span class="v">${f.diferencia_pp>0?'+':''}${f.diferencia_pp.toLocaleString('es-ES')}</span></div>`}).join('');
+for(const s of ['#mb','#ms']){
+  $(s).addEventListener('click',e=>{const td=e.target.closest('td.c');if(td)pick(td.dataset.e,td.dataset.r);});
+  $(s).addEventListener('keydown',e=>{const td=e.target.closest('td.c');if(td&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pick(td.dataset.e,td.dataset.r);}});
 }
+$('#years').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;year=+b.dataset.y;$$('#years button').forEach(x=>x.setAttribute('aria-pressed',x===b));matrix();if(sel)pick(...sel);});
+
+let PUB=[], def='roe';
+const BANCOS=['bbva','caixabank','santander','sabadell'];
+const T={roe:'Con el patrimonio atribuido, que incluye el otro resultado global acumulado, BBVA lidera con holgura.',
+  roe_fondos_propios:'Sin el otro resultado global, muy negativo en BBVA y Santander, sus ROE caen unos cuatro puntos: CaixaBank pasa a liderar y Santander baja al último puesto.',
+  pub:'El orden publicado coincide con el de patrimonio atribuido, pero cada banco usa su propia base y su propio promedio: compararlos directamente mezcla definiciones.'};
+function rank(){
+  const val=b=>{const f=def==='pub'?PUB.find(p=>p.entidad===b&&p.ratio==='roe'&&p.ejercicio===2025&&!p.variante)||PUB.find(p=>p.entidad===b&&p.ratio==='roe'&&p.ejercicio===2025):D.filas.find(f=>f.entidad===b&&f.ratio===def&&f.ejercicio===2025);return f?f.valor_pct:null;};
+  const items=BANCOS.map(b=>({b,v:val(b)})).filter(x=>x.v!=null).sort((a,c)=>c.v-a.v), max=Math.max(...items.map(x=>x.v));
+  const box=$('#rank');
+  if(!box.children.length) box.innerHTML=BANCOS.map(b=>`<div class="r" data-b="${b}"><span><span class="pos"></span>${esc(corto(D.nombres[b]))}</span><span class="bar"><i></i></span><span class="v num"></span></div>`).join('');
+  items.forEach((x,i)=>{const el=box.querySelector(`[data-b="${x.b}"]`);el.style.transform=`translateY(${i*46}px)`;el.querySelector('.pos').textContent=(i+1)+'.';el.querySelector('i').style.width=(x.v/max*100).toFixed(1)+'%';el.querySelector('.v').textContent=pct(x.v,1);});
+  $('#finding').textContent=T[def];
+}
+$('#defs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;def=b.dataset.d;$$('#defs button').forEach(x=>x.setAttribute('aria-pressed',x===b));rank();});
+
+function route(){
+  const h=location.hash.slice(1), v=['preguntar','explorar','definicion'].includes(h)?h:'preguntar';
+  $$('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));
+  $$('nav a').forEach(a=>{if(a.getAttribute('href')==='#'+v)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+}
+addEventListener('hashchange',route);
 
 (async()=>{
-  D=await (await fetch('/api/ratios')).json();
-  $('#se').innerHTML=Object.entries(D.nombres).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join('');
-  fillRatios(); tables(); traza(); diff(); ask();
+  route();
+  [D,PUB]=await Promise.all([get('/api/ratios'),get('/api/publicados').then(j=>j.filas)]);
+  matrix(); rank();
+  $('#q').value='ROE de Santander y BBVA en 2025'; ask();
 })();
 }
 </script>

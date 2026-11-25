@@ -34,6 +34,19 @@ def pregunta(q: str = Query(..., max_length=300)):
     return {"interpretacion": i, "respuestas": respuestas}
 
 
+@app.get("/api/consulta")
+def consulta(entidad: str, ratio: str, ejercicio: int):
+    if entidad not in NOMBRES or ratio not in NOMBRE_RATIO or ejercicio not in (2024, 2025):
+        return {"error": "parámetros no válidos"}
+    return consultar(entidad, ratio, ejercicio)
+
+
+@app.get("/api/publicados")
+def publicados():
+    pub = pd.read_csv(RAIZ / "data/published/ratios_publicados.csv")
+    return {"filas": pub.astype(object).where(pd.notna(pub), None).to_dict(orient="records")}
+
+
 @app.get("/api/ratios")
 def ratios():
     filas = CALC.astype(object).where(pd.notna(CALC), None).to_dict(orient="records")
